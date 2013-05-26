@@ -1,0 +1,405 @@
+2013-04-23 00:15:10 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-23 00:15:14 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-23 00:35:14 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-23 00:35:17 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-23 01:30:37 Error: [MissingControllerException] Controller class Info.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Info.phpController',
+  'plugin' => NULL,
+)
+Request URL: /info.php
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-23 01:30:50 Error: [MissingControllerException] Controller class InfoController could not be found.
+Exception Attributes: array (
+  'class' => 'InfoController',
+  'plugin' => NULL,
+)
+Request URL: /info
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 20:28:17 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 20:28:20 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 20:48:19 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 20:48:22 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 21:08:25 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 21:08:29 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 21:28:32 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 21:28:35 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 21:48:35 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 21:48:38 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 22:08:39 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-27 22:08:42 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 01:00:09 Error: [MissingControllerException] Controller class AnnounceController could not be found.
+Exception Attributes: array (
+  'class' => 'AnnounceController',
+  'plugin' => NULL,
+)
+Request URL: /announce?info_hash=%DD%14%D63%81%D49%FAH%EB%3A%B7D%C2%87%96%F2%DCR%00&peer_id=-UM15130%04h%A2P%B1d%84%B88%09T%E3&port=28159&uploaded=0&downloaded=0&left=718544896&corrupt=0&key=A5991660&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3A%3A7aca%3A39ff%3Afeb1%3Acb13
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:19:13 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:19:17 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:19:17 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:19:20 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:21:46 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:21:49 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:41:00 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:41:03 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:42:39 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:42:42 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:44:42 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:44:45 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:48:50 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 15:48:53 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 16:08:53 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 16:08:56 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 16:14:21 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 16:14:24 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 16:24:42 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-28 16:24:45 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-07 13:48:16 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-07 13:48:19 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 15:34:32 Error: [MissingControllerException] Controller class Apple-touch-icon-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /apple-touch-icon-precomposed.png
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-12 23:06:32 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-12 23:06:35 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-15 14:44:55 Error: [MissingControllerException] Controller class Apple-touch-icon-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /apple-touch-icon-precomposed.png
+Stack Trace:
+#0 /Users/mizoguti/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
