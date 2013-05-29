@@ -1,0 +1,29 @@
+body {
+	background-color: #F0F7FF;
+}
+
+.dashboard-block {
+	background-color: white;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	margin-bottom: 25px;
+	padding: 10px 25px 10px 25px;
+	box-shadow: 4px 4px 10px 1px #CCC; 
+}
+
+.dashboard-title {
+	margin-top: 25px;
+}
+
+.event-cell p {
+	margin-top: 10px;
+}
+
+.event-cell strong {
+	margin-left: 25px;
+}
+
+.event-btn {
+	margin-right: 11px;
+}
+

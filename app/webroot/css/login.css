@@ -1,0 +1,52 @@
+body {
+	background-color: #F0F7FF;
+}
+
+#main_container {
+	position: absolute;
+	width: 500px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	margin: -200px 0 0 -250px;
+}
+
+h1 {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	font-size: 50px;
+	text-align: center;
+}
+
+#ico_kanri {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -70px 0 0 -70px;
+}
+
+#bkg_login {
+	position: absolute;
+	width: 500px;
+	height: 140px;
+	top: 160px;
+}
+
+#form_login {
+	margin: 30px 0 0 -40px;
+}
+
+#btn_login {
+	margin-left: 15px;
+	color: white;
+	border-color: #04C;
+}
+
+#msg_error {
+	position: absolute;
+	width: 100%;
+	top: 130px;
+	text-align: center;
+	color: #b94048;
+}
