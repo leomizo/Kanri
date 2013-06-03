@@ -49,7 +49,7 @@
 			<div class="control-group">
 				<?php echo $this->Form->label('Company.address', 'Endereço: ', array("class" => 'control-label')); ?>
 				<div class="controls">
-					<?php echo $this->Form->input('Company.address', array('div' => false, 'label' => false, 'required' => 'required')); ?>
+					<?php echo $this->Form->input('Company.address', array('div' => false, 'label' => false, 'required' => 'required', 'class' => 'input-xxlarge')); ?>
 				</div>
 			</div>
 			<div class="control-group">

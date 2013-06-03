@@ -84,3 +84,7 @@ li {
 	text-decoration: none;
 	color: black;
 }
+
+.hidden-element {
+	display: none;
+}

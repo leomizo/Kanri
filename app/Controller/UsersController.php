@@ -8,8 +8,10 @@ class UsersController extends AppController {
 		if ($success_message) $this->Set('success_message', $success_message);
 		$search = $this->request->query['search'];
 		$sort = $this->request->query['sort'];
-		$asc = !($this->request->query['asc'] == 'false');
-		$this->Set('users', $this->User->search($search, $sort, $asc));
+		$asc = $this->request->query['asc'] == 'desc' ? 'desc' : 'asc';
+		
+		$this->paginate = $this->User->pagination($search, $sort, $asc);
+		$this->set('users', $this->paginate('User'));
 	}
 
 	public function show($id = null) {
@@ -50,7 +52,7 @@ class UsersController extends AppController {
 		}
 	}
 
-	public function delete($id) {
+	public function delete($id = null) {
 		if ($this->request->is('post') && $id > 0) {
 			$this->User->delete($id);
 			$this->redirect(array('controller' => 'users', 'action' => 'index', 'delete'));

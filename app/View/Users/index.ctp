@@ -30,12 +30,12 @@
 					<strong>Sucesso!</strong> Usuário <?php if ($success_message == 'edit') echo 'atualizado'; elseif ($success_message == 'add') echo 'adicionado'; elseif ($success_message == 'delete') echo 'deletado' ?> com sucesso!
 				</div>
 			<?php endif; ?>
-				<?php echo $this->Form->create(null, array('class' => 'form-search well search-box', 'type' => 'get'));
-					  echo $this->Form->input("Buscar usuário: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
-					  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
-					  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar novo usuário', 'add', array('class' => 'btn btn-success pull-right', 'escape' => false));
-					  echo $this->Form->end();
-				?>
+			<?php echo $this->Form->create(null, array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
+				  echo $this->Form->input("Buscar usuário: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
+				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
+				  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar novo usuário', 'add', array('class' => 'btn btn-success pull-right', 'escape' => false));
+				  echo $this->Form->end();
+			?>
 		</div>
 	</div>
 
@@ -43,9 +43,9 @@
 		<table class="table table-striped table-bordered table-sortable">
 			<thead>
 				<tr>
-					<th><?php echo $this->Html->link('Nome', array('?' => array('search' => $this->request->query['search'], 'sort' => 'name', 'asc' => ($this->request->query['asc'] == 'true' ? 'false' : 'true')))); ?></th>
-					<th><?php echo $this->Html->link('E-mail', array('?' => array('search' => $this->request->query['search'], 'sort' => 'email', 'asc' => ($this->request->query['asc'] == 'true' ? 'false' : 'true')))); ?></th>
-					<th><?php echo $this->Html->link('Tipo de usuário', array('?' => array('search' => $this->request->query['search'], 'sort' => 'type', 'asc' => ($this->request->query['asc'] == 'true' ? 'false' : 'true')))); ?></th>
+					<th><?php echo $this->Paginator->sort("name", "Nome"); ?></th>
+					<th><?php echo $this->Paginator->sort("email", "E-mail"); ?></th>
+					<th><?php echo $this->Paginator->sort("type", "Tipo de usuário"); ?></th>
 					<th style="width: 110px">Opções</th>
 				</tr>
 			</thead>
@@ -69,5 +69,16 @@
 				<?php endforeach; ?>
 			</tbody>
 		</table>
+		<div class="pagination pagination-centered">
+			<ul class='pager'>
+				<?php echo $this->Paginator->prev("← Anterior", array('tag' => 'li', 'class' => 'previous', 'style' => 'margin-right: 15px'), null, array('class' => 'hidden-element')); ?>
+			</ul>
+			<ul>
+				<?php echo $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'span', 'currentClass' => 'active', 'separator' => false, 'first' => 'Primeiro', 'last' => 'Último')); ?>
+			</ul>
+			<ul class='pager'>
+				<?php echo $this->Paginator->next("Próximo →", array('tag' => 'li', 'class' => 'previous', 'style' => 'margin-left: 15px'), null, array('class' => 'hidden-element')); ?>
+			</ul>
+		</div>
 	</div>
 </div>

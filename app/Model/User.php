@@ -40,16 +40,12 @@ class User extends AppModel {
 		}
 	}
 
-	public function search($query = null, $sort = null, $asc = true) {
-		if ($query) {
-			$options = array('conditions' => array('User.name LIKE' => '%'.$query.'%'));
-		} 
-		else $options = null;
-		if ($sort) {
-			if ($options) $options['order'] = array('User.'.$sort => ($asc ? 'asc' : 'desc'));
-			else $options = array('order' => array('User.'.$sort => ($asc ? 'asc' : 'desc')));
-		}
-		return $this->find('all', $options);
+	public function pagination($query = null, $sort = null, $asc = 'asc') {
+		$pagination = array('limit' => 10);
+		if ($search) $pagination['conditions'] = array('User.name LIKE' => '%'.$search.'%');
+		if ($sort) $pagination['order'] = array('User.'.$sort => $asc);
+		else $pagination['order'] = array("User.name" => 'asc');
+		return $pagination;
 	}
 
 }

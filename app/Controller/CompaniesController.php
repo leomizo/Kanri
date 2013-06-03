@@ -6,7 +6,13 @@ class CompaniesController extends AppController {
 
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
-		$this->set('companies', $this->Company->find('all'));
+		
+		$search = $this->request->query['search'];
+		$sort = $this->request->query['sort'];
+		$asc = $this->request->query['asc'] == 'desc' ? 'desc' : 'asc';
+		
+		$this->paginate = $this->Company->pagination($search, $sort, $asc);
+		$this->set('companies', $this->paginate('Company'));
 	}
 
 	public function show($id) {
@@ -29,12 +35,29 @@ class CompaniesController extends AppController {
 		}
 	}
 
-	public function edit() {
-
+	public function edit($id = null) {
+		if ($id) {
+			$company = $this->Company->findById($id);
+			if ($this->request->is('post') || $this->request->is('put')) {
+				$this->Company->id = $id;
+				if ($this->Company->save($this->request->data)) {
+					$this->redirect(array('controller' => 'companies', 'action' => 'index', 'edit'));
+				}
+				else {
+					$this->Set('alert', true);
+				}
+			}
+			else if ($company) {
+				$this->request->data = $company;	
+			}
+		}
 	}
 
-	public function delete() {
-
+	public function delete($id = null) {
+		if ($this->request->is('post') && $id > 0) {
+			$this->Company->delete($id);
+			$this->redirect(array('controller' => 'companies', 'action' => 'index', 'delete'));
+		}
 	}
 	
 }
