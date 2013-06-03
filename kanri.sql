@@ -5,39 +5,194 @@ CREATE TABLE `users` (
 	name VARCHAR(128),
 	email VARCHAR(128),
 	password VARCHAR(128),
-	user_type ENUM('main_manager', 'auxiliary_manager')
+	type INT UNSIGNED
 );
+
+DROP TABLE IF EXISTS `candidates`;
+
+CREATE TABLE `candidates` (
+	id SERIAL PRIMARY KEY,
+	first_name VARCHAR(32),
+	middle_names VARCHAR(128),
+	last_name VARCHAR(128),
+	gender INT UNSIGNED,
+	civil_state INT UNSIGNED,
+	place_birth VARCHAR(64),
+	date_birth DATETIME,
+	address VARCHAR(128),
+	neighborhood VARCHAR(64),
+	zip_code VARCHAR(16),
+	city_id BIGINT UNSIGNED,
+	home_phone VARCHAR(32),
+	comercial_phone VARCHAR(32),
+	mobile_phone VARCHAR(32),
+	personal_email VARCHAR(64),
+	comercial_email VARCHAR(64),
+	skype_name VARCHAR(64),
+	international_experience TEXT,
+	income_clt DECIMAL(13, 2),
+	income_pj DECIMAL(13, 2),
+	income_bonus VARCHAR(128),
+	health_insurance_name VARCHAR(128),
+	health_insurance_type INT UNSIGNED,
+	life_insurance_name VARCHAR(128),
+	life_insurance_type INT UNSIGNED,
+	life_insurance_coverage VARCHAR(32),
+	meal_ticket_type INT UNSIGNED,
+	meal_ticket_value DECIMAL(4, 2),
+	vehicle_type INT UNSIGNED,
+	vehicle_description VARCHAR(128),
+	fuel_voucher VARCHAR(64),
+	market_basket VARCHAR(64),
+	training_courses VARCHAR(256),
+	profit_sharing VARCHAR(128),
+	comments TEXT
+);
+
+DROP TABLE IF EXISTS `dependents`;
+
+CREATE TABLE `dependents` (
+	id SERIAL PRIMARY KEY,
+	gender INT UNSIGNED,
+	date_birth DATETIME,
+	candidate_id BIGINT UNSIGNED NULL 
+);
+
+DROP TABLE IF EXISTS `countries`;
+
+CREATE TABLE `countries` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64)
+);
+
+DROP TABLE IF EXISTS `states`;
+
+CREATE TABLE `states` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64),
+	country_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `cities`;
+
+CREATE TABLE `cities` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64),
+	state_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `formations`;
+
+CREATE TABLE `formations` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(128)
+);
+
+DROP TABLE IF EXISTS `candidate_formations`;
+
+CREATE TABLE `candidate_formations` (
+	id SERIAL PRIMARY KEY,
+	institution VARCHAR(128),
+	conclusion_year VARCHAR(4),
+	candidate_id BIGINT UNSIGNED NULL,
+	formation_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `languages`;
+
+CREATE TABLE `languages` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(32)
+);
+
+DROP TABLE IF EXISTS `candidate_languages`;
+
+CREATE TABLE `candidate_languages` (
+	id SERIAL PRIMARY KEY,
+	level INT UNSIGNED,
+	candidate_id BIGINT UNSIGNED NULL,
+	language_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `courses`;
+
+CREATE TABLE `courses` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(128)
+);
+
+DROP TABLE IF EXISTS `candidate_courses`;
+
+CREATE TABLE `candidate_courses` (
+	id SERIAL PRIMARY KEY,
+	institution VARCHAR(128),
+	conclusion_year VARCHAR(4),
+	candidate_id BIGINT UNSIGNED NULL,
+	formation_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `market_sectors`;
+
+CREATE TABLE `market_sectors` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64)
+);
+
+DROP TABLE IF EXISTS `workplaces`;
+
+CREATE TABLE `workplaces` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(128),
+	nationality VARCHAR(32),
+	market_sector_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `jobs`;
+
+CREATE TABLE `jobs` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64)
+);
+
+DROP TABLE IF EXISTS `experiences`;
+
+CREATE TABLE `experiences` (
+	id SERIAL PRIMARY KEY,
+	start_date DATE,
+	final_date DATE,
+	report VARCHAR(32),
+	team VARCHAR(32),
+	candidate_id BIGINT UNSIGNED NULL,
+	workplace_id BIGINT UNSIGNED NULL,
+	job_id BIGINT UNSIGNED NULL
+);
+
+DROP TABLE IF EXISTS `companies`;
+
+CREATE TABLE `companies` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(128),
+	contact_name VARCHAR(128),
+	contact_email VARCHAR(64),
+	contact_telephone VARCHAR(32),
+	address VARCHAR(256),
+	cnpj VARCHAR(32),
+	state_inscription VARCHAR(32),
+	city_inscription VARCHAR(32)
+);
+
+
+ 
 
 -- DROP TABLE IF EXISTS `permissions`;
 
 -- CREATE TABLE `permissions` (
 -- 	id SERIAL PRIMARY KEY,
--- 	privileged_user BIGINT UNSIGNED NOT NULL FOREIGN KEY,
+-- 	privileged_user BIGINT UNSIGNED NULL,
 -- 	start_time DATETIME,
 -- 	end_time DATETIME
 -- );
 
--- DROP TABLE IF EXISTS `candidates`;
 
--- CREATE TABLE `candidates` (
--- 	id SERIAL PRIMARY KEY,
--- 	first_name VARCHAR(32),
--- 	middle_names VARCHAR(128),
--- 	last_name VARCHAR(128),
--- 	gender ENUM('male', 'female'),
--- 	civil_state ENUM('single', 'married', 'divorced', 'widower'),
--- 	place_birth VARCHAR(64),
--- 	dependents VARCHAR(128),
--- 	date_birth DATETIME,
--- 	address VARCHAR(128),
--- 	neighborhood VARCHAR(64),
--- 	zip_code VARCHAR(16),
--- 	city BIGINT UNSIGNED NOT NULL FOREIGN KEY,
--- 	home_phone VARCHAR(32),
--- 	comercial_phone VARCHAR(32),
--- 	mobile_phone VARCHAR(32),
--- 	personal_email VARCHAR(64),
--- 	comercial_email VARCHAR(64)
--- );
 
 

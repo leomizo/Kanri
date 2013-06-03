@@ -79,3 +79,8 @@ li[editing='true'] {
 li {
 	color: black;
 }
+
+.table-sortable > thead > tr > th > a {
+	text-decoration: none;
+	color: black;
+}

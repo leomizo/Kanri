@@ -49,7 +49,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase"></i> | Candidatos</a>
 						<ul class="dropdown-menu">
-							<li><a href="candidate_index.html">Visualizar candidatos</a></li>
+							<li>
+								<?php echo $this->Html->link('Visualizar candidato', array('controller' => 'users', 'action' => 'index'));
+								?>
+							</li>
 							<li><a href="candidate_search.html">Busca avançada de candidatos</a></li>
 							<li><a href="candidate_add.html">Adicionar candidato</a></li>
 						</ul>
@@ -57,8 +60,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-globe"></i> | Empresas</a>
 						<ul class="dropdown-menu">
-							<li><a href="company_index.html">Visualizar empresas</a></li>
-							<li><a href="company_add.html">Adicionar empresa</a></li>
+							<li>
+								<?php echo $this->Html->link('Visualizar empresa', array('controller' => 'companies', 'action' => 'index'));
+								?>
+							</li>
+							<li>
+								<?php echo $this->Html->link('Adicionar empresa', array('controller' => 'companies', 'action' => 'add'));
+								?>
+							</li>
 						</ul>
 					</li>
 					<li class="dropdown">

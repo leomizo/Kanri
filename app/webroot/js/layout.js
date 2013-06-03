@@ -54,3 +54,21 @@ $(function() {
 	});
 
 });
+
+var Kanri = {};
+
+Kanri.shakeElement = function(element) {
+
+	$(element).animate({'margin-left': "-=25px"}, 90, function() {
+		$(element).animate({'margin-left': "+=45px"}, 85, function() {
+			$(element).animate({'margin-left': "-=35px"}, 80, function() {
+				$(element).animate({'margin-left': "+=25px"}, 75, function() {
+					$(element).animate({'margin-left': "-=15px"}, 70, function() {
+						$(element).animate({'margin-left': "+=5px"}, 65);	
+					});
+				});	
+			});	
+		});
+	});
+
+}
