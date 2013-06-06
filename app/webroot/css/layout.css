@@ -80,6 +80,15 @@ li {
 	color: black;
 }
 
+
+
+
+
+
+
+
+
+
 .table-sortable > thead > tr > th > a {
 	text-decoration: none;
 	color: black;
@@ -87,4 +96,25 @@ li {
 
 .hidden-element {
 	display: none;
+}
+
+.table-simple-form > td:first-child {
+	vertical-align: middle;
+	width: 60px;
+}
+
+.table-simple-form > td:first-child > button:last-child {
+	margin-left: 4px;
+}
+
+.table-simple-form > td:last-child > button {
+	margin-left: 5px;
+}
+
+.table-simple-form > td:last-child > form > button:last-of-type {
+	margin-left: 5px;
+}
+
+.table-simple-form > td:last-child > form > div > input, .table-simple-form > td:last-child > form > div > select {
+	margin-bottom: 0;
 }

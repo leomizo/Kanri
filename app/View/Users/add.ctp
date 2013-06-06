@@ -33,7 +33,7 @@
   				<strong>Erro!</strong> Não foi possível adicionar o usuário. Por favor, reveja as informações!
 			</div>
 		<?php endif; ?>
-		<?php echo $this->Form->create('User', array('class' => 'form-horizontal')); ?>
+		<?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'onsubmit' => 'return Users.validatePasswordConfirmation()')); ?>
 			<?php $this->Form->inputDefaults(array('errorMessage' => false)); ?>
 			<div class="control-group">
 				<?php echo $this->Form->label('User.name', 'Nome do usuário: ', array("class" => 'control-label')); ?>

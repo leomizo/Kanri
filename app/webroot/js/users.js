@@ -1,17 +1,11 @@
 var Users = {};
 
-Users.load = function() {
-
-	$("#UserAddForm").submit(function(e) {
-		e.preventDefault();
-		if ($("#UserPassword").val() != $("#UserPasswordConfirm").val()) {
-			Users.showPasswordConfirmationError();
-		}
-		else {
-			this.submit();
-		}
-	});
-
+Users.validatePasswordConfirmation = function() {
+	if ($("#UserPassword").val() != $("#UserPasswordConfirm").val()) {
+		Users.showPasswordConfirmationError();
+		return false;
+	}
+	else return true;
 }
 
 Users.showPasswordConfirmationError = function() {
@@ -19,6 +13,4 @@ Users.showPasswordConfirmationError = function() {
 	$("#UserPasswordConfirm").parents(".control-group").addClass("error");
 	$("#UserPasswordConfirm").parent(".controls").children(".help-inline").show();
 }
-
-$(function(){Users.load()});
 

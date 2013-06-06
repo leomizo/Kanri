@@ -38,7 +38,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		?>
 	</head>
 
-	<body>
+	<body <?php if (isset($bodyAttr)) echo $bodyAttr; ?>>
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<a id="logo" class="brand" href="/dashboard">
@@ -73,12 +73,30 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-plus"></i> | Informações suplementares</a>
 						<ul class="dropdown-menu">
-							<li><a href="info_index.html#info-language">Línguas</a></li>
-							<li><a href="info_index.html#info-area">Segmentos</a></li>
-							<li><a href="info_index.html#info-job">Cargos</a></li>
-							<li><a href="info_index.html#info-formation">Formações</a></li>
-							<li><a href="info_index.html#info-misc">Cursos e Especializações</a></li>
-							<li><a href="info_index.html#info-local">Locais de trabalho</a></li>
+							<li>
+								<?php echo $this->Html->link('Idiomas', array('controller' => 'info', 'action' => 'index', '#' => 'info-language'));
+								?>
+							</li>
+							<li>
+								<?php echo $this->Html->link('Segmentos', array('controller' => 'info', 'action' => 'index', '#' => 'info-market-sector'));
+								?>
+							</li>
+							<li>
+								<?php echo $this->Html->link('Cargos', array('controller' => 'info', 'action' => 'index', '#' => 'info-job'));
+								?>
+							</li>
+							<li>
+								<?php echo $this->Html->link('Formações', array('controller' => 'info', 'action' => 'index', '#' => 'info-formation'));
+								?>
+							</li>
+							<li>
+								<?php echo $this->Html->link('Cursos e Especializações', array('controller' => 'info', 'action' => 'index', '#' => 'info-course'));
+								?>
+							</li>
+							<li>
+								<?php echo $this->Html->link('Locais de trabalho', array('controller' => 'info', 'action' => 'index', '#' => 'info-workplace'));
+								?>
+							</li>
 						</ul>
 					</li>
 					<li>

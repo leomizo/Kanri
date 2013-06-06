@@ -42,7 +42,7 @@ class User extends AppModel {
 
 	public function pagination($query = null, $sort = null, $asc = 'asc') {
 		$pagination = array('limit' => 10);
-		if ($search) $pagination['conditions'] = array('User.name LIKE' => '%'.$search.'%');
+		if ($query) $pagination['conditions'] = array('User.name LIKE' => '%'.$query.'%');
 		if ($sort) $pagination['order'] = array('User.'.$sort => $asc);
 		else $pagination['order'] = array("User.name" => 'asc');
 		return $pagination;
