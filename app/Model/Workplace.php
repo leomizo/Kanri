@@ -4,7 +4,9 @@ App::uses('AppModel', 'Model');
 
 class Workplace extends AppModel {
 
-	public $belongsTo = 'MarketSector';
+	public $belongsTo = array('MarketSector');
+
+	public $hasMany = array('Experience');
 
 	public function pagination($query = null, $sort = null, $page = 1) {
 		$pagination = array('limit' => 5, 'page' => $page, 'paramType' => 'querystring');

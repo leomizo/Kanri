@@ -18,16 +18,16 @@ CREATE TABLE `candidates` (
 	gender INT UNSIGNED,
 	civil_state INT UNSIGNED,
 	place_birth VARCHAR(64),
-	date_birth DATETIME,
+	birthdate DATE,
 	address VARCHAR(128),
 	neighborhood VARCHAR(64),
 	zip_code VARCHAR(16),
 	city_id BIGINT UNSIGNED,
 	home_phone VARCHAR(32),
-	comercial_phone VARCHAR(32),
+	work_phone VARCHAR(32),
 	mobile_phone VARCHAR(32),
 	personal_email VARCHAR(64),
-	comercial_email VARCHAR(64),
+	work_email VARCHAR(64),
 	skype_name VARCHAR(64),
 	international_experience TEXT,
 	income_clt DECIMAL(13, 2),
@@ -181,167 +181,7 @@ CREATE TABLE `companies` (
 	city_inscription VARCHAR(32)
 );
 
-INSERT INTO `companies` (name)
-VALUES ("A");
 
-INSERT INTO `companies` (name)
-VALUES ("B");
-
-INSERT INTO `companies` (name)
-VALUES ("C");
-
-INSERT INTO `companies` (name)
-VALUES ("D");
-
-INSERT INTO `companies` (name)
-VALUES ("E");
-
-INSERT INTO `companies` (name)
-VALUES ("F");
-
-INSERT INTO `companies` (name)
-VALUES ("G");
-
-INSERT INTO `companies` (name)
-VALUES ("H");
-
-INSERT INTO `companies` (name)
-VALUES ("I");
-
-INSERT INTO `companies` (name)
-VALUES ("J");
-
-INSERT INTO `companies` (name)
-VALUES ("K");
-
-INSERT INTO `companies` (name)
-VALUES ("L");
-
-INSERT INTO `companies` (name)
-VALUES ("M");
-
-INSERT INTO `companies` (name)
-VALUES ("N");
-
-INSERT INTO `companies` (name)
-VALUES ("O");
-
-INSERT INTO `companies` (name)
-VALUES ("P");
-
-INSERT INTO `companies` (name)
-VALUES ("Q");
-
-INSERT INTO `companies` (name)
-VALUES ("R");
-
-INSERT INTO `companies` (name)
-VALUES ("AA");
-
-INSERT INTO `companies` (name)
-VALUES ("BB");
-
-INSERT INTO `companies` (name)
-VALUES ("CC");
-
-INSERT INTO `companies` (name)
-VALUES ("DD");
-
-INSERT INTO `companies` (name)
-VALUES ("EE");
-
-INSERT INTO `companies` (name)
-VALUES ("FF");
-
-INSERT INTO `companies` (name)
-VALUES ("GG");
-
-INSERT INTO `companies` (name)
-VALUES ("HH");
-
-INSERT INTO `companies` (name)
-VALUES ("II");
-
-INSERT INTO `companies` (name)
-VALUES ("JJ");
-
-INSERT INTO `companies` (name)
-VALUES ("KK");
-
-INSERT INTO `companies` (name)
-VALUES ("LL");
-
-INSERT INTO `companies` (name)
-VALUES ("MM");
-
-INSERT INTO `companies` (name)
-VALUES ("NN");
-
-INSERT INTO `companies` (name)
-VALUES ("OO");
-
-INSERT INTO `companies` (name)
-VALUES ("PP");
-
-INSERT INTO `companies` (name)
-VALUES ("QQ");
-
-INSERT INTO `companies` (name)
-VALUES ("RR");
-
-INSERT INTO `companies` (name)
-VALUES ("AAA");
-
-INSERT INTO `companies` (name)
-VALUES ("BBB");
-
-INSERT INTO `companies` (name)
-VALUES ("CCC");
-
-INSERT INTO `companies` (name)
-VALUES ("DDD");
-
-INSERT INTO `companies` (name)
-VALUES ("EEE");
-
-INSERT INTO `companies` (name)
-VALUES ("FFF");
-
-INSERT INTO `companies` (name)
-VALUES ("GGG");
-
-INSERT INTO `companies` (name)
-VALUES ("HHH");
-
-INSERT INTO `companies` (name)
-VALUES ("III");
-
-INSERT INTO `companies` (name)
-VALUES ("JJJ");
-
-INSERT INTO `companies` (name)
-VALUES ("KKK");
-
-INSERT INTO `companies` (name)
-VALUES ("LLL");
-
-INSERT INTO `companies` (name)
-VALUES ("MMM");
-
-INSERT INTO `companies` (name)
-VALUES ("NNN");
-
-INSERT INTO `companies` (name)
-VALUES ("OOO");
-
-INSERT INTO `companies` (name)
-VALUES ("PPP");
-
-INSERT INTO `companies` (name)
-VALUES ("QQQ");
-
-INSERT INTO `companies` (name)
-VALUES ("RRR");
 
 
 

@@ -45156,3 +45156,827 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
 [main] - APP/webroot/index.php, line 109
 
+2013-06-06 20:00:15 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CompaniesController.php, line 10]
+Trace:
+CompaniesController::index() - APP/Controller/CompaniesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:00:15 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CompaniesController.php, line 11]
+Trace:
+CompaniesController::index() - APP/Controller/CompaniesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:00:15 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CompaniesController.php, line 12]
+Trace:
+CompaniesController::index() - APP/Controller/CompaniesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:00:15 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Companies/index.ctp, line 31]
+Trace:
+include - APP/View/Companies/index.ctp, line 31
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:38 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CompaniesController.php, line 10]
+Trace:
+CompaniesController::index() - APP/Controller/CompaniesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:38 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CompaniesController.php, line 11]
+Trace:
+CompaniesController::index() - APP/Controller/CompaniesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:38 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CompaniesController.php, line 12]
+Trace:
+CompaniesController::index() - APP/Controller/CompaniesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:38 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Companies/index.ctp, line 31]
+Trace:
+include - APP/View/Companies/index.ctp, line 31
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:42 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/UsersController.php, line 9]
+Trace:
+UsersController::index() - APP/Controller/UsersController.php, line 9
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:42 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/UsersController.php, line 10]
+Trace:
+UsersController::index() - APP/Controller/UsersController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:42 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/UsersController.php, line 11]
+Trace:
+UsersController::index() - APP/Controller/UsersController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:42 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Users/index.ctp, line 34]
+Trace:
+include - APP/View/Users/index.ctp, line 34
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 16]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 16
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 18]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 20]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 20
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 22]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 22
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 24]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 24
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 26]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 26
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_languages.ctp, line 1]
+Trace:
+include - APP/View/Info/_languages.ctp, line 1
+include - APP/View/Info/index.ctp, line 53
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_market_sectors.ctp, line 1]
+Trace:
+include - APP/View/Info/_market_sectors.ctp, line 1
+include - APP/View/Info/index.ctp, line 91
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_jobs.ctp, line 1]
+Trace:
+include - APP/View/Info/_jobs.ctp, line 1
+include - APP/View/Info/index.ctp, line 129
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_formations.ctp, line 1]
+Trace:
+include - APP/View/Info/_formations.ctp, line 1
+include - APP/View/Info/index.ctp, line 167
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_courses.ctp, line 1]
+Trace:
+include - APP/View/Info/_courses.ctp, line 1
+include - APP/View/Info/index.ctp, line 205
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:48 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_workplaces.ctp, line 1]
+Trace:
+include - APP/View/Info/_workplaces.ctp, line 1
+include - APP/View/Info/index.ctp, line 245
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:59 Notice: Notice (8): Undefined index: page in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 74]
+Trace:
+InfoController::get_workplaces() - APP/Controller/InfoController.php, line 74
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:01:59 Notice: Notice (8): Undefined variable: asc in [/Library/WebServer/Documents/Kanri/app/Model/Workplace.php, line 12]
+Trace:
+Workplace::pagination() - APP/Model/Workplace.php, line 12
+InfoController::get_workplaces() - APP/Controller/InfoController.php, line 75
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 16]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 16
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 18]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 20]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 20
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 22]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 22
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 24]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 24
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 26]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 26
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_languages.ctp, line 1]
+Trace:
+include - APP/View/Info/_languages.ctp, line 1
+include - APP/View/Info/index.ctp, line 53
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_market_sectors.ctp, line 1]
+Trace:
+include - APP/View/Info/_market_sectors.ctp, line 1
+include - APP/View/Info/index.ctp, line 91
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_jobs.ctp, line 1]
+Trace:
+include - APP/View/Info/_jobs.ctp, line 1
+include - APP/View/Info/index.ctp, line 129
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_formations.ctp, line 1]
+Trace:
+include - APP/View/Info/_formations.ctp, line 1
+include - APP/View/Info/index.ctp, line 167
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_courses.ctp, line 1]
+Trace:
+include - APP/View/Info/_courses.ctp, line 1
+include - APP/View/Info/index.ctp, line 205
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:14:45 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_workplaces.ctp, line 1]
+Trace:
+include - APP/View/Info/_workplaces.ctp, line 1
+include - APP/View/Info/index.ctp, line 245
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 16]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 16
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 18]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 20]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 20
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 22]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 22
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 24]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 24
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined variable: search in [/Library/WebServer/Documents/Kanri/app/Controller/InfoController.php, line 26]
+Trace:
+InfoController::index() - APP/Controller/InfoController.php, line 26
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_languages.ctp, line 1]
+Trace:
+include - APP/View/Info/_languages.ctp, line 1
+include - APP/View/Info/index.ctp, line 53
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_market_sectors.ctp, line 1]
+Trace:
+include - APP/View/Info/_market_sectors.ctp, line 1
+include - APP/View/Info/index.ctp, line 91
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_jobs.ctp, line 1]
+Trace:
+include - APP/View/Info/_jobs.ctp, line 1
+include - APP/View/Info/index.ctp, line 129
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_formations.ctp, line 1]
+Trace:
+include - APP/View/Info/_formations.ctp, line 1
+include - APP/View/Info/index.ctp, line 167
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_courses.ctp, line 1]
+Trace:
+include - APP/View/Info/_courses.ctp, line 1
+include - APP/View/Info/index.ctp, line 205
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:23:13 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/View/Info/_workplaces.ctp, line 1]
+Trace:
+include - APP/View/Info/_workplaces.ctp, line 1
+include - APP/View/Info/index.ctp, line 245
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:32:04 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:32:04 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:32:04 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:33:17 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:33:17 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:33:17 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:35:29 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:35:29 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 20:35:29 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:21:46 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:21:46 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:21:46 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:22:01 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:22:01 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:22:01 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:22:40 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:22:40 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:22:40 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:23:50 Notice: Notice (8): Undefined index: search in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 10]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 10
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:23:50 Notice: Notice (8): Undefined index: sort in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 11]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-06 21:23:50 Notice: Notice (8): Undefined index: asc in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 12]
+Trace:
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 12
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-09 02:18:28 Notice: Notice (8): Undefined variable: countries in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 1]
+Trace:
+include - APP/View/Candidates/add.ctp, line 1
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-09 02:18:28 Debug: 
+2013-06-09 02:19:23 Notice: Notice (8): Undefined variable: countries in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 1]
+Trace:
+include - APP/View/Candidates/add.ctp, line 1
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-09 02:19:52 Notice: Notice (8): Undefined variable: countries in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 1]
+Trace:
+include - APP/View/Candidates/add.ctp, line 1
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-09 02:20:15 Notice: Notice (8): Undefined variable: countries in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 1]
+Trace:
+include - APP/View/Candidates/add.ctp, line 1
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-09 02:20:43 Notice: Notice (8): Undefined variable: countries in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 1]
+Trace:
+include - APP/View/Candidates/add.ctp, line 1
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-09 02:23:05 Debug: Array
+(
+    [0] => Array
+        (
+            [Country] => Array
+                (
+                    [name] => Brasil
+                    [id] => 1
+                )
+
+            [State] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [Country] => Array
+                (
+                    [name] => Estados Unidos
+                    [id] => 2
+                )
+
+            [State] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [Country] => Array
+                (
+                    [name] => França
+                    [id] => 4
+                )
+
+            [State] => Array
+                (
+                )
+
+        )
+
+    [3] => Array
+        (
+            [Country] => Array
+                (
+                    [name] => Japão
+                    [id] => 3
+                )
+
+            [State] => Array
+                (
+                )
+
+        )
+
+)
+
+2013-06-09 02:25:11 Debug: Array
+(
+    [1] => Brasil
+    [2] => Estados Unidos
+    [4] => França
+    [3] => Japão
+)
+
