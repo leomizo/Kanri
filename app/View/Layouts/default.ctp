@@ -50,11 +50,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase"></i> | Candidatos</a>
 						<ul class="dropdown-menu">
 							<li>
-								<?php echo $this->Html->link('Visualizar candidato', array('controller' => 'users', 'action' => 'index'));
+								<?php echo $this->Html->link('Visualizar candidatos', array('controller' => 'candidates', 'action' => 'index'));
 								?>
 							</li>
 							<li><a href="candidate_search.html">Busca avançada de candidatos</a></li>
-							<li><a href="candidate_add.html">Adicionar candidato</a></li>
+							<li>
+								<?php echo $this->Html->link('Adicionar candidato', array('controller' => 'candidates', 'action' => 'add'));
+								?>
+							</li>
 						</ul>
 					</li>
 					<li class="dropdown">

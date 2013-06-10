@@ -9238,3 +9238,109 @@ Stack Trace:
 #1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
 #2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-06-10 15:22:01 Error: Fatal Error (1): Call to a member function save() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 30]
+2013-06-10 15:22:01 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 30, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 30, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 15:22:27 Error: [MissingActionException] Action CandidatesController::candidate_add.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'candidate_add.html',
+)
+Request URL: /candidates/candidate_add.html
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-10 17:18:47 Error: [MissingControllerException] Controller class CandidateAdd.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidateAdd.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /candidate_add.html
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-10 17:39:38 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_content.ctp, line 3]
+Trace:
+include - APP/View/Candidates/_modal_content.ctp, line 3
+include - APP/View/Candidates/add.ctp, line 425
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-10 17:39:54 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_content.ctp, line 3]
+Trace:
+include - APP/View/Candidates/_modal_content.ctp, line 3
+include - APP/View/Candidates/add.ctp, line 425
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-10 17:43:16 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_content.ctp, line 5]
+Trace:
+include - APP/View/Candidates/_modal_content.ctp, line 5
+include - APP/View/Candidates/add.ctp, line 425
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-10 17:48:57 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/_formations.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/_formations.ctp',
+)
+Request URL: /candidates/get_formations?page=2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName('_formations')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render('_formations', false)
+#2 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(77): Controller->render('_formations', false)
+#3 [internal function]: CandidatesController->get_formations()
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-06-10 17:49:01 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/_formations.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/_formations.ctp',
+)
+Request URL: /candidates/get_formations?page=2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName('_formations')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render('_formations', false)
+#2 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(77): Controller->render('_formations', false)
+#3 [internal function]: CandidatesController->get_formations()
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-06-10 19:33:23 Error: Fatal Error (1): Call to a member function save() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 30]
+2013-06-10 19:33:23 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 30, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 30, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

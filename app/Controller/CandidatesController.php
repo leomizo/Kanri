@@ -3,7 +3,7 @@
 class CandidatesController extends AppController {
 
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country');
+	public $uses = array('Country', 'Formation');
 
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
@@ -38,6 +38,9 @@ class CandidatesController extends AppController {
 			$countries = $this->Country->getCountryNames();
 			$countries['null'] = 'Outro...';
 			$this->set('countries', $countries);
+
+			$this->paginate = $this->Formation->pagination();
+			$this->set('formations', $this->paginate('Formation'));
 		}
 	}
 
@@ -64,6 +67,15 @@ class CandidatesController extends AppController {
 			$this->Candidate->delete($id);
 			$this->redirect(array('controller' => 'candidates', 'action' => 'index', 'delete'));
 		}
+	}
+
+	public function get_formations() {
+		$search = $this->request->query['search'];
+		$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+		$this->paginate = $this->Formation->pagination($search, $page);
+		$this->set('modal_data', $this->paginate('Formation'));
+		$this->set('modal_table', 'formation');
+		$this->render('_modal_content', false);
 	}
 	
 }

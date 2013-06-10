@@ -72,19 +72,21 @@
 						<table class='table table-striped table-bordered' style='width: 350px'>
 							<thead>
 								<tr>
-									<th style='text-align: center'>Sexo</th>
 									<th style='text-align: center'>Idade</th>
+									<th style='text-align: center'>Sexo</th>
+									<th style='width: 28px'></th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id='dependent-table'>
 
 							</tbody>
 						</table>
 						<?php echo $this->Form->label(null, 'Idade: ', array('div' => false, 'style' => 'display: inline'));
-							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'style' => 'margin-left: 10px'));
+							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'style' => 'margin-left: 10px', 'id' => 'dependent-age-input'));
 							  echo $this->Form->label(null, 'Sexo: ', array('div' => false, 'style' => 'display: inline; margin-left: 10px'));
-							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array('0' => 'Masculino', '1' => 'Feminino'), 'style' => 'margin-left: 10px'));
-						      echo $this->Form->button('Adicionar dependente', array('class' => 'btn btn-primary', 'style' => 'margin-left: 10px')); ?>
+							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array('0' => 'Masculino', '1' => 'Feminino'), 'style' => 'margin-left: 10px', 'id' => 'dependent-gender-input'));
+						      echo $this->Form->button('Adicionar dependente', array('class' => 'btn btn-primary', 'style' => 'margin-left: 10px', 'onclick' => 'Candidate.addDependent()', 'type' => 'button')); ?>
+						<div id='dependent-inputs' style='display: none'></div>
 					</div>
 				</div>
 				<div class="control-group">
@@ -167,30 +169,31 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Tipo de formação: </label>
+					<?php echo $this->Form->label('CandidateFormation', 'Tipo de formação: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
 						<div class="input-append">
-							<span id="formation-input" class="input-xxlarge uneditable-input"></span>
+							<span id="formation-name-input" class="input-xxlarge uneditable-input"></span>
 							<button class="btn" type="button" data-toggle="modal" data-target="#formation-modal"><i class="icon-search"></i></button>
 						</div>
+						<?php echo $this->Form->input(null, array('type' => 'hidden', 'div' => false, 'label' => false, 'id' => 'formation-input')); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
-					<label class="control-label">Instituição: </label>
-					<div class="controls">
-						<input id="formation-local-input" type="text" class="span5"/>
+					<?php echo $this->Form->label(null, 'Instituição: ', array('div' => false, 'class' => 'control-label')); ?>
+					<div class='controls'>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-xxlarge', 'id' => 'formation-institution-input')); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
-					<label class="control-label">Ano de conclusão: </label>
-					<div class="controls">
-						<input id="formation-year-input" type="text" class="input-small" placeholder="AAAA"/>
+					<?php echo $this->Form->label(null, 'Ano de conclusão: ', array('div' => false, 'class' => 'control-label')); ?>
+					<div class='controls'>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'id' => 'formation-year-input', 'placeholder' => 'AAAA')); ?>
 					</div>
 					<br />
 					<div class="controls">
-						<a class="btn btn-primary" id="add-formation-btn"><i class="icon-plus icon-white"></i> Adicionar formação</a>
-						<a class="btn btn-primary" id="update-formation-btn" style="display: none"><i class="icon-edit icon-white"></i> Atualizar formação</a>
-						<a class="btn" id="update-formation-cancel-btn" style="display: none">Cancelar</a>
+						<button type='button' class="btn btn-primary" id="add-formation-btn" onclick='Candidate.addCandidateFormation()'><i class="icon-plus icon-white"></i> Adicionar formação</button>
+						<button type='button' class="btn btn-primary" id="update-formation-btn" style="display: none" onclick="Candidate.updateCandidateFormation()"><i class="icon-edit icon-white"></i> Atualizar formação</a>
+						<button type='button' class="btn" id="update-formation-cancel-btn" style="display: none; margin-left: 10px" onclick="Candidate.cancelEditCandidateFormation()">Cancelar</a>
 					</div>
-
+					<div id='candidate-formation-inputs'></div>
 				</div>
 			</fieldset>
 
@@ -409,20 +412,15 @@
   	<div class="modal-header">
     	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     	<h3>Tipo de Formação</h3>
-    	<form class="form-search" style="margin: 10px 0 0 0">
-		  	<input type="text" class="input-medium search-query" style="width: 415px">
-		  	<button type="submit" class="btn" style="margin-left: 5px">Buscar</button>
-		</form>
+    	<?php echo $this->Form->create('FormationSearch', array('class' => 'form-search', 'style' => 'margin: 10px 0 0 0', 'onsubmit' => 'return Candidate.searchFormation(this)'));
+    		  echo $this->Form->input(null, array('div' => false, 'label' => false, 'type' => 'text', 'class' => 'input-medium search-query', 'style' => 'width: 415px'));
+    		  echo $this->Form->button('Buscar', array('div' => false, 'class' => 'btn', 'style' => 'margin-left: 5px'));
+		      echo $this->Form->end(); ?>
   	</div>
-  	<div class="modal-body">
-		<table class="table table-striped">
-			<tbody>
-				<tr><td><a class="modal-selector" target-input="#formation-input">Graduação em Administração</a></td></tr>
-				<tr><td><a class="modal-selector" target-input="#formation-input">Pós-graduação em Contabilidade</a></td></tr>
-				<tr><td><a class="modal-selector" target-input="#formation-input">MBA em TI</a></td></tr>
-				<tr><td><a class="modal-selector" target-input="#formation-input">Mestrado em Economia</a></td></tr>
-			</tbody>
-		</table>
+  	<div class="modal-body" id='formation-content'>
+  		<?php $modal_data = $formations;
+			  $modal_table = 'formation';
+			  include '_modal_content.ctp'; ?>
   	</div>
   	<div class="modal-footer">
   		<form class="form-horizontal">
@@ -433,7 +431,7 @@
   				</div>
   			</div>
   		</form>
-  		<a id="formation-new-add" class="btn btn-primary">Adicionar formação</a>
+  		<button type='button' class="btn btn-primary" onclick='Candidate.addFormation()'>Adicionar formação</button>
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
   	</div>
 </div>
