@@ -118,3 +118,9 @@ li {
 .table-simple-form > td:last-child > form > div > input, .table-simple-form > td:last-child > form > div > select {
 	margin-bottom: 0;
 }
+
+.btn-mini.btn-micro {
+	height: 14px;
+	line-height: 13px;
+	font-size: 8px;
+}

@@ -3,7 +3,7 @@
 class CandidatesController extends AppController {
 
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country', 'Formation');
+	public $uses = array('Country', 'Formation', 'Language');
 
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
@@ -41,6 +41,10 @@ class CandidatesController extends AppController {
 
 			$this->paginate = $this->Formation->pagination();
 			$this->set('formations', $this->paginate('Formation'));
+
+			$languages = $this->Language->getLanguageNames();
+			$languages['null'] = 'Outro...';
+			$this->set('languages', $languages);
 		}
 	}
 

@@ -12,4 +12,8 @@ class Language extends AppModel {
 		return $pagination;
 	}
 
+	public function getLanguageNames() {
+		return $this->find('list', array('fields' => array('Language.name'), 'order' => array('Language.name' => 'asc')));
+	}
+
 }

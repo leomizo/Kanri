@@ -92,7 +92,7 @@
 				<div class="control-group">
 					<?php echo $this->Form->label('Candidate.birthdate', 'Data de nascimento: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input('Candidate.birthdate', array('div' => false, 'label' => false, 'placeholder' => 'dd/MM/yyyy')); ?>
+						<?php echo $this->Form->input('Candidate.birthdate', array('div' => false, 'label' => false, 'placeholder' => 'dd/MM/yyyy', 'type' => 'text')); ?>
 					</div>
 				</div>
 				<div class="control-group">
@@ -158,6 +158,11 @@
 					<div class='controls'>
 						<?php echo $this->Form->input('Candidate.work_email', array('div' => false, 'label' => false)); ?>
 					</div>
+					<div class="control-group-internal-divider"></div>
+					<?php echo $this->Form->label('Candidate.skype_name', 'Nome Skype: ', array('div' => false, 'class' => 'control-label')); ?>
+					<div class='controls'>
+						<?php echo $this->Form->input('Candidate.skype_name', array('div' => false, 'label' => false)); ?>
+					</div>
 				</div>
 			</fieldset>
 
@@ -205,47 +210,41 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label">Idioma </label>
+					<?php echo $this->Form->label(null, 'Idioma: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<select id="language-select">
-							<option>Inglês</option>
-							<option>Espanhol</option>
-							<option>Francês</option>
-							<option>Alemão</option>
-							<option>Outro...</option>
-						</select>
-						<input id="language-input" class="input-xlarge" style="display: none" type="text" />
-						<a id="language-cancel-btn" class="btn btn-danger" style="display: none">Cancelar</a>
+						<?php echo $this->Form->input(null, array('id' => 'language-input', 'options' => $languages, 'empty' => 'Selecione...', 'div' => false, 'label' => false, 'onchange' => 'Candidate.selectLanguage(this)'));
+							  echo $this->Form->label(null, 'Qual? ', array('div' => false, 'style' => 'display: none; margin-left: 10px; margin-right: 10px', 'id' => 'language-name-label'));
+						      echo $this->Form->input(null, array('id' => 'language-name-input', 'class' => 'input-xlarge', 'style' => 'display: none', 'type' => 'text', 'div' => false, 'label' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
-					<label class="control-label">Nível</label>
+					<?php echo $this->Form->label(null, 'Nível ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
 						<label class="radio inline">
-							<input type="radio" name="language-level" value="Básico" checked>Básico
+							<input type="radio" name="language-level" value="0" label="Básico" checked />Básico
 						</label>
 						<label class="radio inline">
-							<input type="radio" name="language-level" value="Intermediário"> Intermediário
+							<input type="radio" name="language-level" value="1" label="Intermediário" /> Intermediário
 						</label>
 						<label class="radio inline">
-							<input type="radio" name="language-level" value="Avançado"> Avançado
+							<input type="radio" name="language-level" value="2" label="Avançado" /> Avançado
 						</label>
 						<label class="radio inline">
-							<input type="radio" name="language-level" value="Fluente"> Fluente
+							<input type="radio" name="language-level" value="3" label="Fluente" /> Fluente
 						</label>
 					</div>
 					<br />
 					<div class="controls">
-						<a id="add-language-btn" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar idioma</a>
+						<?php echo $this->Form->button($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar idioma', array('class' => 'btn btn-primary', 'type' => 'button', 'onclick' => "Candidate.addCandidateLanguage()")); ?>
 					</div>
+					<div id='candidate-language-inputs'></div>
 				</div>
 			</fieldset>
 
 			<fieldset>
 				<legend>Experiência internacional</legend>
 				<div class="control-group">
-					<label class="control-label">Experiência internacional</label>
 					<div class="controls">
-						<textarea rows="5"></textarea>
+						<?php echo $this->Form->input('Candidate.international_experience', array('div' => false, 'label' => false)); ?>
 					</div>
 				</div>
 			</fieldset>
@@ -253,19 +252,24 @@
 			<fieldset>
 				<legend>Remuneração</legend>
 				<div class="control-group">
-					<label class="control-label">Salário (em R$)</label>
+					<?php echo $this->Form->label('Candidate.income_type', 'Tipo de salário: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<input type="text" />
-						<select class="input-medium" style="margin-left: 15px">
-							<option>CLT</option>
-							<option>PJ</option>
-							<option>CLT e PJ</option>
-						</select>
+						<?php echo $this->Form->input('Candidate.income_type', array('div' => false, 'label' => false, 'class' => 'input-medium', 'options' => array('0' => 'CLT', '1' => 'PJ', '2' => 'CLT e PJ'), 'empty' => 'Selecione...', 'onchange' => 'Candidate.selectIncomeType(this)')); ?>
+					</div>
+					<div class="control-group-internal-divider income-clt-field" style='display: none'></div>
+					<?php echo $this->Form->label('Candidate.income_clt', 'Salário CLT (em R$): ', array('div' => false, 'class' => 'control-label income-clt-field', 'style' => 'display: none')); ?>
+					<div class="controls">
+						<?php echo $this->Form->input('Candidate.income_clt', array('div' => 'false', 'label' => false, 'style' => 'display: none', 'class' => 'income-clt-field', 'step' => '0.01', 'min' => '0')); ?>
+					</div>
+					<div class="control-group-internal-divider income-pj-field" style='display: none'></div>
+					<?php echo $this->Form->label('Candidate.income_pj', 'Salário PJ (em R$): ', array('div' => false, 'class' => 'control-label income-pj-field', 'style' => 'display: none')); ?>
+					<div class="controls">
+						<?php echo $this->Form->input('Candidate.income_pj', array('div' => 'false', 'label' => false, 'style' => 'display: none', 'class' => 'income-pj-field', 'step' => '0.01', 'min' => '0')); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
-					<label class="control-label">Bônus</label>
-					<div class="controls">
-						<input type="text" class="input-xlarge" />
+					<?php echo $this->Form->label('Candidate.income_bonus', 'Bônus: ', array('div' => false, 'class' => 'control-label')); ?>
+					<div class='controls'>
+						<?php echo $this->Form->input('Candidate.income_bonus', array('div' => false, 'label' => false)); ?>
 					</div>
 				</div>
 				<div class="control-group">

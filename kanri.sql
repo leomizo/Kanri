@@ -15,8 +15,8 @@ CREATE TABLE `candidates` (
 	first_name VARCHAR(32),
 	middle_names VARCHAR(128),
 	last_name VARCHAR(128),
-	gender INT UNSIGNED,
-	civil_state INT UNSIGNED,
+	gender TINYINT UNSIGNED,
+	civil_state TINYINT UNSIGNED,
 	place_birth VARCHAR(64),
 	birthdate DATE,
 	address VARCHAR(128),
@@ -30,17 +30,18 @@ CREATE TABLE `candidates` (
 	work_email VARCHAR(64),
 	skype_name VARCHAR(64),
 	international_experience TEXT,
+	income_type TINYINT UNSIGNED,
 	income_clt DECIMAL(13, 2),
 	income_pj DECIMAL(13, 2),
 	income_bonus VARCHAR(128),
 	health_insurance_name VARCHAR(128),
-	health_insurance_type INT UNSIGNED,
+	health_insurance_type TINYINT UNSIGNED,
 	life_insurance_name VARCHAR(128),
-	life_insurance_type INT UNSIGNED,
+	life_insurance_type TINYINT UNSIGNED,
 	life_insurance_coverage VARCHAR(32),
-	meal_ticket_type INT UNSIGNED,
+	meal_ticket_type TINYINT UNSIGNED,
 	meal_ticket_value DECIMAL(4, 2),
-	vehicle_type INT UNSIGNED,
+	vehicle_type TINYINT UNSIGNED,
 	vehicle_description VARCHAR(128),
 	fuel_voucher VARCHAR(64),
 	market_basket VARCHAR(64),
@@ -53,7 +54,7 @@ DROP TABLE IF EXISTS `dependents`;
 
 CREATE TABLE `dependents` (
 	id SERIAL PRIMARY KEY,
-	gender INT UNSIGNED,
+	gender TINYINT UNSIGNED,
 	date_birth DATETIME,
 	candidate_id BIGINT UNSIGNED NULL 
 );
@@ -109,7 +110,7 @@ DROP TABLE IF EXISTS `candidate_languages`;
 
 CREATE TABLE `candidate_languages` (
 	id SERIAL PRIMARY KEY,
-	level INT UNSIGNED,
+	level TINYINT UNSIGNED,
 	candidate_id BIGINT UNSIGNED NULL,
 	language_id BIGINT UNSIGNED NULL
 );

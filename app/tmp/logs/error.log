@@ -9344,3 +9344,115 @@ Stack Trace:
 #3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-10 21:40:01 Warning: Warning (2): PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) in [/Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/Database/Mysql.php, line 158]
+Trace:
+PDO::__construct() - [internal], line ??
+Mysql::connect() - CORE/Cake/Model/Datasource/Database/Mysql.php, line 158
+DboSource::__construct() - CORE/Cake/Model/Datasource/DboSource.php, line 262
+ConnectionManager::getDataSource() - CORE/Cake/Model/ConnectionManager.php, line 107
+Model::setDataSource() - CORE/Cake/Model/Model.php, line 3221
+Model::setSource() - CORE/Cake/Model/Model.php, line 1108
+Model::getDataSource() - CORE/Cake/Model/Model.php, line 3243
+Model::find() - CORE/Cake/Model/Model.php, line 2696
+Country::getCountryNames() - APP/Model/Country.php, line 10
+CandidatesController::add() - APP/Controller/CandidatesController.php, line 38
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-10 21:40:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('countries')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/app/Model/Country.php(10): Model->find('list', Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(38): Country->getCountryNames()
+#8 [internal function]: CandidatesController->add()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-10 22:43:57 Warning: Warning (2): PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) in [/Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/Database/Mysql.php, line 158]
+Trace:
+PDO::__construct() - [internal], line ??
+Mysql::connect() - CORE/Cake/Model/Datasource/Database/Mysql.php, line 158
+DboSource::__construct() - CORE/Cake/Model/Datasource/DboSource.php, line 262
+ConnectionManager::getDataSource() - CORE/Cake/Model/ConnectionManager.php, line 107
+Model::setDataSource() - CORE/Cake/Model/Model.php, line 3221
+Model::setSource() - CORE/Cake/Model/Model.php, line 1108
+Model::getDataSource() - CORE/Cake/Model/Model.php, line 3243
+Model::find() - CORE/Cake/Model/Model.php, line 2696
+Country::getCountryNames() - APP/Model/Country.php, line 10
+CandidatesController::add() - APP/Controller/CandidatesController.php, line 38
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-10 22:43:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('countries')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/app/Model/Country.php(10): Model->find('list', Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(38): Country->getCountryNames()
+#8 [internal function]: CandidatesController->add()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-10 22:44:36 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('countries')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/app/Model/Country.php(10): Model->find('list', Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(38): Country->getCountryNames()
+#8 [internal function]: CandidatesController->add()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-10 22:49:05 Error: Fatal Error (1): Call to a member function save() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 30]
+2013-06-10 22:49:05 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 30, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 30, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

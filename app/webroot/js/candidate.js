@@ -181,5 +181,73 @@ Candidate.correctCandidateFormationIndexes = function() {
 	});
 }
 
+// Languages
+
+Candidate.selectLanguage = function(select) {
+	if ($(select).val() == 'null') {
+		$('#language-name-label').css('display', 'inline');
+		$('#language-name-input').show(150);
+	}
+	else {
+		$('#language-name-input, #language-name-label').hide(100);
+		$('#language-name-input').val("");
+	}
+}
+
+Candidate.addCandidateLanguage = function() {
+	var languageIndex = $("#candidate-language-inputs > .language-level-input").length;
+	if ($("#language-input").val() == 'null') {
+		$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-name-input").val() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
+		$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-name-input" name="data[CandidateLanguage][' + languageIndex + '][Language][name]" value="' + $("#language-name-input").val() + '" index="' + languageIndex + '" />');
+	}
+	else {
+		$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-input > option:selected").text() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
+		$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-id-input" name="data[CandidateLanguage][' + languageIndex + '][language_id]" value="' + $("#language-input").val() + '" index="' + languageIndex + '" />');
+	}
+	$("#candidate-language-inputs").append('<input type="hidden" class="language-level-input" name="data[CandidateLanguage][' + languageIndex + '][level]" value="' + $("input[name='language-level']:checked").val() + '" index="' + languageIndex + '" />');
+	$("#language-input")[0].selectedIndex = 0;
+	Candidate.selectLanguage($("#language-input")[0]);
+}
+
+Candidate.removeCandidateLanguage = function(btn) {
+	var languageIndex = $('.language-remove-btn').index(btn);
+	$("#candidate-language-inputs > input[index='" + languageIndex + "']").remove();
+	$(btn).parents('li').remove();
+	Candidate.correctCandidateLanguageIndexes();
+}
+
+Candidate.correctCandidateLanguageIndexes = function() {
+	$('.language-name-input').each(function() {
+		$(this).attr('name', 'data[CandidateFormation][' + $('.language-input').index(this) + '][Language][name]');
+		$(this).attr('index', $('.language-input').index(this));
+	});
+	$('.language-id-input').each(function() {
+		$(this).attr('name', 'data[CandidateFormation][' + $('.language-input').index(this) + '][language_id]');
+		$(this).attr('index', $('.language-input').index(this));
+	});
+	$('.language-level-input').each(function() {
+		$(this).attr('name', 'data[CandidateFormation][' + $('.language-level-input').index(this) + '][level]');
+		$(this).attr('index', $('.language-level-input').index(this));
+	});
+}
+
+// Income
+
+Candidate.selectIncomeType = function(select) {
+	$(".income-clt-field, .income-pj-field").hide();
+	$("input.income-clt-field, input.income-pj-field").val("");
+	switch (parseInt($(select).val())) {
+	case 0:
+		$(".income-clt-field").show();
+		break;
+	case 1:
+		$(".income-pj-field").show();
+		break;
+	case 2:
+		$(".income-clt-field, .income-pj-field").show();
+		break;
+	}
+}
+
 
 
