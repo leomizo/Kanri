@@ -31,7 +31,6 @@ class MarketSectorsController extends AppController {
 
 	public function refresh_select() {
 		$include_add_option = $this->request->query['add'] == 'true';
-		$this->log($this->MarketSector->select_data($include_add_option), 'debug');
 		$this->set('data', $this->MarketSector->select_data($include_add_option));
 		$this->render('_options', false);
 	}

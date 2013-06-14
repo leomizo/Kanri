@@ -9456,3 +9456,432 @@ Stack Trace:
 #3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-12 18:37:25 Warning: Warning (2): PDO::__construct() [<a href='http://php.net/pdo.--construct'>pdo.--construct</a>]: [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) in [/Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/Database/Mysql.php, line 158]
+Trace:
+PDO::__construct() - [internal], line ??
+Mysql::connect() - CORE/Cake/Model/Datasource/Database/Mysql.php, line 158
+DboSource::__construct() - CORE/Cake/Model/Datasource/DboSource.php, line 262
+ConnectionManager::getDataSource() - CORE/Cake/Model/ConnectionManager.php, line 107
+Model::setDataSource() - CORE/Cake/Model/Model.php, line 3221
+Model::setSource() - CORE/Cake/Model/Model.php, line 1108
+Model::getDataSource() - CORE/Cake/Model/Model.php, line 3243
+Model::schema() - CORE/Cake/Model/Model.php, line 1319
+Model::hasField() - CORE/Cake/Model/Model.php, line 1402
+PaginatorComponent::validateSort() - CORE/Cake/Controller/Component/PaginatorComponent.php, line 388
+PaginatorComponent::paginate() - CORE/Cake/Controller/Component/PaginatorComponent.php, line 142
+Controller::paginate() - CORE/Cake/Controller/Controller.php, line 1074
+InfoController::index() - APP/Controller/InfoController.php, line 17
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-12 18:37:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /info
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('languages')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1402): Model->schema()
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(388): Model->hasField('name')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(Language), Array, Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Language', Array, Array)
+#10 /Library/WebServer/Documents/Kanri/app/Controller/InfoController.php(17): Controller->paginate('Language')
+#11 [internal function]: InfoController->index()
+#12 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(InfoController), Array)
+#13 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(InfoController), Object(CakeRequest), Object(CakeResponse))
+#15 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-06-12 19:35:09 Error: Fatal Error (1): Call to a member function pagination() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 45]
+2013-06-12 19:35:09 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 45, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 45, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-12 19:35:31 Error: Fatal Error (1): Call to a member function pagination() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 45]
+2013-06-12 19:35:31 Error: [FatalErrorException] Call to a member function pagination() on a non-object
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 45, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 45, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-12 19:47:54 Error: [NotFoundException] Not Found
+Request URL: /candidates/get_courses?page=2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Course', Array, Array)
+#1 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(92): Controller->paginate('Course')
+#2 [internal function]: CandidatesController->get_courses()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#6 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-06-12 19:51:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CandidateCourse.course_id' in 'field list'
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1343): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1205): DboSource->fetchAssociated(Object(Course), 'SELECT `Candida...', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1116): DboSource->queryAssociation(Object(Course), Object(CandidateCourse), 'hasMany', 'CandidateCourse', Array, Array, true, Array, 0, Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Course), Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Course', Array, Array)
+#9 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(46): Controller->paginate('Course')
+#10 [internal function]: CandidatesController->add()
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#12 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#14 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-06-12 19:52:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CandidateCourse.course_id' in 'field list'
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1343): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1205): DboSource->fetchAssociated(Object(Course), 'SELECT `Candida...', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1116): DboSource->queryAssociation(Object(Course), Object(CandidateCourse), 'hasMany', 'CandidateCourse', Array, Array, true, Array, 0, Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Course), Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Course', Array, Array)
+#9 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(46): Controller->paginate('Course')
+#10 [internal function]: CandidatesController->add()
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#12 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#14 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-06-12 19:52:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CandidateCourse.course_id' in 'field list'
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1343): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1205): DboSource->fetchAssociated(Object(Course), 'SELECT `Candida...', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1116): DboSource->queryAssociation(Object(Course), Object(CandidateCourse), 'hasMany', 'CandidateCourse', Array, Array, true, Array, 0, Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Course), Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Course', Array, Array)
+#9 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(46): Controller->paginate('Course')
+#10 [internal function]: CandidatesController->add()
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#12 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#14 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-06-12 20:00:34 Error: [MissingControllerException] Controller class CandidateSearch.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidateSearch.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /candidate_search.html
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-12 21:10:19 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 405]
+2013-06-12 21:10:19 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 405, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 405, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-12 21:10:20 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 405]
+2013-06-12 21:10:20 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 405, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 405, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-12 21:29:08 Error: Fatal Error (1): Call to a member function pagination() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 52]
+2013-06-12 21:29:08 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 52, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 52, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-12 21:35:51 Error: [InternalErrorException] Internal Server Error
+Request URL: /workplaces/edit
+Stack Trace:
+#0 [internal function]: WorkplacesController->edit()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(WorkplacesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(WorkplacesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-12 21:37:22 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_workplace.ctp, line 12]
+Trace:
+include - APP/View/Candidates/_modal_workplace.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+CandidatesController::get_workplaces() - APP/Controller/CandidatesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-12 21:39:47 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_workplace.ctp, line 12]
+Trace:
+include - APP/View/Candidates/_modal_workplace.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+CandidatesController::get_workplaces() - APP/Controller/CandidatesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-12 22:47:00 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_workplace.ctp, line 12]
+Trace:
+include - APP/View/Candidates/_modal_workplace.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+CandidatesController::get_workplaces() - APP/Controller/CandidatesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-12 22:47:29 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Candidates/_modal_workplace.ctp, line 12]
+Trace:
+include - APP/View/Candidates/_modal_workplace.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+CandidatesController::get_workplaces() - APP/Controller/CandidatesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-13 16:55:04 Warning: Warning (2): PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) in [/Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/Database/Mysql.php, line 158]
+Trace:
+PDO::__construct() - [internal], line ??
+Mysql::connect() - CORE/Cake/Model/Datasource/Database/Mysql.php, line 158
+DboSource::__construct() - CORE/Cake/Model/Datasource/DboSource.php, line 262
+ConnectionManager::getDataSource() - CORE/Cake/Model/ConnectionManager.php, line 107
+Model::setDataSource() - CORE/Cake/Model/Model.php, line 3221
+Model::setSource() - CORE/Cake/Model/Model.php, line 1108
+Model::getDataSource() - CORE/Cake/Model/Model.php, line 3243
+Model::find() - CORE/Cake/Model/Model.php, line 2696
+Country::getCountryNames() - APP/Model/Country.php, line 10
+CandidatesController::add() - APP/Controller/CandidatesController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-13 16:55:04 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('countries')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/app/Model/Country.php(10): Model->find('list', Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(44): Country->getCountryNames()
+#8 [internal function]: CandidatesController->add()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-13 17:42:23 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 405]
+2013-06-13 17:42:23 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 405, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 405, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-13 17:42:24 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 405]
+2013-06-13 17:42:24 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 405, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 405, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-13 18:01:17 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/Controller/WorkplacesController.php, line 15]
+2013-06-13 18:01:17 Error: [InternalErrorException] Internal Server Error
+Request URL: /workplaces/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 15, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 15, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-13 18:01:23 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/Controller/WorkplacesController.php, line 15]
+2013-06-13 18:01:23 Error: [InternalErrorException] Internal Server Error
+Request URL: /workplaces/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 15, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 15, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-13 18:02:01 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/Controller/WorkplacesController.php, line 16]
+2013-06-13 18:02:01 Error: [InternalErrorException] Internal Server Error
+Request URL: /workplaces/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 16, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 16, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-13 18:02:45 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/Controller/WorkplacesController.php, line 16]
+2013-06-13 18:02:45 Error: [InternalErrorException] Internal Server Error
+Request URL: /workplaces/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 16, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 16, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-13 18:12:19 Error: [MissingActionException] Action CandidatesController::market_sectors() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'market_sectors',
+)
+Request URL: /candidates/market_sectors/refresh_select
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-13 19:19:04 Error: Fatal Error (1): Call to a member function save() on a non-object in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 36]
+2013-06-13 19:19:04 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Library/WebSer...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Library/WebSer...', 36, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Library/WebSer...', 36, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:52:08 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:52:08 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:52:10 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:52:10 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:52:40 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:52:40 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:52:41 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:52:41 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:53:09 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:53:09 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:53:10 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:53:10 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-14 01:53:19 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 463]
+2013-06-14 01:53:19 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 463, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 463, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -14,12 +14,12 @@
 
 <div class="pagination pagination-centered" style='margin-top: 0'>
 	<ul class='pager' style='margin-right: 15px'>
-		<?php echo $this->Paginator->prev("← Anterior", array('tag' => 'li', 'class' => 'previous', 'model' => 'Formation'), null, array('class' => 'hidden-element')); ?>
+		<?php echo $this->Paginator->prev("← Anterior", array('tag' => 'li', 'class' => 'previous', 'model' => ucfirst($modal_table)), null, array('class' => 'hidden-element')); ?>
 	</ul>
 	<ul>
-		<?php echo $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'span', 'currentClass' => 'active', 'separator' => false, 'first' => 'Primeiro', 'last' => 'Último', 'model' => 'Formation')); ?>
+		<?php echo $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'span', 'currentClass' => 'active', 'separator' => false, 'first' => 'Primeiro', 'last' => 'Último', 'model' => ucfirst($modal_table))); ?>
 	</ul>
 	<ul class='pager' style='margin-left: 15px'>
-		<?php echo $this->Paginator->next("Próximo →", array('tag' => 'li', 'class' => 'next', 'model' => 'Formation'), null, array('class' => 'hidden-element')); ?>
+		<?php echo $this->Paginator->next("Próximo →", array('tag' => 'li', 'class' => 'next', 'model' => ucfirst($modal_table)), null, array('class' => 'hidden-element')); ?>
 	</ul>
 </div>

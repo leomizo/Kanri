@@ -6,6 +6,7 @@ class CoursesController extends AppController {
 		if ($this->request->is('post')) {
 			if($this->Course->save($this->request->data)) {
 				$this->response->statusCode(200);
+				$this->response->body(json_encode(array('id' => $this->Course->id)));
 				return $this->response;
 			} else throw new InternalErrorException();
 		}

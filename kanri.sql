@@ -39,6 +39,8 @@ CREATE TABLE `candidates` (
 	life_insurance_name VARCHAR(128),
 	life_insurance_type TINYINT UNSIGNED,
 	life_insurance_coverage VARCHAR(32),
+	dental_insurance VARCHAR(128),
+	private_pension VARCHAR(128),
 	meal_ticket_type TINYINT UNSIGNED,
 	meal_ticket_value DECIMAL(4, 2),
 	vehicle_type TINYINT UNSIGNED,
@@ -47,7 +49,8 @@ CREATE TABLE `candidates` (
 	market_basket VARCHAR(64),
 	training_courses VARCHAR(256),
 	profit_sharing VARCHAR(128),
-	comments TEXT
+	comments TEXT,
+	cv MEDIUMBLOB
 );
 
 DROP TABLE IF EXISTS `dependents`;
@@ -129,7 +132,7 @@ CREATE TABLE `candidate_courses` (
 	institution VARCHAR(128),
 	conclusion_year VARCHAR(4),
 	candidate_id BIGINT UNSIGNED NULL,
-	formation_id BIGINT UNSIGNED NULL
+	course_id BIGINT UNSIGNED NULL
 );
 
 DROP TABLE IF EXISTS `market_sectors`;

@@ -6,6 +6,7 @@ class JobsController extends AppController {
 		if ($this->request->is('post')) {
 			if($this->Job->save($this->request->data)) {
 				$this->response->statusCode(200);
+				$this->response->body(json_encode(array('id' => $this->Job->id)));
 				return $this->response;
 			} else throw new InternalErrorException();
 		}

@@ -3,7 +3,13 @@
 class CandidatesController extends AppController {
 
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country', 'Formation', 'Language');
+	public $uses = array('Country', 
+						 'Formation', 
+						 'Language', 
+						 'Course', 
+						 'Job', 
+						 'Workplace',
+						 'MarketSector');
 
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
@@ -42,9 +48,20 @@ class CandidatesController extends AppController {
 			$this->paginate = $this->Formation->pagination();
 			$this->set('formations', $this->paginate('Formation'));
 
+			$this->paginate = $this->Course->pagination();
+			$this->set('courses', $this->paginate('Course'));
+
 			$languages = $this->Language->getLanguageNames();
 			$languages['null'] = 'Outro...';
 			$this->set('languages', $languages);
+
+			$this->paginate = $this->Workplace->pagination();
+			$this->set('workplaces', $this->paginate('Workplace'));
+
+			$this->paginate = $this->Job->pagination();
+			$this->set('jobs', $this->paginate('Job'));
+
+			$this->set('market_sectors', $this->MarketSector->select_data(true));
 		}
 	}
 
@@ -80,6 +97,32 @@ class CandidatesController extends AppController {
 		$this->set('modal_data', $this->paginate('Formation'));
 		$this->set('modal_table', 'formation');
 		$this->render('_modal_content', false);
+	}
+
+	public function get_courses() {
+		$search = $this->request->query['search'];
+		$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+		$this->paginate = $this->Course->pagination($search, $page);
+		$this->set('modal_data', $this->paginate('Course'));
+		$this->set('modal_table', 'course');
+		$this->render('_modal_content', false);
+	}
+
+	public function get_jobs() {
+		$search = $this->request->query['search'];
+		$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+		$this->paginate = $this->Job->pagination($search, $page);
+		$this->set('modal_data', $this->paginate('Job'));
+		$this->set('modal_table', 'job');
+		$this->render('_modal_content', false);
+	}
+
+	public function get_workplaces() {
+		$search = $this->request->query['search'];
+		$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+		$this->paginate = $this->Workplace->pagination($search, null, $page);
+		$this->set('workplaces', $this->paginate('Workplace'));
+		$this->render('_modal_workplace', false);
 	}
 	
 }

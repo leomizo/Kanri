@@ -89,7 +89,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 								?>
 							</li>
 							<li>
-								<?php echo $this->Html->link('Formações', array('controller' => 'info', 'action' => 'index', '#' => 'info-formation'));
+								<?php echo $this->Html->link('Formações acadêmicas', array('controller' => 'info', 'action' => 'index', '#' => 'info-formation'));
 								?>
 							</li>
 							<li>

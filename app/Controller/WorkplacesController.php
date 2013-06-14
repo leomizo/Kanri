@@ -12,9 +12,10 @@ class WorkplacesController extends AppController {
 				unset($this->request->data['MarketSector']['id']);
 				$new_sector = true;
 			}
+			$this->log($this->request->data, 'debug');
 			if ($this->Workplace->saveAll($this->request->data)) {
 				$this->response->statusCode(200);
-				$this->response->body(json_encode(array('new_sector' => $new_sector)));
+				$this->response->body(json_encode(array('new_sector' => $new_sector, 'id' => $this->Workplace->id)));
 				return $this->response;
 			} else throw new InternalErrorException();
 		}
