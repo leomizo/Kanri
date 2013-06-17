@@ -3,13 +3,17 @@
 class CandidatesController extends AppController {
 
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country', 
+	public $uses = array('Model', 
+						 'AppModel',
+						 'Candidate',
+						 'Country', 
 						 'Formation', 
 						 'Language', 
 						 'Course', 
 						 'Job', 
 						 'Workplace',
-						 'MarketSector');
+						 'MarketSector',
+						 'Curriculum');
 
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
@@ -19,12 +23,13 @@ class CandidatesController extends AppController {
 		$asc = $this->request->query['asc'] == 'desc' ? 'desc' : 'asc';
 		
 		$this->paginate = $this->Candidate->pagination($search, $sort, $asc);
-		$this->set('candidate', $this->paginate('Candidate'));
+		$this->set('candidates', $this->paginate('Candidate'));
+
 	}
 
 	public function show($id) {
 		if ($id) {
-			$candidate = $this->Candidate->findById($id);
+			$candidate = $this->Candidate->find('first', array('conditions' => array('Candidate.id' => $id), 'recursive' => 3));
 			if ($candidate) {
 				$this->Set('candidate', $candidate);
 			}
@@ -33,7 +38,9 @@ class CandidatesController extends AppController {
 
 	public function add() {
 		if ($this->request->is('post')) {
-			if ($this->Candidate->save($this->request->data)) {
+			unset($this->request->data['language-level']);
+
+			if ($this->Candidate->saveAll($this->request->data, array('deep' => true))) {
 				$this->redirect(array('controller' => 'candidates', 'action' => 'index', 'add'));
 			}
 			else {
@@ -123,6 +130,13 @@ class CandidatesController extends AppController {
 		$this->paginate = $this->Workplace->pagination($search, null, $page);
 		$this->set('workplaces', $this->paginate('Workplace'));
 		$this->render('_modal_workplace', false);
+	}
+
+	public function curriculum($id) {
+		$this->Candidate->id = $id;
+		$curriculum = $this->Curriculum->findById($this->Candidate->field('curriculum_id'));
+		$this->set('curriculum', $curriculum);
+		$this->layout = 'ajax';
 	}
 	
 }

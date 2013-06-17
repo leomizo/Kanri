@@ -440,7 +440,7 @@ Candidate.addExperience = function() {
 	$("#experience-inputs").append("<input class='form-workplace' name='data[Experience][" + experienceIndex + "][workplace_id]' type='hidden' value='" + $("#workplace-id-input").text() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 	$("#experience-inputs").append("<input class='form-job' name='data[Experience][" + experienceIndex + "][job_id]' type='hidden' value='" + $("#job-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 	$("#experience-inputs").append("<input class='form-start' name='data[Experience][" + experienceIndex + "][start_date]' type='hidden' value='" + $("#experience-start-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-	$("#experience-inputs").append("<input class='form-end' name='data[Experience][" + experienceIndex + "][end_date]' type='hidden' value='" + $("#experience-end-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+	$("#experience-inputs").append("<input class='form-end' name='data[Experience][" + experienceIndex + "][final_date]' type='hidden' value='" + $("#experience-end-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 	$("#experience-inputs").append("<input class='form-report' name='data[Experience][" + experienceIndex + "][report]' type='hidden' value='" + $("#experience-report-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 	$("#experience-inputs").append("<input class='form-team' name='data[Experience][" + experienceIndex + "][team]' type='hidden' value='" + $("#experience-team-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 
@@ -627,7 +627,7 @@ Candidate.correctExperienceIndexes = function() {
 	});
 	$("#experience-inputs > .form-end").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-end").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-end").index(this) + '][end_date]');
+		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-end").index(this) + '][final_date]');
 	});
 	$("#experience-inputs > .form-report").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-report").index(this));

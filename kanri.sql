@@ -50,7 +50,7 @@ CREATE TABLE `candidates` (
 	training_courses VARCHAR(256),
 	profit_sharing VARCHAR(128),
 	comments TEXT,
-	cv MEDIUMBLOB
+	curriculum_id BIGINT UNSIGNED
 );
 
 DROP TABLE IF EXISTS `dependents`;
@@ -58,7 +58,7 @@ DROP TABLE IF EXISTS `dependents`;
 CREATE TABLE `dependents` (
 	id SERIAL PRIMARY KEY,
 	gender TINYINT UNSIGNED,
-	date_birth DATETIME,
+	birthdate DATE,
 	candidate_id BIGINT UNSIGNED NULL 
 );
 
@@ -183,6 +183,16 @@ CREATE TABLE `companies` (
 	cnpj VARCHAR(32),
 	state_inscription VARCHAR(32),
 	city_inscription VARCHAR(32)
+);
+
+DROP TABLE IF EXISTS `curriculums`;
+
+CREATE TABLE `curriculums` (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(128) NOT NULL,
+	type VARCHAR(32) NOT NULL,
+	size INT NOT NULL,
+	content MEDIUMBLOB NOT NULL
 );
 
 

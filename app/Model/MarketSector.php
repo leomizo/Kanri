@@ -4,8 +4,6 @@ App::uses('AppModel', 'Model');
 
 class MarketSector extends AppModel {
 
-	public $hasMany = 'Workplace';
-
 	public function pagination($query = null, $page = 1) {
 		$pagination = array('limit' => 5, 'page' => $page, 'order' => array('MarketSector.name' => 'asc'), 'paramType' => 'querystring');
 		if ($query) $pagination['conditions'] = array('MarketSector.name LIKE' => '%'.$query.'%');

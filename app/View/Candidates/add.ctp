@@ -67,7 +67,7 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<?php echo $this->Form->label('Dependent', 'Dependentes: ', array('div' => false, 'class' => 'control-label')); ?>
+					<?php echo $this->Form->label(null, 'Dependentes: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
 						<table class='table table-striped table-bordered' style='width: 350px'>
 							<thead>
@@ -82,9 +82,9 @@
 							</tbody>
 						</table>
 						<?php echo $this->Form->label(null, 'Idade: ', array('div' => false, 'style' => 'display: inline'));
-							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'style' => 'margin-left: 10px', 'id' => 'dependent-age-input'));
+							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'style' => 'margin-left: 10px', 'id' => 'dependent-age-input', 'name' => false));
 							  echo $this->Form->label(null, 'Sexo: ', array('div' => false, 'style' => 'display: inline; margin-left: 10px'));
-							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array('0' => 'Masculino', '1' => 'Feminino'), 'style' => 'margin-left: 10px', 'id' => 'dependent-gender-input'));
+							  echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array('0' => 'Masculino', '1' => 'Feminino'), 'style' => 'margin-left: 10px', 'id' => 'dependent-gender-input', 'name' => false));
 						      echo $this->Form->button('Adicionar dependente', array('class' => 'btn btn-primary', 'style' => 'margin-left: 10px', 'onclick' => 'Candidate.addDependent()', 'type' => 'button')); ?>
 						<div id='dependent-inputs' style='display: none'></div>
 					</div>
@@ -111,18 +111,18 @@
 						<?php echo $this->Form->input('Candidate.zip_code', array('div' => false, 'label' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
-					<?php echo $this->Form->label('Country.id', 'País: ', array('div' => false, 'class' => 'control-label')); ?>
+					<?php echo $this->Form->label('City.State.Country.id', 'País: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input('Country.id', array('div' => false, 'label' => false, 'options' => $countries, 'empty' => 'Selecione...', 'onchange' => 'Candidate.selectCountry(this)'));
-							  echo $this->Form->label('Country.name', 'Qual? ', array('div' => false, 'style' => 'display: none; margin-left: 10px', 'id' => 'country-name-label'));
-							  echo $this->Form->input('Country.name', array('div' => false, 'label' => false, 'style' => 'display: none; margin-left: 10px', 'id' => 'country-name-input')); ?>
+						<?php echo $this->Form->input('City.State.Country.id', array('div' => false, 'label' => false, 'options' => $countries, 'empty' => 'Selecione...', 'onchange' => 'Candidate.selectCountry(this)'));
+							  echo $this->Form->label('City.State.Country.name', 'Qual? ', array('div' => false, 'style' => 'display: none; margin-left: 10px', 'id' => 'country-name-label'));
+							  echo $this->Form->input('City.State.Country.name', array('div' => false, 'label' => false, 'style' => 'display: none; margin-left: 10px', 'id' => 'country-name-input')); ?>
 					</div>
 					<div class="control-group-internal-divider" id='state-divider' style='display: none'></div>
-					<?php echo $this->Form->label('State.id', 'Estado / Província: ', array('div' => false, 'class' => 'control-label', 'style' => 'display: none', 'id' => 'state-label')); ?>
+					<?php echo $this->Form->label('City.State.id', 'Estado / Província: ', array('div' => false, 'class' => 'control-label', 'style' => 'display: none', 'id' => 'state-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input('State.id', array('div' => false, 'label' => false, 'options' => array(), 'onchange' => 'Candidate.selectState(this)', 'id' => 'state-input', 'style' => 'display: none'));
-							  echo $this->Form->label('State.name', 'Qual? ', array('div' => false, 'style' => 'display: none; margin-left: 10px; margin-right: 10px', 'id' => 'state-name-label'));
-							  echo $this->Form->input('State.name', array('div' => false, 'label' => false, 'style' => 'display: none', 'id' => 'state-name-input')); ?>
+						<?php echo $this->Form->input('City.State.id', array('div' => false, 'label' => false, 'options' => array(), 'onchange' => 'Candidate.selectState(this)', 'id' => 'state-input', 'style' => 'display: none'));
+							  echo $this->Form->label('City.State.name', 'Qual? ', array('div' => false, 'style' => 'display: none; margin-left: 10px; margin-right: 10px', 'id' => 'state-name-label'));
+							  echo $this->Form->input('City.State.name', array('div' => false, 'label' => false, 'style' => 'display: none', 'id' => 'state-name-input')); ?>
 					</div>
 					<div class="control-group-internal-divider" id='city-divider' style='display: none'></div>
 					<?php echo $this->Form->label('City.id', 'Cidade: ', array('div' => false, 'class' => 'control-label', 'style' => 'display: none', 'id' => 'city-label')); ?>
@@ -174,23 +174,23 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<?php echo $this->Form->label('CandidateFormation', 'Tipo de formação: ', array('div' => false, 'class' => 'control-label')); ?>
+					<?php echo $this->Form->label(null, 'Tipo de formação: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
 						<div class="input-append">
 							<span id="formation-name-input" class="input-xxlarge uneditable-input"></span>
 							<button class="btn" type="button" data-toggle="modal" data-target="#formation-modal"><i class="icon-search"></i></button>
 						</div>
-						<?php echo $this->Form->input(null, array('type' => 'hidden', 'div' => false, 'label' => false, 'id' => 'formation-input')); ?>
+						<?php echo $this->Form->input(null, array('type' => 'hidden', 'div' => false, 'label' => false, 'id' => 'formation-input', 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Instituição: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-xxlarge', 'id' => 'formation-institution-input')); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-xxlarge', 'id' => 'formation-institution-input', 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Ano de conclusão: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'id' => 'formation-year-input', 'placeholder' => 'AAAA')); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'id' => 'formation-year-input', 'placeholder' => 'AAAA', 'name' => false)); ?>
 					</div>
 					<br />
 					<div class="controls">
@@ -198,8 +198,8 @@
 						<button type='button' class="btn btn-primary" id="update-formation-btn" style="display: none" onclick="Candidate.updateCandidateFormation()"><i class="icon-edit icon-white"></i> Atualizar formação</a>
 						<button type='button' class="btn" id="update-formation-cancel-btn" style="display: none; margin-left: 10px" onclick="Candidate.cancelEditCandidateFormation()">Cancelar</a>
 					</div>
-					<div id='candidate-formation-inputs'></div>
 				</div>
+				<div id='candidate-formation-inputs'></div>
 			</fieldset>
 
 			<fieldset>
@@ -212,9 +212,9 @@
 				<div class="control-group">
 					<?php echo $this->Form->label(null, 'Idioma: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('id' => 'language-input', 'options' => $languages, 'empty' => 'Selecione...', 'div' => false, 'label' => false, 'onchange' => 'Candidate.selectLanguage(this)'));
+						<?php echo $this->Form->input(null, array('id' => 'language-input', 'options' => $languages, 'empty' => 'Selecione...', 'div' => false, 'label' => false, 'onchange' => 'Candidate.selectLanguage(this)', 'name' => false));
 							  echo $this->Form->label(null, 'Qual? ', array('div' => false, 'style' => 'display: none; margin-left: 10px; margin-right: 10px', 'id' => 'language-name-label'));
-						      echo $this->Form->input(null, array('id' => 'language-name-input', 'class' => 'input-xlarge', 'style' => 'display: none', 'type' => 'text', 'div' => false, 'label' => false)); ?>
+						      echo $this->Form->input(null, array('id' => 'language-name-input', 'class' => 'input-xlarge', 'style' => 'display: none', 'type' => 'text', 'div' => false, 'label' => false, 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Nível ', array('div' => false, 'class' => 'control-label')); ?>
@@ -254,17 +254,17 @@
 							<span id="course-name-input" class="input-xxlarge uneditable-input"></span>
 							<button class="btn" type="button" data-toggle="modal" data-target="#course-modal"><i class="icon-search"></i></button>
 						</div>
-						<?php echo $this->Form->input(null, array('type' => 'hidden', 'div' => false, 'label' => false, 'id' => 'course-input')); ?>
+						<?php echo $this->Form->input(null, array('type' => 'hidden', 'div' => false, 'label' => false, 'id' => 'course-input', 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Instituição: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-xxlarge', 'id' => 'course-institution-input')); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-xxlarge', 'id' => 'course-institution-input', 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Ano de conclusão: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class='controls'>
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'id' => 'course-year-input', 'placeholder' => 'AAAA')); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'class' => 'input-small', 'id' => 'course-year-input', 'placeholder' => 'AAAA', 'name' => false)); ?>
 					</div>
 					<br />
 					<div class="controls">
@@ -422,23 +422,23 @@
 				<div id="period-group" class="control-group">
 					<?php echo $this->Form->label(null, 'Início: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('id' => 'experience-start-input', 'type' => 'text', 'placeholder' => 'MM/aaaa', 'div' => false, 'label' => false)); ?>
+						<?php echo $this->Form->input(null, array('id' => 'experience-start-input', 'type' => 'text', 'placeholder' => 'MM/aaaa', 'div' => false, 'label' => false, 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Final: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('id' => 'experience-end-input', 'type' => 'text', 'placeholder' => 'MM/aaaa', 'div' => false, 'label' => false)); ?>
+						<?php echo $this->Form->input(null, array('id' => 'experience-end-input', 'type' => 'text', 'placeholder' => 'MM/aaaa', 'div' => false, 'label' => false, 'name' => false)); ?>
 					</div>
 				</div>
 				<div id="details-group" class="control-group">
 					<?php echo $this->Form->label(null, 'Reporte: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('id' => 'experience-report-input', 'type' => 'text', 'div' => false, 'label' => false)); ?>
+						<?php echo $this->Form->input(null, array('id' => 'experience-report-input', 'type' => 'text', 'div' => false, 'label' => false, 'name' => false)); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label(null, 'Equipe: ', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('id' => 'experience-team-input', 'type' => 'text', 'div' => false, 'label' => false)); ?>
+						<?php echo $this->Form->input(null, array('id' => 'experience-team-input', 'type' => 'text', 'div' => false, 'label' => false, 'name' => false)); ?>
 					</div>
 				</div>
 				<div class="control-group">
@@ -459,20 +459,19 @@
 				<legend>Adicionar currículo</legend>
 				<div class='control-group'>
 					<div class='controls'>
-						<?php echo $this->Form->file('Candidate.cv'); ?>
+						<input name='data[Curriculum]' type='file' />
 					</div>
 				</div>
 			</fieldset>
 
+			<div class="form-actions" style="padding-left: 20px">
+				<?php echo $this->Form->submit('Adicionar', array('class' => 'btn btn-primary', 'div' => false));
+					  echo $this->Html->link('Voltar', array('action' => 'index'), array('class' => 'btn', 'style' => 'margin-left: 10px')); ?>
+			</div>
+
 		<?php echo $this->Form->end(); ?>
 	</div>
 
-	<div class="row-fluid">
-		<div class="form-actions">
-			<button class="btn btn-primary">Adicionar</button>
-			<a href="candidate_index.html" class="btn">Voltar</a>
-		</div>
-	</div>
 </div>
 
 <div id="formation-modal" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static">

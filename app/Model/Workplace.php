@@ -6,8 +6,6 @@ class Workplace extends AppModel {
 
 	public $belongsTo = array('MarketSector');
 
-	public $hasMany = array('Experience');
-
 	public function pagination($query = null, $sort = null, $page = 1) {
 		$pagination = array('limit' => 5, 'page' => $page, 'paramType' => 'querystring');
 		if ($query) $pagination['conditions'] = array('Workplace.name LIKE' => '%'.$query.'%');
