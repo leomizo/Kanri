@@ -617,7 +617,7 @@
 
 			<div class="form-actions" style="padding-left: 20px">
 				<?php echo $this->Form->submit('Atualizar', array('class' => 'btn btn-primary', 'div' => false));
-					  echo $this->Html->link('Voltar', array('action' => 'index'), array('class' => 'btn', 'style' => 'margin-left: 10px')); ?>
+					  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 10px', 'onclick' => 'parent.history.back()')); ?>
 			</div>
 
 		<?php echo $this->Form->end(); ?>

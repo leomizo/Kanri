@@ -12,6 +12,8 @@ class Candidate extends AppModel {
 						    'CandidateCourse' => array('dependent' => true),
 						    'Experience' => array('dependent' => true));
 
+	public $virtualFields = array('name' => 'CONCAT(Candidate.first_name, " ", Candidate.middle_names, " ", Candidate.last_name)');
+
 	public function afterFind($results, $primary = null) {
 		foreach ($results as &$candidate) {
 			if (isset($candidate['Candidate']['birthdate'])) {
@@ -130,11 +132,21 @@ class Candidate extends AppModel {
 	}
 
 	public function pagination($search = null, $sort = null, $asc = 'asc') {
-		$pagination = array('limit' => 10);
-		if ($search) $pagination['conditions'] = array('Candidate.first_name LIKE' => '%'.$search.'%');
+		$pagination = array('limit' => 5);
+		if ($search) $pagination['conditions'] = array('Candidate.name LIKE' => '%'.$search.'%');
 		if ($sort) $pagination['order'] = array('Candidate.'.$sort => $asc);
-		else $pagination['order'] = array("Candidate.first_name" => 'asc');
-		$pagination['fields'] = array('Candidate.first_name', 'Candidate.middle_names', 'Candidate.last_name', 'Candidate.city_id', 'Candidate.birthdate');
+		else $pagination['order'] = array("Candidate.name" => 'asc');
+		$pagination['fields'] = array('Candidate.name', 'Candidate.city_id', 'Candidate.birthdate');
+		$pagination['recursive'] = 3;
+		return $pagination;
+	}
+
+	public function searchPagination($list, $sort = null, $asc = 'asc') {
+		$pagination = array('limit' => 10);
+		$pagination['conditions'] = array("Candidate.id" => $list);
+		if ($sort) $pagination['order'] = array('Candidate.'.$sort => $asc);
+		else $pagination['order'] = array("Candidate.name" => 'asc');
+		$pagination['fields'] = array('Candidate.name', 'Candidate.city_id', 'Candidate.birthdate');
 		$pagination['recursive'] = 3;
 		return $pagination;
 	}
@@ -148,9 +160,7 @@ class Candidate extends AppModel {
 		$joined_experiences = false;
 		$joined_workplaces = false;
 
-		if ($parameters['name'] != '') array_push($conditions, array("OR" => array('Candidate.first_name LIKE' => '%'.$parameters['name'].'%',
-										   'Candidate.middle_names LIKE' => '%'.$parameters['name'].'%',
-										   'Candidate.last_name LIKE' => '%'.$parameters['name'].'%')));
+		if ($parameters['name'] != '') array_push($conditions, array('Candidate.name LIKE' => '%'.$parameters['name'].'%'));
 
 		if ($parameters['job'] != '') {
 			array_push($joins, array("table" => "experiences", "alias" => "Experience", "type" => "INNER", "conditions" => array("Experience.candidate_id = Candidate.id")));
@@ -221,7 +231,7 @@ class Candidate extends AppModel {
 
 		if ($parameters['additional'] != '') array_push($conditions, array("Candidate.additional_info LIKE" => '%'.$parameters['additional'].'%'));
 
-		if ($parameters['income'] != '0.00') array_push($conditions, array("(Candidate.income_clt + Candidate.income_pj) <" => $parameters['income']));
+		if ($parameters['income'] != '0.00') array_push($conditions, array("(Candidate.income_clt + Candidate.income_pj) <=" => $parameters['income']));
 		
 		if ($parameters['age'] != '') {
 			if (count($parameters['age']) == 1) array_push($conditions, $this->ageGroupToQuery($parameters['age'][0]));
@@ -234,7 +244,14 @@ class Candidate extends AppModel {
 			}
 		}
 
-		return $this->find('all', array('fields' => array("Candidate.id"), 'conditions' => array("AND" => $conditions), "joins" => $joins, "group" => $groups, 'recursive' => -1));
+		$candidates = $this->find('all', array('fields' => array("Candidate.id"), 'conditions' => array("AND" => $conditions), "joins" => $joins, "group" => $groups, 'recursive' => -1));
+		$list = array();
+
+		foreach ($candidates as $candidate) {
+			array_push($list, $candidate['Candidate']['id']);
+		}
+
+		return $list;
 		
 	}
 

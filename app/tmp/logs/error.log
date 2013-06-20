@@ -24745,3 +24745,548 @@ Request URL: /
 Stack Trace:
 #0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-20 01:10:17 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'income_clt' cannot be null
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1744): DboSource->create(Object(Candidate), Array, Array)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2247): Model->save(Array, Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2054): Model->saveAssociated(Array, Array)
+#6 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(70): Model->saveAll(Array, Array)
+#7 [internal function]: CandidatesController->add()
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-20 01:10:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'income_clt' cannot be null
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1744): DboSource->create(Object(Candidate), Array, Array)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2247): Model->save(Array, Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2054): Model->saveAssociated(Array, Array)
+#6 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(70): Model->saveAll(Array, Array)
+#7 [internal function]: CandidatesController->add()
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-20 01:12:11 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 315]
+2013-06-20 01:12:11 Error: [FatalErrorException] parse error, expecting `')''
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 315)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 315, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 315, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:12:13 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/View/Candidates/add.ctp, line 315]
+2013-06-20 01:12:13 Error: [FatalErrorException] parse error, expecting `')''
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 315)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 315, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 315, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:13:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'income_clt' cannot be null
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1744): DboSource->create(Object(Candidate), Array, Array)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2247): Model->save(Array, Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2054): Model->saveAssociated(Array, Array)
+#6 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(70): Model->saveAll(Array, Array)
+#7 [internal function]: CandidatesController->add()
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-20 01:35:33 Error: [MissingControllerException] Controller class ShowController could not be found.
+Exception Attributes: array (
+  'class' => 'ShowController',
+  'plugin' => NULL,
+)
+Request URL: /show/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:35:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Candidate.curriculum_id' in 'field list'
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1552): Model->find('first', Array)
+#6 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(264): Model->field('curriculum_id')
+#7 [internal function]: CandidatesController->curriculum('1')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-20 01:36:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Candidate.curriculum_id' in 'field list'
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1552): Model->find('first', Array)
+#6 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(264): Model->field('curriculum_id')
+#7 [internal function]: CandidatesController->curriculum('1')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-20 01:36:58 Error: Fatal Error (1): Cannot use object of type Curriculum as array in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 264]
+2013-06-20 01:36:58 Error: [FatalErrorException] Cannot use object of type Curriculum as array
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Library/WebSer...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:37:39 Error: Fatal Error (1): Cannot use object of type Candidate as array in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 264]
+2013-06-20 01:37:39 Error: [FatalErrorException] Cannot use object of type Candidate as array
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Library/WebSer...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:38:28 Error: Fatal Error (1): Cannot use object of type Candidate as array in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 264]
+2013-06-20 01:38:28 Error: [FatalErrorException] Cannot use object of type Candidate as array
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Library/WebSer...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:38:29 Error: Fatal Error (1): Cannot use object of type Candidate as array in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 264]
+2013-06-20 01:38:29 Error: [FatalErrorException] Cannot use object of type Candidate as array
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Library/WebSer...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:39:01 Error: Fatal Error (1): Cannot use object of type Candidate as array in [/Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php, line 264]
+2013-06-20 01:39:01 Error: [FatalErrorException] Cannot use object of type Candidate as array
+Request URL: /candidates/curriculum/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Library/WebSer...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Library/WebSer...', 264, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 01:49:21 Error: [MissingActionException] Action CandidatesController::process_index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'process_index.html',
+)
+Request URL: /candidates/process_index.html
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-20 14:06:49 Warning: Warning (2): PDO::__construct() [<a href='http://php.net/pdo.--construct'>pdo.--construct</a>]: [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) in [/Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/Database/Mysql.php, line 158]
+Trace:
+PDO::__construct() - [internal], line ??
+Mysql::connect() - CORE/Cake/Model/Datasource/Database/Mysql.php, line 158
+DboSource::__construct() - CORE/Cake/Model/Datasource/DboSource.php, line 262
+ConnectionManager::getDataSource() - CORE/Cake/Model/ConnectionManager.php, line 107
+Model::setDataSource() - CORE/Cake/Model/Model.php, line 3221
+Model::setSource() - CORE/Cake/Model/Model.php, line 1108
+Model::getDataSource() - CORE/Cake/Model/Model.php, line 3243
+Model::schema() - CORE/Cake/Model/Model.php, line 1319
+Model::hasField() - CORE/Cake/Model/Model.php, line 1402
+PaginatorComponent::validateSort() - CORE/Cake/Controller/Component/PaginatorComponent.php, line 388
+PaginatorComponent::paginate() - CORE/Cake/Controller/Component/PaginatorComponent.php, line 142
+Controller::paginate() - CORE/Cake/Controller/Controller.php, line 1074
+CandidatesController::index() - APP/Controller/CandidatesController.php, line 29
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-20 14:06:49 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /candidates
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('candidates')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1402): Model->schema()
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(388): Model->hasField('first_name')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(Candidate), Array, Array)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#10 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(29): Controller->paginate('Candidate')
+#11 [internal function]: CandidatesController->index()
+#12 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#13 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#15 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-06-20 14:07:09 Warning: Warning (2): PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] Connection refused (trying to connect via tcp://127.0.0.1:3306) in [/Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/Database/Mysql.php, line 158]
+Trace:
+PDO::__construct() - [internal], line ??
+Mysql::connect() - CORE/Cake/Model/Datasource/Database/Mysql.php, line 158
+DboSource::__construct() - CORE/Cake/Model/Datasource/DboSource.php, line 262
+ConnectionManager::getDataSource() - CORE/Cake/Model/ConnectionManager.php, line 107
+Model::setDataSource() - CORE/Cake/Model/Model.php, line 3221
+Model::setSource() - CORE/Cake/Model/Model.php, line 1108
+Model::getDataSource() - CORE/Cake/Model/Model.php, line 3243
+Model::find() - CORE/Cake/Model/Model.php, line 2696
+MarketSector::select_data() - APP/Model/MarketSector.php, line 15
+CandidatesController::search() - APP/Controller/CandidatesController.php, line 211
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-20 14:07:09 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /candidates/search
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('market_sectors')
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#6 /Library/WebServer/Documents/Kanri/app/Model/MarketSector.php(15): Model->find('all', Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(211): MarketSector->select_data()
+#8 [internal function]: CandidatesController->search()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 14:24:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL   ORDER BY `Candidate`.`first_name` asc  LIMIT 10' at line 1
+Request URL: /candidates/search
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(209): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->search()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 14:25:07 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL   ORDER BY `Candidate`.`first_name` asc  LIMIT 10' at line 1
+Request URL: /candidates/search
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(209): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->search()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 14:53:44 Error: [MissingControllerException] Controller class CandidateSearch.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidateSearch.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /candidate_search.html
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:54:39 Error: [MissingControllerException] Controller class CandidateSearch.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidateSearch.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /candidate_search.html
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:55:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ('1')   ORDER BY `Candidate`.`first_name` asc  LIMIT 10' at line 1
+Request URL: /candidates/search
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(210): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->search()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 14:55:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ('1')   ORDER BY `Candidate`.`first_name` asc  LIMIT 10' at line 1
+Request URL: /candidates/search
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(210): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->search()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 14:56:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ('1')   ORDER BY `Candidate`.`first_name` asc  LIMIT 10' at line 1
+Request URL: /candidates/search
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(210): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->search()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 15:47:39 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc  LIMIT 5' at line 1
+Request URL: /candidates/index/sort:name/direction:asc/page:1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(29): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->index()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 15:48:17 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc  LIMIT 5' at line 1
+Request URL: /candidates/index/sort:name/direction:asc/page:1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Candida...', Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Candida...', Array, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Candida...', false)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(2696): DboSource->read(Object(Candidate), Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#7 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(29): Controller->paginate('Candidate')
+#8 [internal function]: CandidatesController->index()
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 17:08:43 Error: [NotFoundException] Not Found
+Request URL: /candidates/index/page:2/sort:name/direction:asc?search=ana
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Candidate', Array, Array)
+#1 /Library/WebServer/Documents/Kanri/app/Controller/CandidatesController.php(27): Controller->paginate('Candidate')
+#2 [internal function]: CandidatesController->index()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#6 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-06-20 17:10:39 Error: [MissingControllerException] Controller class ModelsController could not be found.
+Exception Attributes: array (
+  'class' => 'ModelsController',
+  'plugin' => NULL,
+)
+Request URL: /models?search=ana
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 17:10:48 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 17:10:51 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 17:10:54 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 17:10:56 Error: [MissingControllerException] Controller class ModelsController could not be found.
+Exception Attributes: array (
+  'class' => 'ModelsController',
+  'plugin' => NULL,
+)
+Request URL: /models?search=ana
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 17:16:50 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:17:12 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:18:41 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:18:52 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:20:04 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:20:06 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:20:16 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-20 17:20:41 Error: [MissingViewException] View file "/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Library/WebServer/Documents/Kanri/app/View/Candidates/delete.ctp',
+)
+Request URL: /candidates/delete
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

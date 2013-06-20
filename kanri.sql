@@ -32,8 +32,8 @@ CREATE TABLE `candidates` (
 	skype_name VARCHAR(64),
 	international_experience TEXT,
 	income_type TINYINT UNSIGNED,
-	income_clt DECIMAL(13, 2) NOT NULL,
-	income_pj DECIMAL(13, 2) NOT NULL,
+	income_clt DECIMAL(13, 2) DEFAULT 0.00,
+	income_pj DECIMAL(13, 2) DEFAULT 0.00,
 	income_bonus VARCHAR(128),
 	health_insurance_name VARCHAR(128),
 	health_insurance_type TINYINT UNSIGNED,
@@ -43,7 +43,7 @@ CREATE TABLE `candidates` (
 	dental_insurance VARCHAR(128),
 	private_pension VARCHAR(128),
 	meal_ticket_type TINYINT UNSIGNED,
-	meal_ticket_value DECIMAL(4, 2),
+	meal_ticket_value DECIMAL(6, 2),
 	vehicle_type TINYINT UNSIGNED,
 	vehicle_description VARCHAR(128),
 	fuel_voucher VARCHAR(64),
@@ -212,6 +212,70 @@ CREATE TABLE `curriculums` (
 	content MEDIUMBLOB NOT NULL,
 	candidate_id BIGINT UNSIGNED,
 	created DATETIME NULL 
+);
+
+DROP TABLE IF EXISTS `processes`;
+
+CREATE TABLE `processes` (
+	id SERIAL PRIMARY KEY,
+	candidate_id BIGINT UNSIGNED,
+	company_id BIGINT UNSIGNED,
+	created DATETIME NULL
+);
+
+DROP TABLE IF EXISTS `events`;
+
+CREATE TABLE `events` (
+	id SERIAL PRIMARY KEY,
+	event_type TINYINT,
+	occurrence DATETIME,
+	process_id BIGINT UNSIGNED,
+	created DATETIME NULL
+);
+
+DROP TABLE IF EXISTS `event_contacts`;
+
+CREATE TABLE `event_contacts` (
+	id SERIAL PRIMARY KEY,
+	event_id BIGINT UNSIGNED,
+	contact_reason VARCHAR(256),
+	contact_sender VARCHAR(128),
+	contact_receiver VARCHAR(128),
+	contact_type TINYINT,
+	contact_type_description VARCHAR(32),
+	created DATETIME NULL
+);
+
+DROP TABLE IF EXISTS `event_interviews`;
+
+CREATE TABLE `event_interviews` (
+	id SERIAL PRIMARY KEY,
+	event_id BIGINT UNSIGNED,
+	attendance BOOLEAN,
+	contact_type TINYINT,
+	contact_type_description VARCHAR(32),
+	attendance_justification VARCHAR(256),
+	created DATETIME NULL
+);
+
+DROP TABLE IF EXISTS `event_feedbacks`;
+
+CREATE TABLE `event_feedbacks` (
+	id SERIAL PRIMARY KEY,
+	event_id BIGINT UNSIGNED,
+	feedback TINYINT,
+	comments TEXT,
+	created DATETIME NULL
+);
+
+DROP TABLE IF EXISTS `event_conclusions`;
+
+CREATE TABLE `event_conclusions`(
+	id SERIAL PRIMARY KEY,
+	event_id BIGINT UNSIGNED,
+	result BOOLEAN,
+	comments TEXT,
+	created DATETIME NULL
 );
 
 

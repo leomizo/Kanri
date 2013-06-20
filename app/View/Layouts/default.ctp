@@ -32,7 +32,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			echo $this->Html->css(array('bootstrap.min.css', 'bootstrap-datetimepicker.min.css', 'layout.css'));
 			echo $this->fetch('css');
 
-			echo $this->Html->script(array('jquery-2.0.0.min.js', 'bootstrap.min.js', 'bootstrap-datetimepicker.min.js','layout.js'));
+			echo $this->Html->script(array('jquery-2.0.0.min.js', 'bootstrap.min.js', 'bootstrap-datetimepicker.min.js','kanri.js'));
 			echo $this->fetch('script');
 
 		?>
@@ -106,7 +106,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						</ul>
 					</li>
 					<li>
-						<a href="process_index.html"><i class="icon-eye-open"></i> | Processos</a>
+						<?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-eye-open')).' | Processos', array('controller' => 'processes', 'action' => 'index'), array('escape' => false)); ?>
 					</li>
 				</ul>
 				<ul class="nav pull-right">

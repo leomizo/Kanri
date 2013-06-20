@@ -138,7 +138,7 @@
 			<dl class="dl-horizontal">
 				<?php if ($candidate['Candidate']['income_type'] == 0 || $candidate['Candidate']['income_type'] == 2): ?>
 				<dt>Salário CLT:</dt>
-				<dd><?php echo avoid_blank($candidate['Candidate']['income_clt']); ?></dd>
+				<dd><?php echo formatCurrency($candidate['Candidate']['income_clt']); ?></dd>
 				<?php endif; ?>
 				<?php if ($candidate['Candidate']['income_type'] == 1 || $candidate['Candidate']['income_type'] == 2): ?>
 				<dt>Salário PJ:</dt>
@@ -169,7 +169,7 @@
 				<dd><?php echo avoid_blank($candidate['Candidate']['private_pension']); ?></dd>
 				<br />
 				<dt>Vale Refeição:</dt>
-				<dd><?php if ($candidate['Candidate']['meal_ticket_value'] != '') echo $candidate['Candidate']['meal_ticket_value'].' '.$candidate['Candidate']['meal_ticket_type_string']; else echo '-'; ?></dd>
+				<dd><?php if ($candidate['Candidate']['meal_ticket_value'] != '') echo formatCurrency($candidate['Candidate']['meal_ticket_value']).' '.$candidate['Candidate']['meal_ticket_type_string']; else echo '-'; ?></dd>
 				<br />
 				<dt>Veículo:</dt>
 				<dd><?php echo avoid_blank($candidate['Candidate']['vehicle_description']); ?></dd>
@@ -247,7 +247,7 @@
 		<div class="form-actions">
 			<?php echo $this->Html->link('Editar', array('action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-primary')); 
 				  echo $this->Form->postLink('Remover', array('action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-left: 5px'), 'Você está certo disso?');
-				  echo $this->Html->link('Voltar', array('action' => 'index'), array('class' => 'btn', 'style' => 'margin-left: 5px'));
+				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()'));
 			?>
 		</div>
 	</div>

@@ -304,12 +304,12 @@
 					<div class="control-group-internal-divider income-clt-field" style='display: none'></div>
 					<?php echo $this->Form->label('Candidate.income_clt', 'Salário CLT (em R$): ', array('div' => false, 'class' => 'control-label income-clt-field', 'style' => 'display: none')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input('Candidate.income_clt', array('div' => 'false', 'label' => false, 'style' => 'display: none', 'class' => 'income-clt-field', 'step' => '0.01', 'min' => '0')); ?>
+						<?php echo $this->Form->input('Candidate.income_clt', array('div' => false, 'label' => false, 'style' => 'display: none', 'class' => 'income-clt-field', 'step' => '0.01', 'min' => '0')); ?>
 					</div>
 					<div class="control-group-internal-divider income-pj-field" style='display: none'></div>
 					<?php echo $this->Form->label('Candidate.income_pj', 'Salário PJ (em R$): ', array('div' => false, 'class' => 'control-label income-pj-field', 'style' => 'display: none')); ?>
 					<div class="controls">
-						<?php echo $this->Form->input('Candidate.income_pj', array('div' => 'false', 'label' => false, 'style' => 'display: none', 'class' => 'income-pj-field', 'step' => '0.01', 'min' => '0')); ?>
+						<?php echo $this->Form->input('Candidate.income_pj', array('div' => false, 'label' => false, 'style' => 'display: none', 'class' => 'income-pj-field', 'step' => '0.01', 'min' => '0')); ?>
 					</div>
 					<div class="control-group-internal-divider"></div>
 					<?php echo $this->Form->label('Candidate.income_bonus', 'Bônus: ', array('div' => false, 'class' => 'control-label')); ?>

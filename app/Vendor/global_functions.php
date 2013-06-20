@@ -19,6 +19,11 @@ function sortByStartDate($a, $b) {
 	return strcmp($b['start_date'], $a['start_date']);
 }
 
+function formatCurrency($value = 0.0) {
+	$value = bcadd(doubleval($value), 0, 2);
+	return "R$ ".$value;
+}
+
 function monthNumberToMonthString($monthNumber) {
 	switch ($monthNumber) {
 		case 1:

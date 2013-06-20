@@ -22,10 +22,8 @@ class CandidatesController extends AppController {
 		if ($success_message) $this->Set('success_message', $success_message);
 		
 		$search = $this->request->query['search'];
-		$sort = $this->request->query['sort'];
-		$asc = $this->request->query['asc'] == 'desc' ? 'desc' : 'asc';
 		
-		$this->paginate = $this->Candidate->pagination($search, $sort, $asc);
+		$this->paginate = $this->Candidate->pagination($search);
 		$this->set('candidates', $this->paginate('Candidate'));
 
 	}
@@ -203,24 +201,36 @@ class CandidatesController extends AppController {
 	}
 
 	public function search() {
+		$this->set('market_sectors', $this->MarketSector->select_data());
+
+		$countries = $this->Country->getCountryNames();
+		$this->set('countries', $countries);
+
+		$this->paginate = $this->Formation->pagination();
+		$this->set('formations', $this->paginate('Formation'));
+
+		$this->paginate = $this->Job->pagination();
+		$this->set('jobs', $this->paginate('Job'));
+
+		$languages = json_encode($this->Language->getLanguageNames());
+		$this->set('languages', $languages);
+	}
+
+	public function results() {
 		if ($this->request->is('post')) {
-			//var_dump($this->request->data);
-			var_dump($this->Candidate->performSearch($this->request->data));
+			$candidate_list = $this->Candidate->performSearch($this->request->data);
+			if (count($candidate_list) > 0) {
+				$this->paginate = $this->Candidate->searchPagination($candidate_list);
+				$this->set('candidates', $this->paginate('Candidate'));
+				$this->Session->write('Search', $candidate_list);
+			}
+			else $this->set('candidates', array());
 		}
 		else {
-			$this->set('market_sectors', $this->MarketSector->select_data());
-
-			$countries = $this->Country->getCountryNames();
-			$this->set('countries', $countries);
-
-			$this->paginate = $this->Formation->pagination();
-			$this->set('formations', $this->paginate('Formation'));
-
-			$this->paginate = $this->Job->pagination();
-			$this->set('jobs', $this->paginate('Job'));
-
-			$languages = json_encode($this->Language->getLanguageNames());
-			$this->set('languages', $languages);
+			if ($this->Session->check('Search')) {
+				$this->paginate = $this->Candidate->searchPagination($this->Session->read('Search'));
+				$this->set('candidates', $this->paginate('Candidate'));
+			}
 		}
 	}
 
@@ -260,9 +270,7 @@ class CandidatesController extends AppController {
 	}
 
 	public function curriculum($id) {
-		$this->Candidate->id = $id;
-		$curriculum = $this->Curriculum->findById($this->Candidate->field('curriculum_id'));
-		$this->set('curriculum', $curriculum);
+		$this->set('curriculum', $this->Candidate->Curriculum->findByCandidateId($id));
 	}
 	
 }

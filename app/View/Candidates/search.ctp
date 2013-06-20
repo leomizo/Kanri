@@ -25,7 +25,7 @@
 	</div>
 
 	<div class="row-fluid">
-		<?php echo $this->Form->create(null, array('class' => 'form-horizontal')); ?>
+		<?php echo $this->Form->create('Candidate', array('class' => 'form-horizontal', 'controller' => 'candidates', 'action' => 'results')); ?>
 			<fieldset class="control-group">
 				<legend>Filtro por nomes</legend>
 				<label class="control-label">Nomes</label>
