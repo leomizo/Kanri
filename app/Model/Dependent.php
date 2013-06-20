@@ -6,7 +6,7 @@ class Dependent extends AppModel {
 	
 	public function afterFind($results, $primary = false) {
 		foreach ($results as &$dependent) {
-			$dependent['Dependent']['age'] = age_from_dob($dependent['Dependent']['birthdate']).' anos';
+			$dependent['Dependent']['age'] = age_from_dob($dependent['Dependent']['birthdate']);
 			if (isset($dependent['Dependent']['gender'])) {
 				switch ($dependent['Dependent']['gender']) {
 					case 0:

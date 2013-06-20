@@ -10,10 +10,4 @@ class City extends AppModel {
 		return $this->find('list', array('fields' => array('City.name'), 'conditions' => array('City.state_id' => $state_id), 'order' => array('City.name' => 'asc')));
 	}
 
-	public function afterFind($results, $primary = null) {
-		foreach ($results as &$city) {
-			
-		}
-		return $results;
-	}	
 }

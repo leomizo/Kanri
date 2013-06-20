@@ -53,7 +53,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 								<?php echo $this->Html->link('Visualizar candidatos', array('controller' => 'candidates', 'action' => 'index'));
 								?>
 							</li>
-							<li><a href="candidate_search.html">Busca avançada de candidatos</a></li>
+							<li>
+								<?php echo $this->Html->link('Busca avançado de candidatos', array('controller' => 'candidates', 'action' => 'search'));
+								?>
+							</li>
 							<li>
 								<?php echo $this->Html->link('Adicionar candidato', array('controller' => 'candidates', 'action' => 'add'));
 								?>

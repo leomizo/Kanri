@@ -4,12 +4,13 @@ App::uses('AppModel', 'Model');
 
 class Candidate extends AppModel {
 
-	public $belongsTo = array('City', 'Curriculum');
-	public $hasMany = array('Dependent', 
-						    'CandidateFormation',
-						    'CandidateLanguage',
-						    'CandidateCourse',
-						    'Experience');
+	public $belongsTo = array('City');
+	public $hasOne = array('Curriculum' => array('dependent' => true));
+	public $hasMany = array('Dependent' => array('dependent' => true), 
+						    'CandidateFormation' => array('dependent' => true),
+						    'CandidateLanguage' => array('dependent' => true),
+						    'CandidateCourse' => array('dependent' => true),
+						    'Experience' => array('dependent' => true));
 
 	public function afterFind($results, $primary = null) {
 		foreach ($results as &$candidate) {
@@ -116,6 +117,7 @@ class Candidate extends AppModel {
 				foreach ($experiences as $key => &$value) {
 					usort($value, 'sortByStartDate');
 				}
+				$candidate['Candidate']['current_job'] = $candidate["Experience"][0]['Job']['name'];
 				$candidate['Experience'] = $experiences;
 			}
 		}
@@ -124,25 +126,6 @@ class Candidate extends AppModel {
 
 	public function beforeSave($options = array()) {
 		$this->data['Candidate']['birthdate'] = date('Y-m-d', strtotime($this->data['Candidate']['birthdate']));
-		if ($this->data['City']['State']['Country']['id'] == 'null' || $this->data['City']['State']['Country']['id'] == '') {
-			unset($this->data['City']['State']['Country']['id']);
-		}
-		else {
-			unset($this->data['City']['State']['Country']['name']);
-		}
-		if ($this->data['City']['State']['id'] == 'null' || $this->data['City']['State']['id'] == '') {
-			unset($this->data['City']['State']['id']);
-		}
-		else {
-			unset($this->data['City']['State']['name']);
-		}
-		if ($this->data['City']['id'] == 'null' || $this->data['City']['id'] == '') {
-			unset($this->data['City']['id']);
-		}
-		else {
-			unset($this->data['City']['name']);
-		}
-
 		return true;
 	}
 
@@ -154,6 +137,131 @@ class Candidate extends AppModel {
 		$pagination['fields'] = array('Candidate.first_name', 'Candidate.middle_names', 'Candidate.last_name', 'Candidate.city_id', 'Candidate.birthdate');
 		$pagination['recursive'] = 3;
 		return $pagination;
+	}
+
+	public function performSearch($parameters = array()) {
+
+		$conditions = array();
+		$joins = array();
+		$groups = array();
+
+		$joined_experiences = false;
+		$joined_workplaces = false;
+
+		if ($parameters['name'] != '') array_push($conditions, array("OR" => array('Candidate.first_name LIKE' => '%'.$parameters['name'].'%',
+										   'Candidate.middle_names LIKE' => '%'.$parameters['name'].'%',
+										   'Candidate.last_name LIKE' => '%'.$parameters['name'].'%')));
+
+		if ($parameters['job'] != '') {
+			array_push($joins, array("table" => "experiences", "alias" => "Experience", "type" => "INNER", "conditions" => array("Experience.candidate_id = Candidate.id")));
+			array_push($conditions, array("Experience.job_id" => $parameters["job"]));
+			$joined_experiences = true;
+		}
+
+		if ($parameters['nationality'] != '') {
+			if (!$joined_experiences) {
+				array_push($joins, array("table" => "experiences", "alias" => "Experience", "type" => "INNER", "conditions" => array("Experience.candidate_id = Candidate.id")));
+				$joined_experiences = true;
+			}
+			array_push($joins, array("table" => "workplaces", "alias" => "Workplace", "type" => "INNER", "conditions" => array("Experience.workplace_id = Workplace.id")));
+			array_push($conditions, array("Workplace.nationality" => $parameters["nationality"]));
+			$joined_workplaces = true;
+		}
+
+		if ($parameters['market_sector'] != '') {
+			if (!$joined_experiences) {
+				array_push($joins, array("table" => "experiences", "alias" => "Experience", "type" => "INNER", "conditions" => array("Experience.candidate_id = Candidate.id")));
+				$joined_experiences = true;
+			}
+			if (!$joined_workplaces) {
+				array_push($joins, array("table" => "workplaces", "alias" => "Workplace", "type" => "INNER", "conditions" => array("Experience.workplace_id = Workplace.id")));
+				$joined_workplaces = true;
+			}
+			array_push($conditions, array("Workplace.market_sector_id" => $parameters["market_sector"]));
+		}
+
+		if (isset($parameters["language"])) {
+			array_push($joins, array("table" => "candidate_languages", "alias" => "CandidateLanguage", "type" => "INNER", "conditions" => array("CandidateLanguage.candidate_id = Candidate.id")));
+			array_push($groups, "Candidate.id HAVING COUNT(Candidate.id) = ".count($parameters["language"]));
+			$language_queries = array();
+			foreach ($parameters["language"] as $language) {
+				array_push($language_queries, array("AND" => array("CandidateLanguage.language_id" => $language["id"], "CandidateLanguage.level >=" => $language["level"])));
+			}
+			array_push($conditions, array("OR" => $language_queries));
+		}
+
+		if ($parameters['formation'] != '') {
+			array_push($joins, array("table" => "candidate_formations", "alias" => "CandidateFormation", "type" => "INNER", "conditions" => array("CandidateFormation.candidate_id = Candidate.id")));
+			array_push($conditions, array("CandidateFormation.formation_id" => $parameters['formation']));
+		}
+
+		if (isset($parameters['location'])) {
+			array_push($joins, array("table" => "cities", "alias" => "CandidateCity", "type" => "INNER", "conditions" => array("CandidateCity.id = Candidate.city_id")));
+			array_push($joins, array("table" => "states", "alias" => "State", "type" => "INNER", "conditions" => array("State.id = CandidateCity.state_id")));
+			array_push($joins, array("table" => "countries", "alias" => "Country", "type" => "INNER", "conditions" => array("Country.id = State.country_id")));
+			$location_queries = array();
+			foreach ($parameters['location'] as $country) {
+				if (is_array($country)) {
+					foreach ($country as $state) {
+						if (is_array($state)) {
+							foreach ($state as $city) {
+								array_push($location_queries, array("CandidateCity.id" => $city));
+							}
+						}
+						else array_push($location_queries, array("State.id" => $state));
+					}
+				}
+				else array_push($location_queries, array("Country.id" => $country));
+			}
+			array_push($conditions, array("OR" => $location_queries));
+		}
+
+		if (!isset($parameters['gender_male'])) array_push($conditions, array("Candidate.gender !=" => "0"));
+		if (!isset($parameters['gender_female'])) array_push($conditions, array("Candidate.gender !=" => "1"));
+
+		if ($parameters['additional'] != '') array_push($conditions, array("Candidate.additional_info LIKE" => '%'.$parameters['additional'].'%'));
+
+		if ($parameters['income'] != '0.00') array_push($conditions, array("(Candidate.income_clt + Candidate.income_pj) <" => $parameters['income']));
+		
+		if ($parameters['age'] != '') {
+			if (count($parameters['age']) == 1) array_push($conditions, $this->ageGroupToQuery($parameters['age'][0]));
+			else {
+				$age_queries = array();
+				foreach ($parameters['age'] as $age_group) {
+					array_push($age_queries, $this->ageGroupToQuery($age_group));
+				}
+				array_push($conditions, array("OR" => $age_queries));
+			}
+		}
+
+		return $this->find('all', array('fields' => array("Candidate.id"), 'conditions' => array("AND" => $conditions), "joins" => $joins, "group" => $groups, 'recursive' => -1));
+		
+	}
+
+	function ageGroupToQuery($index) {
+		switch ($index) {
+			case 0:
+				$min_date = date('Y-m-d', strtotime("-30 years +1 day"));
+				return array("Candidate.birthdate >=" => $min_date);
+				break;
+			case 1:
+				$min_date = date('Y-m-d', strtotime("-40 years +1 day"));
+				$max_date = date('Y-m-d', strtotime("-30 years"));
+				return array("Candidate.birthdate BETWEEN ? AND ?" => array($min_date, $max_date));
+				break;
+			case 2:
+				$min_date = date('Y-m-d', strtotime("-50 years +1 day"));
+				$max_date = date('Y-m-d', strtotime("-40 years"));
+				return array("Candidate.birthdate BETWEEN ? AND ?" => array($min_date, $max_date));
+				break;
+			case 3:
+				$max_date = date('Y-m-d', strtotime("-50 years"));
+				return array("Candidate.birthdate <=" => $max_date);
+				break;
+			default:
+				return null;
+				break;
+		}
 	}
 
 }

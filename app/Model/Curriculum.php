@@ -8,7 +8,6 @@ class Curriculum extends AppModel {
 		if ($this->data['Curriculum']['size'] > 0) {
 			$fp = fopen($this->data['Curriculum']['tmp_name'], 'r');
 			$this->data['Curriculum']['content'] = fread($fp, filesize($this->data['Curriculum']['tmp_name']));
-			//$this->data['Curriculum']['content'] = addslashes($this->data['Curriculum']['content']);
 			fclose($fp);
 			unset($this->data['Curriculum']['error'], $this->data['Curriculum']['tmp_name']);
 		}

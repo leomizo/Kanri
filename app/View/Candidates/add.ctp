@@ -286,6 +286,15 @@
 			</fieldset>
 
 			<fieldset>
+				<legend>Informações adicionais</legend>
+				<div class="control-group">
+					<div class="controls">
+						<?php echo $this->Form->input('Candidate.additional_info', array('div' => false, 'label' => false, 'class' => 'input-xxlarge', 'placeholder' => 'Ex: CRC ativo, OAB, etc...')); ?>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
 				<legend>Remuneração</legend>
 				<div class="control-group">
 					<?php echo $this->Form->label('Candidate.income_type', 'Tipo de salário: ', array('div' => false, 'class' => 'control-label')); ?>
@@ -456,8 +465,9 @@
 			</fieldset>
 			
 			<fieldset>
-				<legend>Adicionar currículo</legend>
+				<legend>Currículo</legend>
 				<div class='control-group'>
+					<label class='control-label'>Adicionar currículo: </label>
 					<div class='controls'>
 						<input name='data[Curriculum]' type='file' />
 					</div>

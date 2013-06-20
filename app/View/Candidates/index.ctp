@@ -41,6 +41,7 @@
 					<th>Nome do candidato</th>
 					<th>Idade</th>
 					<th>Cidade</th>
+					<th>Cargo atual</th>
 					<th style="width: 200px">Opções</th>
 				</tr>
 			</thead>
@@ -57,6 +58,9 @@
 					</td>
 					<td>
 						<?php echo $candidate['City']['name']; ?>
+					</td>
+					<td>
+						<?php echo $candidate['Candidate']['current_job']; ?>
 					</td>
 					<td>
 						<?php echo $this->Html->link('Editar', array('controller' => 'candidates', 'action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-mini', 'style' => 'margin-right: 6px'));

@@ -15,4 +15,5 @@ class Company extends AppModel {
 		else $pagination['order'] = array("Company.name" => 'asc');
 		return $pagination;
 	}
+
 }

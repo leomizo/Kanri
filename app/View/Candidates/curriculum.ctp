@@ -1,4 +1,6 @@
 <?php
 
-header("Content-type: application/pdf");
+header("Content-type: ".$curriculum['Curriculum']['type']);
+header("Content-disposition: inline;filename=".$curriculum['Curriculum']['name']);
 echo $curriculum['Curriculum']['content'];
+exit();

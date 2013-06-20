@@ -10,8 +10,10 @@ class Experience extends AppModel {
 		foreach ($results as &$experience) {
 			list($year, $month, $day) = split('-', $experience['Experience']['start_date']);
 			$experience['Experience']['start_date_string'] = monthNumberToMonthString($month).'/'.$year;
+			$experience['Experience']['start_date_edit'] = $month.'/'.$year;
 			list($year, $month, $day) = split('-', $experience['Experience']['final_date']);
 			$experience['Experience']['final_date_string'] = monthNumberToMonthString($month).'/'.$year;
+			$experience['Experience']['final_date_edit'] = $month.'/'.$year;
 		}
 		return $results;
 	}

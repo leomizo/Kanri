@@ -89,7 +89,7 @@
 				<dt>E-mail comercial:</dt>
 				<dd><?php echo avoid_blank($candidate['Candidate']['work_email']); ?></dd>
 				<dt>Nome Skype:</dt>
-				<dd><?php echo avoid_blank($candidate['Candidate']['skype_nameavoid_blank(']); ?></dd>
+				<dd><?php echo avoid_blank($candidate['Candidate']['skype_name']); ?></dd>
 			</dl>
 		</div>
 	</div>
@@ -145,7 +145,7 @@
 				<dd><?php echo avoid_blank($candidate['Candidate']['income_pj']); ?></dd>
 				<?php endif; ?>
 				<dt>Bônus</dt>
-				<dd><?php echo avoid_blank($candidate['Candidate']['bonus']); ?></dd>
+				<dd><?php echo avoid_blank($candidate['Candidate']['income_bonus']); ?></dd>
 				<br />
 				<dt>Seguro saúde:</dt>
 				<dd><?php echo avoid_blank($candidate['Candidate']['health_insurance_name']); ?></dd>
@@ -235,7 +235,12 @@
 
 	<div class="row-fluid">
 		<legend>Currículo</legend>
-		<span style="margin-left: 40px"><img src="img/pdficon_large.png" /><a href="joaosilva_cv.pdf" style="margin-left: 10px"> joaosilva_cv.pdf</a></span>
+		<?php if (isset($candidate['Curriculum']['name'])): ?>
+		<span style="margin-left: 40px">
+			<?php echo $this->Html->image('pdficon_large.png');
+				  echo $this->Html->link($candidate['Curriculum']['name'], array('action' => 'curriculum', $candidate['Candidate']['id']), array('style' => 'margin-left: 10px')); ?>
+		</span>
+		<?php endif; ?>
 	</div>
 
 	<div class="row-fluid">

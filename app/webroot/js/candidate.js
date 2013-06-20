@@ -37,7 +37,7 @@ Candidate.correctDependentIndexes = function() {
 	});
 	$('.candidate-dependent-gender').each(function() {
 		$(this).attr('name', 'data[Dependent][' + $('.candidate-dependent-gender').index(this) + '][gender]');
-		$(this).attr('index', $('.candidate-dependent-age').index(this));
+		$(this).attr('index', $('.candidate-dependent-gender').index(this));
 	});
 }
 
@@ -636,6 +636,104 @@ Candidate.correctExperienceIndexes = function() {
 	$("#experience-inputs > .form-team").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-team").index(this));
 		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-team").index(this) + '][team]');
+	});
+}
+
+// SEARCH
+
+Candidate.addSearchLanguage = function() {
+	var index = $("#language-table > tbody > tr").length;
+	var language_select = '<select name="data[language][' + index + '][id]" >';
+
+	var languages = $.parseJSON($("#language-table").attr('languages'));
+	$.each(languages, function(i, e) {
+		language_select += '<option value="' + i + '">' + e + '</option>';
+	});
+	language_select += '</select>';
+
+	var levels = '<label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="0">Básico</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="1"> Intermediário</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="2"> Avançado</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="3"> Fluente</label>';
+	$("#language-table > tbody").append("<tr><td>" + language_select + "</td><td>" + levels + "</td><td style='vertical-align: middle'><button type='button' class='btn btn-danger btn-mini' onclick='Candidate.removeSearchLanguage(this)'>Remover</button></td></tr>");
+	
+}
+
+Candidate.removeSearchLanguage = function(btn) {
+	$(btn).parents('tr').remove();
+	$.each($("#language-table > tbody > tr"), function(index) {
+		$(this).find('select').attr('name', 'data[language][' + index + '][id]');
+		$(this).find('input').attr('name', 'data[language][' + index + '][level]');
+	});
+}
+
+Candidate.selectSearchCountry = function() {
+	$('#state-select, #city-select').hide();
+	if ($('#country-select * select').val() != '') {
+		$("#state-select * select").load('/states/get_states_by_country/' + $('#country-select * select').val() + '?add=false', function() {
+			$('#state-select').show();
+			$('#add-location-btn').removeClass('disabled');
+		});
+	}
+	else $('#add-location-btn').addClass('disabled');
+}
+
+Candidate.selectSearchState = function() {
+	$('#city-select').hide();
+	if ($('#state-select * select').val() != '') {
+		$("#city-select * select").load('/cities/get_cities_by_state/' + $('#state-select * select').val() + '?add=false', function() {
+			$('#city-select').show();
+		});
+	}
+}
+
+Candidate.addSearchLocation = function(btn) {
+	if (!$(btn).hasClass("disabled")) {
+		var countryList, stateList;
+		if ($("#location-list").children("li[country='" + $("#country-select * select").val() + "']").length == 0) {
+			$("#location-list").append('<li class="country-indicator" country="' + $("#country-select * select").val() + '"><strong>País:</strong> ' + $("#country-select * select > option:selected").text() + '<button type="button" class="btn btn-danger btn-mini btn-micro" style="margin-left: 5px" onclick="Candidate.removeSearchLocation(this)" >X</button><ul></ul></li>');
+		}
+		if ($("#state-select * select").val() != "") {
+			countryList = $("#location-list").find("li[country='" + $("#country-select * select").val() + "'] > ul");
+			if ($(countryList).find("li[state='" + $("#state-select * select").val() + "']").length == 0) {
+				$(countryList).append('<li class="state-indicator" state="' + $("#state-select * select").val() + '"><strong>Estado / Província:</strong> ' + $("#state-select * select > option:selected").text() + '<button type="button" class="btn btn-danger btn-mini btn-micro" style="margin-left: 5px" onclick="Candidate.removeSearchLocation(this)" >X</button><ul></ul></li>');
+			}
+			if ($("#city-select * select").val() != "") {
+				stateList = $(countryList).find("li[state='" + $("#state-select * select").val() + "'] > ul");
+				if ($(stateList).find("li[city='" + $("#city-select * select").val() + "']").length == 0) {
+					$(stateList).append('<li class="city-indicator" city="' + $("#city-select * select").val() + '"><strong>Cidade: </strong> ' + $("#city-select * select > option:selected").text() + '<button type="button" class="btn btn-danger btn-mini btn-micro" style="margin-left: 5px" onclick="Candidate.removeSearchLocation(this)" >X</button></li>');
+				}
+			}
+		}
+		Candidate.generateLocationInputs();
+	}
+}
+
+Candidate.removeSearchLocation = function(btn) {
+	$(btn).parent('li').remove();
+	Candidate.generateLocationInputs();
+}
+
+Candidate.removeAllSearchLocations = function() {
+	$("#location-list").empty();
+	$("#location-inputs").empty();
+}
+
+Candidate.generateLocationInputs = function() {
+	$("#location-inputs").empty();
+	$.each($("#location-list > li"), function(country_index) {
+		if ($(this).find(".state-indicator").length > 0) {
+			$.each($(this).find(".state-indicator"), function(state_index) {
+				if ($(this).find('.city-indicator').length > 0) {
+					$.each($(this).find(".city-indicator"), function(city_index) {
+						$("#location-inputs").append("<input type='hidden' name='data[location][" + country_index + "][" + state_index + "][" + city_index + "]' value='" + $(this).attr('city') + "' />");	
+					});
+				}
+				else {
+					$("#location-inputs").append("<input type='hidden' name='data[location][" + country_index + "][" + state_index + "]' value='" + $(this).attr('state') + "' />");	
+				}
+			});
+		}
+		else {
+			$("#location-inputs").append("<input type='hidden' name='data[location][" + country_index + "]' value='" + $(this).attr('country') + "' />");
+		}
 	});
 }
 

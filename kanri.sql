@@ -5,7 +5,8 @@ CREATE TABLE `users` (
 	name VARCHAR(128),
 	email VARCHAR(128),
 	password VARCHAR(128),
-	type INT UNSIGNED
+	type INT UNSIGNED,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `candidates`;
@@ -31,8 +32,8 @@ CREATE TABLE `candidates` (
 	skype_name VARCHAR(64),
 	international_experience TEXT,
 	income_type TINYINT UNSIGNED,
-	income_clt DECIMAL(13, 2),
-	income_pj DECIMAL(13, 2),
+	income_clt DECIMAL(13, 2) NOT NULL,
+	income_pj DECIMAL(13, 2) NOT NULL,
 	income_bonus VARCHAR(128),
 	health_insurance_name VARCHAR(128),
 	health_insurance_type TINYINT UNSIGNED,
@@ -50,7 +51,8 @@ CREATE TABLE `candidates` (
 	training_courses VARCHAR(256),
 	profit_sharing VARCHAR(128),
 	comments TEXT,
-	curriculum_id BIGINT UNSIGNED
+	additional_info VARCHAR(256),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `dependents`;
@@ -59,14 +61,16 @@ CREATE TABLE `dependents` (
 	id SERIAL PRIMARY KEY,
 	gender TINYINT UNSIGNED,
 	birthdate DATE,
-	candidate_id BIGINT UNSIGNED NULL 
+	candidate_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL 
 );
 
 DROP TABLE IF EXISTS `countries`;
 
 CREATE TABLE `countries` (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(64)
+	name VARCHAR(64),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `states`;
@@ -74,7 +78,8 @@ DROP TABLE IF EXISTS `states`;
 CREATE TABLE `states` (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(64),
-	country_id BIGINT UNSIGNED NULL
+	country_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `cities`;
@@ -82,14 +87,16 @@ DROP TABLE IF EXISTS `cities`;
 CREATE TABLE `cities` (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(64),
-	state_id BIGINT UNSIGNED NULL
+	state_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `formations`;
 
 CREATE TABLE `formations` (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(128)
+	name VARCHAR(128),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `candidate_formations`;
@@ -99,14 +106,16 @@ CREATE TABLE `candidate_formations` (
 	institution VARCHAR(128),
 	conclusion_year VARCHAR(4),
 	candidate_id BIGINT UNSIGNED NULL,
-	formation_id BIGINT UNSIGNED NULL
+	formation_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `languages`;
 
 CREATE TABLE `languages` (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(32)
+	name VARCHAR(32),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `candidate_languages`;
@@ -115,14 +124,16 @@ CREATE TABLE `candidate_languages` (
 	id SERIAL PRIMARY KEY,
 	level TINYINT UNSIGNED,
 	candidate_id BIGINT UNSIGNED NULL,
-	language_id BIGINT UNSIGNED NULL
+	language_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `courses`;
 
 CREATE TABLE `courses` (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(128)
+	name VARCHAR(128),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `candidate_courses`;
@@ -132,14 +143,16 @@ CREATE TABLE `candidate_courses` (
 	institution VARCHAR(128),
 	conclusion_year VARCHAR(4),
 	candidate_id BIGINT UNSIGNED NULL,
-	course_id BIGINT UNSIGNED NULL
+	course_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `market_sectors`;
 
 CREATE TABLE `market_sectors` (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(64)
+	name VARCHAR(64),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `workplaces`;
@@ -148,14 +161,16 @@ CREATE TABLE `workplaces` (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(128),
 	nationality VARCHAR(32),
-	market_sector_id BIGINT UNSIGNED NULL
+	market_sector_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `jobs`;
 
 CREATE TABLE `jobs` (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(64)
+	name VARCHAR(64),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `experiences`;
@@ -168,7 +183,8 @@ CREATE TABLE `experiences` (
 	team VARCHAR(32),
 	candidate_id BIGINT UNSIGNED NULL,
 	workplace_id BIGINT UNSIGNED NULL,
-	job_id BIGINT UNSIGNED NULL
+	job_id BIGINT UNSIGNED NULL,
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `companies`;
@@ -182,7 +198,8 @@ CREATE TABLE `companies` (
 	address VARCHAR(256),
 	cnpj VARCHAR(32),
 	state_inscription VARCHAR(32),
-	city_inscription VARCHAR(32)
+	city_inscription VARCHAR(32),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `curriculums`;
@@ -190,9 +207,11 @@ DROP TABLE IF EXISTS `curriculums`;
 CREATE TABLE `curriculums` (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(128) NOT NULL,
-	type VARCHAR(32) NOT NULL,
+	type VARCHAR(128) NOT NULL,
 	size INT NOT NULL,
-	content MEDIUMBLOB NOT NULL
+	content MEDIUMBLOB NOT NULL,
+	candidate_id BIGINT UNSIGNED,
+	created DATETIME NULL 
 );
 
 
