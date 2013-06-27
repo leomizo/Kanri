@@ -25,11 +25,12 @@ class UsersController extends AppController {
 
 	public function add() {
 		if ($this->request->is('post')) {
+			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->redirect(array('controller' => 'users', 'action' => 'index', 'add'));
 			}
 			else {
-				$this->Set('alert', true);
+				$this->set('alert', true);
 			}
 		}
 	}
@@ -61,6 +62,25 @@ class UsersController extends AppController {
 
 	public function permissions() {
 
+	}
+
+	public function login() {
+		$this->layout = 'login';
+		$this->Session->destroy();
+		if ($this->request->is('post')) {
+			if ($this->Auth->login()) {
+				$this->response->body($this->Auth->redirect());
+				$this->response->statusCode(200);
+	        } 
+	        else {
+	           $this->response->statusCode(500);
+	        }
+	        return $this->response;
+		}
+	}
+
+	public function logout() {
+	    $this->redirect($this->Auth->logout());
 	}
 
 }

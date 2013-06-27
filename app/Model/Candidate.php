@@ -131,13 +131,17 @@ class Candidate extends AppModel {
 		return true;
 	}
 
-	public function pagination($search = null, $sort = null, $asc = 'asc') {
-		$pagination = array('limit' => 5);
+	public function pagination($search = null) {
+		$pagination = array('limit' => 10);
 		if ($search) $pagination['conditions'] = array('Candidate.name LIKE' => '%'.$search.'%');
-		if ($sort) $pagination['order'] = array('Candidate.'.$sort => $asc);
-		else $pagination['order'] = array("Candidate.name" => 'asc');
 		$pagination['fields'] = array('Candidate.name', 'Candidate.city_id', 'Candidate.birthdate');
 		$pagination['recursive'] = 3;
+		return $pagination;
+	}
+
+	public function ajaxPagination($query = null, $page = 1) {
+		$pagination = array('limit' => 5, 'page' => $page, 'order' => array('Candidate.name' => 'asc'), 'paramType' => 'querystring');
+		if ($query) $pagination['conditions'] = array('Candidate.name LIKE' => '%'.$query.'%');
 		return $pagination;
 	}
 

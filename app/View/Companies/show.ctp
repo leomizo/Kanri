@@ -44,7 +44,7 @@
 		<div class="form-actions">
 			<?php echo $this->Html->link('Editar', array('controller' => 'companies', 'action' => 'edit', $company['Company']['id']), array('class' => 'btn btn-primary', 'style' => 'margin-right: 6px'));
 				  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-right: 6px'), 'Você está certo disso?'); 
-				  echo $this->Html->link('Voltar', array('controller' => 'companies', 'action' => 'index'), array('class' => 'btn', 'style' => 'margin-right: 6px')); ?>
+				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()')); ?>
 		</div>
 	</div>
 </div>

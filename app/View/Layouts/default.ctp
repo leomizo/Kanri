@@ -17,7 +17,6 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 ?>
 
 <!DOCTYPE html>
@@ -133,7 +132,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						</ul>
 					</li>
 					<li>
-						<a href="login.html"><i class="icon-off"></i> | Logout</a>
+						<?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-off')).' | Logout', array('controller' => 'users', 'action' => 'logout'), array('escape' => false)); ?>
 					</li>
 				</ul>
 			</div>

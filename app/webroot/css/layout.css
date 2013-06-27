@@ -124,3 +124,7 @@ li {
 	line-height: 13px;
 	font-size: 8px;
 }
+
+tr[editing="true"] > td > div.event-cell, tr[editing="true"] > td > div.event-cell > div.event-info > ul > li {
+	color: red;
+}

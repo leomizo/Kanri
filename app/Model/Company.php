@@ -16,4 +16,10 @@ class Company extends AppModel {
 		return $pagination;
 	}
 
+	public function ajaxPagination($query = null, $page = 1) {
+		$pagination = array('limit' => 5, 'page' => $page, 'order' => array('Company.name' => 'asc'), 'paramType' => 'querystring');
+		if ($query) $pagination['conditions'] = array('Company.name LIKE' => '%'.$query.'%');
+		return $pagination;
+	}
+
 }

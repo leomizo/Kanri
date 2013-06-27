@@ -24,6 +24,12 @@ function formatCurrency($value = 0.0) {
 	return "R$ ".$value;
 }
 
+function formatDate($date) {
+	$components = getdate(strtotime($date));
+	if ($components['minutes'] < 10) $components['minutes'] = '0'.$components['minutes'];
+	return $components['mday'].' de '.monthNumberToMonthString($components['mon']).' de '.$components['year'].' às '.($components['hours']).':'.$components['minutes'];
+}
+
 function monthNumberToMonthString($monthNumber) {
 	switch ($monthNumber) {
 		case 1:

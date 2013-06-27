@@ -278,6 +278,9 @@ CREATE TABLE `event_conclusions`(
 	created DATETIME NULL
 );
 
+INSERT INTO `users` (`name`, `email`, `password`, `type`)
+VALUES ("Edson Tamamaro", "edson@kanri.com", "64bbf816abf3fd1f415b1826b78f5b3a8d22ac84", "0");
+
 
 
 

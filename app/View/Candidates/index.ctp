@@ -24,6 +24,12 @@
 
 	<div class="row-fluid">
 		<div class="span12">
+			<?php if (isset($success_message)): ?>
+				<div class='alert alert-success'>
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong>Sucesso!</strong> Candidato <?php if ($success_message == 'edit') echo 'atualizado'; elseif ($success_message == 'add') echo 'adicionado'; elseif ($success_message == 'delete') echo 'deletado' ?> com sucesso!
+				</div>
+			<?php endif; ?>
 			<?php echo $this->Form->create('Candidate', array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
 				  echo $this->Form->input("Buscar candidato: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
 				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));

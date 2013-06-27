@@ -1,3 +1,5 @@
+<?php $this->Html->script('process.js', array('inline' => false)); ?>
+
 <div class="content-block container-fluid">
 
 	<div class="row-fluid content-title">
@@ -6,103 +8,95 @@
 
 	<div class="row-fluid">
 		<div class="span12">
-			<form class="form-search well search-box">
-			  	<label class="control-label" for="inputUserSearch">Buscar candidato/empresa: </label>
-			  	<input type="text" id="inputUserSearch" class="input-medium search-query" />
-				<button type="submit" class="btn">Buscar</button>
-				<a class="btn btn-success pull-right" data-toggle="modal" data-target="#add-modal"><i class="icon-plus icon-white"></i> Abrir novo processo</a>
-			</form>
+			<?php if (isset($success_message)): ?>
+				<div class='alert alert-success'>
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong>Sucesso!</strong> Processo <?php if ($success_message == 'add') echo 'adicionado'; elseif ($success_message == 'delete') echo 'deletado' ?> com sucesso!
+				</div>
+			<?php endif; ?>
+			<?php echo $this->Form->create(null, array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
+				  echo $this->Form->input("Buscar candidato / empresa: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
+				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
+				  echo $this->Form->button($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Abrir novo processo', array('type' => 'button', 'class' => 'btn btn-success pull-right', 'escape' => false, 'data-toggle' => 'modal', 'data-target' => '#process-modal'));
+				  echo $this->Form->end();
+			?>
 		</div>
 	</div>
 
 	<div class="row-fluid">
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped table-bordered table-sortable">
 			<thead>
 				<tr>
-					<th>Empresa</th>
-					<th>Candidato</th>
-					<th>Data do último evento</th>
-					<th style="width: 140px">Opções</th>
+					<th><?php echo $this->Paginator->sort("Company.name", 'Empresa'); ?></th>
+					<th><?php echo $this->Paginator->sort("Candidate.first_name", 'Candidato'); ?></th>
+					<th><?php echo $this->Paginator->sort("last_occurrence", 'Data do evento mais recente'); ?></th>
+					<th style="width: 120px">Opções</th>
 				</tr>
 			</thead>
 			<tbody>
+				<?php foreach ($processes as $process): ?>
 				<tr>
-					<td><a href="company_show.html">Banco Santander</a></td>
-					<td><a href="candidate_show.html">Jorge Mattos</a></td>
-					<td>18 de maio de 2013 às 15:00</td>
 					<td>
-						<a href="process_show.html" class="btn btn-mini btn-primary">Ver eventos</a>
-						<button class="btn btn-mini btn-danger">Remover</button>
+						<?php echo $this->Html->link($process['Company']['name'], array('controller' => 'companies', 'action' => 'show', $process['Company']['id'])); ?>
+					</td>
+					<td>
+						<?php echo $this->Html->link($process['Candidate']['first_name'].' '.$process['Candidate']['middle_names'].' '.$process['Candidate']['last_name'], array('controller' => 'candidates', 'action' => 'show', $process['Candidate']['id'])); ?>
+					</td>
+					<td><?php echo formatDate($process[0]['last_occurrence']); ?></td>
+					<td>
+						<?php echo $this->Html->link('Eventos', array('action' => 'events', $process['Process']['id']), array('class' => 'btn btn-mini btn-primary')); 
+							  echo $this->Form->postLink('Remover', array('controller' => 'processes', 'action' => 'delete', $process['Process']['id']), array('class' => 'btn btn-mini btn-danger', 'style' => 'margin-left: 5px'), 'Você está certo disso?');
+						?>
 					</td>
 				</tr>
-				<tr>
-					<td><a href="company_show.html">Sony</a></td>
-					<td><a href="candidate_show.html">Ricardo Mendes</a></td>
-					<td>16 de maio de 2013 às 17:30</td>
-					<td>
-						<a href="process_show.html" class="btn btn-mini btn-primary">Ver eventos</a>
-						<button class="btn btn-mini btn-danger">Remover</button>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="company_show.html">Banco Itaú</a></td>
-					<td><a href="candidate_show.html">João Silva</a></td>
-					<td>15 de maio de 2013 às 12:30</td>
-					<td>
-						<a href="process_show.html" class="btn btn-mini btn-primary">Ver eventos</a>
-						<button class="btn btn-mini btn-danger">Remover</button>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="company_show.html">Nokia</a></td>
-					<td><a href="candidate_show.html">Alfredo Siqueira</a></td>
-					<td>11 de maio de 2013 às 11:30</td>
-					<td>
-						<a href="process_show.html" class="btn btn-mini btn-primary">Ver eventos</a>
-						<button class="btn btn-mini btn-danger">Remover</button>
-					</td>
-				</tr>
+				<?php endforeach; ?>
 			</tbody>
 		</table>
+		<div class="pagination pagination-centered">
+			<ul class='pager'>
+				<?php echo $this->Paginator->prev("← Anterior", array('tag' => 'li', 'class' => 'previous', 'style' => 'margin-right: 15px', 'model' => 'Process'), null, array('class' => 'hidden-element')); ?>
+			</ul>
+			<ul>
+				<?php echo $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'span', 'currentClass' => 'active', 'separator' => false, 'first' => 'Primeiro', 'last' => 'Último', 'model' => 'Process')); ?>
+			</ul>
+			<ul class='pager'>
+				<?php echo $this->Paginator->next("Próximo →", array('tag' => 'li', 'class' => 'previous', 'style' => 'margin-left: 15px', 'model' => 'Process'), null, array('class' => 'hidden-element')); ?>
+			</ul>
+		</div>
 	</div>
 </div>
 
-<div id="add-modal" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static">
+<div id="process-modal" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static">
   	<div class="modal-header">
     	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    	<h3 id="add-modal-title">Selecione uma empresa</h3>
+    	<h3>Selecione uma empresa</h3>
     	<form class="form-search" style="margin: 10px 0 0 0">
 		  	<input type="text" class="input-medium search-query" style="width: 415px">
 		  	<button type="submit" class="btn" style="margin-left: 5px">Buscar</button>
 		</form>
   	</div>
   	<div class="modal-body">
-		<table id="company-table" class="table table-striped" style="position: relative">
-			<tbody>
-				<tr><td><a class="company-selector">Banco Itaú</a></td></tr>
-				<tr><td><a class="company-selector">Nokia</a></td></tr>
-				<tr><td><a class="company-selector">Banco Santander</a></td></tr>
-				<tr><td><a class="company-selector">Sony</a></td></tr>
-			</tbody>
-		</table>
-		<table id="candidate-table" class="table table-striped" style="display: none; position: relative; opacity: 0; left: 100px">
-			<tbody>
-				<tr><td><a class="candidate-selector">Ricardo Mendes</a></td></tr>
-				<tr><td><a class="candidate-selector">João Silva</a></td></tr>
-				<tr><td><a class="candidate-selector">Alfredo Siqueira</a></td></tr>
-				<tr><td><a class="candidate-selector">Jorge Mattos</a></td></tr>
-			</tbody>
-		</table>
+  		<div id='company-content'>
+  			<?php include '_company_table.ctp' ?>
+  		</div>
+  		<div id='candidate-content'>
+  			<?php $visible = false;
+  				  include '_candidate_table.ctp'; ?>
+  		</div>
   	</div>
   	<div class="modal-footer">
+  		<?php echo $this->Form->create("Process", array('action' => 'add')); ?>
   		<dl class="dl-horizontal pull-left">
   			<dt style="width: 80px">Empresa:</dt>
-  			<dd id="company-add" style="margin-left: 100px; text-align: left"></dd>
+  			<dd id="company-name-input" style="margin-left: 100px; text-align: left"></dd>
   			<dt style="width: 80px">Candidato:</dt>
-  			<dd id="candidate-add" style="margin-left: 100px; text-align: left"></dd>
+  			<dd id="candidate-name-input" style="margin-left: 100px; text-align: left"></dd>
   		</dl>
-  		<a id="add-modal-return-btn" class="btn" style="position: relative; top: 20px; display: none">Voltar</a>
-  		<a id="add-modal-ok-btn" class="btn btn-primary" style="position: relative; top: 20px; display: none">OK</a>
+  		<?php echo $this->Form->input("Process.candidate_id", array('div' => false, 'label' => false, 'type' => 'hidden', 'id' => 'candidate-input')); 
+  			  echo $this->Form->input("Process.company_id", array('div' => false, 'label' => false, 'type' => 'hidden', 'id' => 'company-input')); ?>
+  		<button type='button' id="process-return-btn" class="btn" style="position: relative; top: 20px; display: none" onclick='Process.returnToCompanySelection()'>Voltar</button>
+  		<button type='submit' id="process-ok-btn" class="btn btn-primary" style="position: relative; top: 20px; display: none">OK</button>
     	<button class="btn" data-dismiss="modal" aria-hidden="true" style="position: relative; top: 20px">Cancelar</button>
+    	<?php echo $this->Form->end(); ?>
   	</div>
 </div>

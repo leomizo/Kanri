@@ -1,67 +1,16 @@
-$(function() {
+var Login = {
+	errorCondition: false
+};
 
-	var errorCondition = false;
-
-	setInitialElementsPositions();
-
-	executeInitialAnimation();
-
-	$("#btn_login").click(function(event) {
-		if (!$("#btn_login").hasClass("disabled")) {
-			$("#btn_login").addClass("disabled");
-			if (authenticate($("#inputUser").val(), $("#inputPassword").val())) {
-				window.location.replace("dashboard.html");
-			}
-			else {
-				if (!errorCondition) {
-					shakeWindow(function() {
-						presentErrorMessage();
-						$("#btn_login").removeClass("disabled");
-					});
-					errorCondition = true;
-				}
-				else shakeWindow(function() {
-					animateErrorMessage();
-					$("#btn_login").removeClass("disabled");
-				});
-			}
-		}
-	});
-
-	$("#inputUser").focus(function(event) {
-		if (errorCondition) {
-			hideErrorMessage();
-			errorCondition = false;
-		}
-	});
-
-	$("#inputPassword").focus(function(event) {
-		if (errorCondition) {
-			hideErrorMessage();
-			errorCondition = false;
-		}
-	});
-});
-
-function setInitialElementsPositions() {
-	//	Login window
+Login.onLoad = function() {
 	$("#bkg_login").css("margin-top", "+=30");
 	$("#bkg_login").css("opacity", 0);
-
-	//	"Kanri" title
 	$("h1").css("top", "-=20");
 	$("h1").css("opacity", 0);
-
-	//	"Kanri" logo
 	$("#ico_kanri").css("top", "+=20");
 	$("#ico_kanri").css("opacity", 0);
-
-	//	Error message
 	$("#msg_error").css("top", "-=10");
-	$("#msg_error").css("opacity", 0);	
-}
-
-function executeInitialAnimation() {
+	$("#msg_error").css("opacity", 0);
 	setTimeout(function() {
 		$("#ico_kanri").animate({top: "-=20", opacity: 1}, 450, function () {
 			$("h1").animate({top: "+=20", opacity: 1}, 450, function() {
@@ -73,19 +22,33 @@ function executeInitialAnimation() {
 				});
 			});
 		})
-	}, 100);	
+	}, 100);
 }
 
-function authenticate(user, password) {
-	if (user == "edson@kanri.com" && password == "1234") {
-		return true;
-	}
-	else {
-		return false;
+Login.authenticate = function() {
+	if (!$("#btn_login").hasClass("disabled")) {
+		$("#btn_login").addClass("disabled");
+		$.post("login", $("#form_login").serialize(), function(redirection) {
+			if (redirection) {
+                window.location.href = redirection;
+            }
+		}).fail(function() {
+			if (!Login.errorCondition) {
+				Login.shakeWindow(function() {
+					Login.presentErrorMessage();
+					$("#btn_login").removeClass("disabled");
+				});
+				Login.errorCondition = true;
+			}
+			else Login.shakeWindow(function() {
+				Login.animateErrorMessage();
+				$("#btn_login").removeClass("disabled");
+			});
+		});
 	}
 }
 
-function shakeWindow(animationFinished) {
+Login.shakeWindow = function(animationFinished) {
 	$("#bkg_login").animate({left: "+=20"}, 80, function() {
 	$("#bkg_login").animate({left: "-=35"}, 70, function() {
 	$("#bkg_login").animate({left: "+=25"}, 75, function() {
@@ -94,7 +57,7 @@ function shakeWindow(animationFinished) {
 	$("#bkg_login").animate({left: "-=5"}, 90, animationFinished)})})})})});
 }
 
-function presentErrorMessage() {
+Login.presentErrorMessage = function() {
 	$(".control-group").addClass("error");
 	$("#bkg_login").animate({height: "+=25"}, 100, function() {
 		$("#msg_error").animate({top: "+=15", opacity: 0.7}, 100, function() {
@@ -103,7 +66,7 @@ function presentErrorMessage() {
 	});
 }
 
-function hideErrorMessage() {
+Login.hideErrorMessage = function() {
 	$(".control-group").removeClass("error");
 	$("#msg_error").animate({top: "+=5", opacity: 0.7}, 50, function() {
 		$("#msg_error").animate({top: "-=15", opacity: 0}, 100, function() {
@@ -112,7 +75,7 @@ function hideErrorMessage() {
 	});
 }
 
-function animateErrorMessage() {
+Login.animateErrorMessage = function() {
 	$("#msg_error").animate({top: "-=15"}, 120, function() {
 		$("#msg_error").animate({top: "+=15"}, 100, function() {
 			$("#msg_error").animate({top: "-=10"}, 100, function() {
@@ -121,4 +84,13 @@ function animateErrorMessage() {
 		});	
 	});	
 }
+
+Login.removeErrorCondition = function() {
+	if (Login.errorCondition) {
+		Login.hideErrorMessage();
+		Login.errorCondition = false;
+	}
+}
+
+$(function(){Login.onLoad()});
 
