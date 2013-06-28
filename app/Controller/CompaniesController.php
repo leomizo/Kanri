@@ -7,11 +7,9 @@ class CompaniesController extends AppController {
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
 		
-		$search = $this->request->query['search'];
-		$sort = $this->request->query['sort'];
-		$asc = $this->request->query['asc'] == 'desc' ? 'desc' : 'asc';
+		$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
 		
-		$this->paginate = $this->Company->pagination($search, $sort, $asc);
+		$this->paginate = $this->Company->pagination($search);
 		$this->set('companies', $this->paginate('Company'));
 	}
 

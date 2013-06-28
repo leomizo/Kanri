@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_candidates', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#candidate-content', 'onclick' => 'return Process.handleAsynchronousPagination(this, true)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_candidates', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#candidate-content', 'onclick' => 'return Process.handleAsynchronousPagination(this, true)')); ?>
 
 <table id="candidate-table" class="table table-striped" style="position: relative;<?php if (!$visible) echo 'opacity: 0; display: none; left: 100px' ?>">
 	<tbody>

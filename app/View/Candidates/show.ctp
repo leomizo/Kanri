@@ -239,7 +239,8 @@
 		<legend>Currículo</legend>
 		<?php if (isset($candidate['Curriculum']['name'])): ?>
 		<span style="margin-left: 40px">
-			<?php echo $this->Html->image('pdficon_large.png');
+			<?php if ($candidate['Curriculum']['type'] == "application/pdf") echo $this->Html->image('pdf-icon');
+				  else if ($candidate['Curriculum']['type'] == "application/msword" || $candidate['Curriculum']['type'] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") echo $this->Html->image('word-icon');
 				  echo $this->Html->link($candidate['Curriculum']['name'], array('action' => 'curriculum', $candidate['Candidate']['id']), array('style' => 'margin-left: 10px')); ?>
 		</span>
 		<?php endif; ?>

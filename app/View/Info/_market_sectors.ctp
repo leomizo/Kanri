@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_market_sectors', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#market-sector-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_market_sectors', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#market-sector-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
 
 <table class="table table-striped table-bordered" id="market-sector-table" style='margin-bottom: 0'>
 	<tbody>

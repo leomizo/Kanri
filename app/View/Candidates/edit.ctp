@@ -601,7 +601,8 @@
 					<?php if (isset($this->request->data['Curriculum']['name'])): ?>
 					<label class='control-label'>Currículo existente: </label>
 					<div class='controls'>
-						<?php echo $this->Html->image('pdficon_large.png');
+						<?php if ($this->request->data['Curriculum']['type'] == "application/pdf") echo $this->Html->image('pdf-icon');
+				  else if ($this->request->data['Curriculum']['type'] == "application/msword" || $this->request->data['Curriculum']['type'] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") echo $this->Html->image('word-icon');
 				  			  echo $this->Html->link($this->request->data['Curriculum']['name'], array('action' => 'curriculum', $this->request->data['Candidate']['id']), array('style' => 'margin-left: 10px')); ?>
 					</div>
 					<div class='control-group-internal-divider'></div>

@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_jobs', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#job-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_jobs', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#job-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
 
 <table class="table table-striped table-bordered" id="job-table" style='margin-bottom: 0'>
 	<tbody>

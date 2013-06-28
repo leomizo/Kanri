@@ -8,11 +8,8 @@ class UsersController extends AppController {
 	public function index($success_message = null) {
 		if ($this->UserVisibility == 0) {
 			if ($success_message) $this->Set('success_message', $success_message);
-			$search = $this->request->query['search'];
-			$sort = $this->request->query['sort'];
-			$asc = $this->request->query['asc'] == 'desc' ? 'desc' : 'asc';
-			
-			$this->paginate = $this->User->pagination($search, $sort, $asc);
+			$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;			
+			$this->paginate = $this->User->pagination($search);
 			$this->set('users', $this->paginate('User'));
 		}
 		else throw new ForbiddenException();

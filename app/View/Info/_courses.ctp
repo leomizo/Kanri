@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_courses', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#course-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_courses', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#course-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
 
 <table class="table table-striped table-bordered" id="course-table" style='margin-bottom: 0'>
 	<tbody>

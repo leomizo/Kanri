@@ -41,6 +41,10 @@ function formatHour($date) {
 	return $components['hours'].':'.$components['minutes'];
 }
 
+function checkFile($fileType) {
+	return $fileType == "application/pdf" || $fileType == "application/msword" || $fileType == "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+}
+
 function monthNumberToMonthString($monthNumber) {
 	switch ($monthNumber) {
 		case 1:

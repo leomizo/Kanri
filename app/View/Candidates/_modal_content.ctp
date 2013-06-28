@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_'.$modal_table.'s', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#'.$modal_table.'-content', 'onclick' => 'return Candidate.handleAsynchronousPagination(this)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_'.$modal_table.'s', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#'.$modal_table.'-content', 'onclick' => 'return Candidate.handleAsynchronousPagination(this)')); ?>
 
 <table class="table table-striped">
 	<tbody>

@@ -5,7 +5,7 @@ class ProcessesController extends AppController {
 	public function index($success_message = null) {
 		if ($success_message) $this->set('success_message', $success_message);
 
-		$search = $this->request->query['search'];
+		$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
 		$this->paginate = $this->Process->pagination($search);
 		$this->set('processes', $this->paginate('Process'));
 
@@ -46,7 +46,7 @@ class ProcessesController extends AppController {
 		}
 	}
 
-	public function events($process_id, $success_message) {
+	public function events($process_id, $success_message = null) {
 		$process = $this->Process->find('first', array('fields' => array('Company.name', 'CONCAT(Candidate.first_name, " ", Candidate.middle_names, " ", Candidate.last_name) as Candidate_name', 'Process.id'), 'conditions' => array('Process.id' => $process_id), 'recursive' => 2));
 		$this->set('process', $process);
 		if ($success_message) $this->set('success_message', $success_message);

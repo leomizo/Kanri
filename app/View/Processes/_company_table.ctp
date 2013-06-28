@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_companies', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#company-content', 'onclick' => 'return Process.handleAsynchronousPagination(this, false)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_companies', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#company-content', 'onclick' => 'return Process.handleAsynchronousPagination(this, false)')); ?>
 
 <table id="company-table" class="table table-striped" style="position: relative">
 	<tbody>

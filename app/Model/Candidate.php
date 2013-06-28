@@ -119,7 +119,7 @@ class Candidate extends AppModel {
 				foreach ($experiences as $key => &$value) {
 					usort($value, 'sortByStartDate');
 				}
-				$candidate['Candidate']['current_job'] = $candidate["Experience"][0]['Job']['name'];
+				$candidate['Candidate']['current_job'] = isset($candidate["Experience"][0]['Job']['name']) ? $candidate["Experience"][0]['Job']['name'] : "";
 				$candidate['Experience'] = $experiences;
 			}
 		}

@@ -31,7 +31,7 @@
 				</div>
 			<?php endif; ?>
 			<?php echo $this->Form->create(null, array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
-				  echo $this->Form->input("Buscar usuário: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
+				  echo $this->Form->input("Buscar usuário: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => isset($this->request->query['search']) ? $this->request->query['search'] : ''));
 				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
 				  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar novo usuário', 'add', array('class' => 'btn btn-success pull-right', 'escape' => false));
 				  echo $this->Form->end();

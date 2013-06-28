@@ -1,4 +1,4 @@
-<?php $this->Paginator->options(array('url' => array('action' => 'get_languages', '?' => array('search' => $this->request->query['search'])), 'class' => 'pagination-link', 'paginated-content' => '#language-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
+<?php $this->Paginator->options(array('url' => array('action' => 'get_languages', '?' => array('search' => isset($this->request->query['search']) ? $this->request->query['search'] : '')), 'class' => 'pagination-link', 'paginated-content' => '#language-content', 'onclick' => 'return Info.handleAsynchronousPagination(this)')); ?>
 
 <table class="table table-striped table-bordered" id="language-table" style='margin-bottom: 0'>
 	<tbody>

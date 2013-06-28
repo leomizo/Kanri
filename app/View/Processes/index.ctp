@@ -15,7 +15,7 @@
 				</div>
 			<?php endif; ?>
 			<?php echo $this->Form->create(null, array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
-				  echo $this->Form->input("Buscar candidato / empresa: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
+				  echo $this->Form->input("Buscar candidato / empresa: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => isset($this->request->query['search']) ? $this->request->query['search'] : ''));
 				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
 				  echo $this->Form->button($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Abrir novo processo', array('type' => 'button', 'class' => 'btn btn-success pull-right', 'escape' => false, 'data-toggle' => 'modal', 'data-target' => '#process-modal'));
 				  echo $this->Form->end();

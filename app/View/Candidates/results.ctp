@@ -53,7 +53,7 @@
 					<td>
 						<?php if ($visibility == 0 || $visibility == 2) {
 								    echo $this->Html->link('Editar', array('controller' => 'candidates', 'action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-mini', 'style' => 'margin-right: 6px'));
-							        echo $this->Form->postLink('Remover', array('controller' => 'candidates', 'action' => 'delete', $candidate['Candidates']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?');
+							        echo $this->Form->postLink('Remover', array('controller' => 'candidates', 'action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?');
 						  	  }
 						      echo $this->Html->link('Ver processos', array('controller' => 'processes', 'action' => 'view', $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-primary', 'style' => 'margin-left: 4px')); ?>
 					</td>

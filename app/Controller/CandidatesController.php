@@ -21,7 +21,7 @@ class CandidatesController extends AppController {
 	public function index($success_message = null) {
 		if ($success_message) $this->Set('success_message', $success_message);
 		
-		$search = $this->request->query['search'];
+		$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
 		
 		$this->paginate = $this->Candidate->pagination($search);
 		$this->set('candidates', $this->paginate('Candidate'));
@@ -49,20 +49,20 @@ class CandidatesController extends AppController {
 				else {
 					unset($this->request->data['City']['State']['Country']['name']);
 				}
-				if ($this->request->data['City']['State']['id'] == 'null' || $this->request->data['City']['State']['id'] == '') {
+				if (isset($this->request->data['City']['State']['id']) && ($this->request->data['City']['State']['id'] == 'null' || $this->request->data['City']['State']['id'] == '')) {
 					unset($this->request->data['City']['State']['id']);
 				}
 				else {
 					unset($this->request->data['City']['State']['name']);
 				}
-				if ($this->request->data['City']['id'] == 'null' || $this->request->data['City']['id'] == '') {
+				if (isset($this->request->data['City']['id']) && ($this->request->data['City']['id'] == 'null' || $this->request->data['City']['id'] == '')) {
 					unset($this->request->data['City']['id']);
 				}
 				else {
 					unset($this->request->data['City']['name']);
 				}
 
-				if ($this->request->data['Curriculum']['size'] <= 0) {
+				if ($this->request->data['Curriculum']['size'] <= 0 || !checkFile($this->request->data['Curriculum']['type'])) {
 					unset($this->request->data['Curriculum']);
 				}
 
@@ -127,7 +127,7 @@ class CandidatesController extends AppController {
 						unset($this->request->data['City']['name']);
 					}
 
-					if ($this->request->data['Curriculum']['size'] <= 0) {
+					if ($this->request->data['Curriculum']['size'] <= 0  || !checkFile($this->request->data['Curriculum']['type'])) {
 						unset($this->request->data['Curriculum']);
 					}
 					else $curriculum = $candidate['Curriculum']['id'];
