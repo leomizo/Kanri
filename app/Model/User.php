@@ -28,7 +28,9 @@ class User extends AppModel {
 
 	public function afterFind($results, $primary = false) {
 		foreach ($results as &$user) {
-			$user['User']['user_type'] = $this->getTypeEnumName($user['User']['type']);
+			if (isset($user['User']['type'])) {
+				$user['User']['user_type'] = $this->getTypeEnumName($user['User']['type']);
+			}
 		}
 		return $results;
 	}
@@ -53,6 +55,10 @@ class User extends AppModel {
 		if ($sort) $pagination['order'] = array('User.'.$sort => $asc);
 		else $pagination['order'] = array("User.name" => 'asc');
 		return $pagination;
+	}
+
+	public function getAuxiliaryUsers() {
+		return $this->find('list', array('conditions' => array('User.type' => 1), 'order' => 'User.name ASC'));
 	}
 
 }

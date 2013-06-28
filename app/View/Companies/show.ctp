@@ -1,3 +1,4 @@
+<?php if ($visibility == 0 || $visibility == 2): ?>
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner">
 		<div class="container">
@@ -12,6 +13,7 @@
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 
 <div class="content-block container-fluid">
 
@@ -42,8 +44,10 @@
 
 	<div class="row-fluid">
 		<div class="form-actions">
-			<?php echo $this->Html->link('Editar', array('controller' => 'companies', 'action' => 'edit', $company['Company']['id']), array('class' => 'btn btn-primary', 'style' => 'margin-right: 6px'));
-				  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-right: 6px'), 'Você está certo disso?'); 
+			<?php if ($visibility == 0 || $visibility == 2) {
+					  echo $this->Html->link('Editar', array('controller' => 'companies', 'action' => 'edit', $company['Company']['id']), array('class' => 'btn btn-primary', 'style' => 'margin-right: 6px'));
+					  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-right: 6px'), 'Você está certo disso?'); 
+				  }
 				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()')); ?>
 		</div>
 	</div>

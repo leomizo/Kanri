@@ -25,39 +25,48 @@ class CompaniesController extends AppController {
 	}
 
 	public function add() {
-		if ($this->request->is('post')) {
-			if ($this->Company->save($this->request->data)) {
-				$this->redirect(array('controller' => 'companies', 'action' => 'index', 'add'));
-			}
-			else {
-				$this->Set('alert', true);
-			}
-		}
-	}
-
-	public function edit($id = null) {
-		if ($id) {
-			$company = $this->Company->findById($id);
-			if ($this->request->is('post') || $this->request->is('put')) {
-				$this->Company->id = $id;
+		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
+			if ($this->request->is('post')) {
 				if ($this->Company->save($this->request->data)) {
-					$this->redirect(array('controller' => 'companies', 'action' => 'index', 'edit'));
+					$this->redirect(array('controller' => 'companies', 'action' => 'index', 'add'));
 				}
 				else {
 					$this->Set('alert', true);
 				}
 			}
-			else if ($company) {
-				$this->request->data = $company;	
+		}
+		else throw new ForbiddenException();
+	}
+
+	public function edit($id = null) {
+		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
+			if ($id) {
+				$company = $this->Company->findById($id);
+				if ($this->request->is('post') || $this->request->is('put')) {
+					$this->Company->id = $id;
+					if ($this->Company->save($this->request->data)) {
+						$this->redirect(array('controller' => 'companies', 'action' => 'index', 'edit'));
+					}
+					else {
+						$this->Set('alert', true);
+					}
+				}
+				else if ($company) {
+					$this->request->data = $company;	
+				}
 			}
 		}
+		else throw new ForbiddenException();
 	}
 
 	public function delete($id = null) {
-		if ($this->request->is('post') && $id > 0) {
-			$this->Company->delete($id);
-			$this->redirect(array('controller' => 'companies', 'action' => 'index', 'delete'));
+		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
+			if ($this->request->is('post') && $id > 0) {
+				$this->Company->delete($id);
+				$this->redirect(array('controller' => 'companies', 'action' => 'index', 'delete'));
+			}
 		}
+		else throw new ForbiddenException();
 	}
 	
 }

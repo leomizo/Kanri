@@ -45,5 +45,25 @@ class AppController extends Controller {
         )
     );
 
+    public function beforeFilter() {
+        if ($this->Auth->user('type') == 0) {
+            $visibility = 0;
+            $this->layout = 'main';
+        }
+        else {
+            $this->loadModel('Permission');
+            if ($this->Permission->userIsPrivileged($this->Auth->user('id'))) {
+                $visibility = 2;
+                $this->layout = 'privileged';
+            }
+            else {
+                $visibility = 1;
+                $this->layout = 'auxiliary';  
+            }
+        }
+        $this->UserVisibility = $visibility;
+        $this->set('visibility', $visibility);
+    }
+
 	
 }

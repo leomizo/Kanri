@@ -17,16 +17,20 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<h2><?php echo $name; ?></h2>
-<p class="error">
-	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
-	<?php printf(
-		__d('cake', 'The requested address %s was not found on this server.'),
-		"<strong>'{$url}'</strong>"
-	); ?>
-</p>
-<?php
-if (Configure::read('debug') > 0):
-	echo $this->element('exception_stack_trace');
-endif;
-?>
+
+<?php $this->Html->css('error.css', null, array('inline' => false)); ?>
+<?php $this->Html->script('error.js', array('inline' => false)); ?>
+
+<?php if ($error instanceof ForbiddenException): ?>
+	<div class="content-block" id='message-container'>
+		<?php echo $this->Html->image('warning-icon', array('id' => 'message-icon')); ?>
+		<br />
+		<h2>Sem permissão para executar ação!</h2>
+	</div>
+<?php else : ?>
+	<div class="content-block" id='message-container'>
+		<?php echo $this->Html->image('error-icon', array('id' => 'message-icon')); ?>
+		<br />
+		<h2>404: Página não encontrada!</h2>
+	</div>
+<?php endif; ?>

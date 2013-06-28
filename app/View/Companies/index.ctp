@@ -1,3 +1,4 @@
+<?php if ($visibility == 0 || $visibility == 2): ?>
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner">
 		<div class="container">
@@ -5,6 +6,7 @@
 				<li class="active">
 					<?php echo $this->Html->link('Visualizar empresas', '/companies'); ?>
 				</li>
+				
 				<li>
 					<?php echo $this->Html->link('Adicionar empresa', '/companies/add'); ?>
 				</li>
@@ -12,6 +14,7 @@
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 
 <div class="content-block container-fluid">
 
@@ -30,7 +33,9 @@
 			<?php echo $this->Form->create(null, array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
 				  echo $this->Form->input("Buscar empresa: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
 				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
-				  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar nova empresa', 'add', array('class' => 'btn btn-success pull-right', 'escape' => false));
+				  if ($visibility == 0 || $visibility == 2) {
+				  	  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar nova empresa', 'add', array('class' => 'btn btn-success pull-right', 'escape' => false));
+				  }
 				  echo $this->Form->end();
 			?>
 		</div>
@@ -44,7 +49,7 @@
 					<th><?php echo $this->Paginator->sort("contact_name", "Contato"); ?></th>
 					<th><?php echo $this->Paginator->sort("contact_email", "E-mail"); ?></th>
 					<th><?php echo $this->Paginator->sort("contact_telephone", "Telefone"); ?></th>
-					<th style="width: 200px">Opções</th>
+					<th style="width: <?php if ($visibility == 0 || $visibility == 2) echo '200px'; else echo '87px'; ?>">Opções</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -57,9 +62,11 @@
 					<td><?php echo $company['Company']['contact_email']; ?></td>
 					<td><?php echo $company['Company']['contact_telephone']; ?></td>
 					<td>
-						<?php echo $this->Html->link('Editar', array('controller' => 'companies', 'action' => 'edit', $company['Company']['id']), array("class" => 'btn btn-mini', 'style' => 'margin-right: 5px')); 
-							  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-mini btn-danger', 'style' => 'margin-right: 5px'), 'Você está certo disso?'); 
-							  echo $this->Html->link('Ver processos', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array("class" => 'btn btn-mini btn-primary')); ?>
+						<?php if ($visibility == 0 || $visibility == 2) {
+								  echo $this->Html->link('Editar', array('controller' => 'companies', 'action' => 'edit', $company['Company']['id']), array("class" => 'btn btn-mini', 'style' => 'margin-right: 5px')); 
+								  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-mini btn-danger', 'style' => 'margin-right: 5px'), 'Você está certo disso?'); 
+							  }
+							  echo $this->Html->link('Ver processos', array('controller' => 'processes', 'action' => 'view', $company['Company']['id'], true), array("class" => 'btn btn-mini btn-primary')); ?>
 					</td>
 				</tr>
 				<?php endforeach; ?>

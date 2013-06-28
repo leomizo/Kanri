@@ -77,8 +77,7 @@ Process.editEvent = function(btn) {
 	var cell = $(btn).parents('tr');
 	cell.attr('editing', 'true');
 	cell.addClass('info');
-	$('tr[editing="false"] > td > div.event-cell').hide("150");
-	$('tr[editing="false"]').hide("10");
+	$('tr[editing="false"]').hide();
 	cell.find("button, a").hide();
 
 	var event_type = cell.find('.event-type').text();
@@ -107,8 +106,7 @@ Process.editEvent = function(btn) {
 Process.cancelEventEdit = function() {
 	var cell = $('tr[editing="true"]');
 	cell.find("button, a").show();
-	$('tr[editing="false"]').show("100");
-	$('tr[editing="false"] > td > div.event-cell').show("150");
+	$('tr[editing="false"]').show();
 	cell.attr('editing', 'false');
 	cell.removeClass('info');
 

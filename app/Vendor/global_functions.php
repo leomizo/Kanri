@@ -30,6 +30,17 @@ function formatDate($date) {
 	return $components['mday'].' de '.monthNumberToMonthString($components['mon']).' de '.$components['year'].' às '.($components['hours']).':'.$components['minutes'];
 }
 
+function formatDay($date) {
+	$components = getdate(strtotime($date));
+	return $components['mday'].' de '.monthNumberToMonthString($components['mon']).' de '.$components['year'];
+}
+
+function formatHour($date) {
+	$components = getdate(strtotime($date));
+	if ($components['minutes'] < 10) $components['minutes'] = '0'.$components['minutes'];
+	return $components['hours'].':'.$components['minutes'];
+}
+
 function monthNumberToMonthString($monthNumber) {
 	switch ($monthNumber) {
 		case 1:

@@ -8,9 +8,11 @@
 				<li>
 					<?php echo $this->Html->link('Busca avançada de candidatos', '/candidates/search'); ?>
 				</li>
+				<?php if ($visibility == 0 || $visibility == 2): ?>
 				<li>
 					<?php echo $this->Html->link('Adicionar candidatos', '/candidates/add'); ?>
 				</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>
@@ -33,8 +35,10 @@
 			<?php echo $this->Form->create('Candidate', array('class' => 'form-search well search-box', 'type' => 'get', 'action' => 'index'));
 				  echo $this->Form->input("Buscar candidato: ", array('div' => false, 'class' => 'input-large search-query', 'label' => array('class' => 'control-label'), 'name' => 'search', 'id' => 'search-input', 'value' => ($this->request->query['search'] ? $this->request->query['search'] : '')));
 				  echo $this->Form->submit("Buscar", array('class' => 'btn', 'div' => false));
-				  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar novo candidato', array('action' => 'add'), array('class' => 'btn btn-success pull-right', 'escape' => false)); 
-					  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-search icon-white')).' Busca avançada', array('action' => 'search'), array('class' => 'btn btn-primary pull-right', 'escape' => false));
+				  if ($visibility == 0 || $visibility == 2) {
+				  	echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).' Adicionar novo candidato', array('action' => 'add'), array('class' => 'btn btn-success pull-right', 'escape' => false)); 
+				  }
+				  echo $this->Html->link($this->Html->tag('i', '', array('class' => 'icon-search icon-white')).' Busca avançada', array('action' => 'search'), array('class' => 'btn btn-primary pull-right', 'escape' => false));
 				  echo $this->Form->end();
 			?>
 		</div>
@@ -56,7 +60,7 @@
 					<th>
 						Cargo mais recente
 					</th>
-					<th style="width: 200px">Opções</th>
+					<th style="width: <?php if ($visibility == 0 || $visibility == 2) echo '200px'; else echo '95px'; ?>">Opções</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -75,8 +79,11 @@
 						<?php echo $candidate['Candidate']['current_job']; ?>
 					</td>
 					<td>
-						<?php echo $this->Html->link('Editar', array('controller' => 'candidates', 'action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-mini', 'style' => 'margin-right: 6px'));
-						      echo $this->Form->postLink('Remover', array('controller' => 'candidates', 'action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?'); ?>
+						<?php if ($visibility == 0 || $visibility == 2) {
+							  	  echo $this->Html->link('Editar', array('controller' => 'candidates', 'action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-mini', 'style' => 'margin-right: 4px'));
+						      	  echo $this->Form->postLink('Remover', array('controller' => 'candidates', 'action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?');
+						      }
+						      echo $this->Html->link('Ver processos', array('controller' => 'processes', 'action' => 'view', $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-primary', 'style' => 'margin-left: 4px')); ?>
 					</td>
 				</tr>
 				<?php endforeach; ?>

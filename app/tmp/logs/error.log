@@ -26704,3 +26704,1416 @@ Stack Trace:
 #3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-27 15:40:27 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:40:27 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:41:07 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:41:07 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:41:46 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:41:46 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/1
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:43:01 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:43:01 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:43:18 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:43:18 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:43:20 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:43:20 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:43:30 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Processes/view.ctp, line 20]
+Trace:
+include - APP/View/Processes/view.ctp, line 20
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-27 15:44:05 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:44:05 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:44:52 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/Model/Process.php, line 28]
+2013-06-27 15:44:52 Error: [InternalErrorException] Internal Server Error
+Request URL: /processes/view/2
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 28, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:45:51 Warning: Warning (2): Missing argument 2 for ProcessesController::events() in [/Library/WebServer/Documents/Kanri/app/Controller/ProcessesController.php, line 49]
+Trace:
+ProcessesController::events() - APP/Controller/ProcessesController.php, line 49
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-27 15:58:29 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/View/Candidates/index.ctp, line 80]
+2013-06-27 15:58:29 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 80)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 80, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 80, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 15:59:00 Error: Fatal Error (4): parse error, expecting `')'' in [/Library/WebServer/Documents/Kanri/app/View/Candidates/index.ctp, line 80]
+2013-06-27 15:59:00 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error, ex...', '/Library/WebSer...', 80)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error, ex...', '/Library/WebSer...', 80, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error, ex...', '/Library/WebSer...', 80, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 16:52:06 Warning: Warning (2): Missing argument 2 for ProcessesController::events() in [/Library/WebServer/Documents/Kanri/app/Controller/ProcessesController.php, line 49]
+Trace:
+ProcessesController::events() - APP/Controller/ProcessesController.php, line 49
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-27 17:26:09 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:27:31 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/edit/1
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('1')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:28:18 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/delete/1
+Stack Trace:
+#0 [internal function]: CandidatesController->delete('1')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:47:04 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/edit/1
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('1')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:50:56 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:50:56 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:57:25 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:57:25 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:57:25 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 17:57:34 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:57:34 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:57:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 17:57:34 Error: [MissingActionException] Action CandidatesController::asldjsakldj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'asldjsakldj',
+)
+Request URL: /candidates/asldjsakldj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 17:57:34 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:57:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/asldjsakldj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 17:58:38 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:58:38 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:58:38 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 17:58:38 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:58:38 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:58:38 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 17:59:33 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 17:59:33 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:59:33 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/add
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 17:59:40 Error: [MissingActionException] Action CandidatesController::ldjaskdsa() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'ldjaskdsa',
+)
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 17:59:40 Error: Fatal Error (1): Class 'AppExceptionRenderer' not found in [/Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php, line 122]
+2013-06-27 17:59:40 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppExcep...', '/Library/WebSer...', 122, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 18:01:18 Error: [MissingActionException] Action CandidatesController::ldjaskdsa() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'ldjaskdsa',
+)
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 18:02:24 Error: [MissingActionException] Action CandidatesController::ldjaskdsa() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'ldjaskdsa',
+)
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 18:04:03 Error: [MissingActionException] Action CandidatesController::ldjaskdsa() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'ldjaskdsa',
+)
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 18:28:15 Error: [MissingActionException] Action CandidatesController::ldjaskdsa() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'ldjaskdsa',
+)
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 18:28:44 Error: [MissingActionException] Action CandidatesController::ldjaskdsa() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'ldjaskdsa',
+)
+Request URL: /candidates/ldjaskdsa
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 18:28:52 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 18:28:52 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 18:29:11 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 18:30:42 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 18:30:45 Error: [MissingActionException] Action CandidatesController::a;sdkjaksdj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'a;sdkjaksdj',
+)
+Request URL: /candidates/a;sdkjaksdj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:42:49 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:43:17 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:44:23 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:45:26 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:45:46 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:46:19 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:48:18 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:48:26 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:48:33 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:48:58 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:50:27 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:51:00 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:51:11 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:51:21 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:51:46 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:52:25 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:52:34 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:53:13 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:53:34 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:54:01 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:55:04 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:55:27 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:56:40 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:56:45 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:56:52 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:57:44 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:58:01 Error: [MissingActionException] Action CandidatesController::lkasjdksaj() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'lkasjdksaj',
+)
+Request URL: /candidates/lkasjdksaj
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 19:58:49 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:01:31 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:02:49 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:02:59 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:02 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:09 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:26 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:28 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:30 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:35 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:03:36 Error: [MissingControllerException] Controller class CandidatessController could not be found.
+Exception Attributes: array (
+  'class' => 'CandidatessController',
+  'plugin' => NULL,
+)
+Request URL: /candidatess
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:23 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:27 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:29 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:32 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:44 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:46 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:04:52 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:05:06 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:05:13 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:05:14 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /dashboards
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 20:06:15 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:06:16 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:06:30 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:06:43 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:56:28 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:57:23 Error: [MissingActionException] Action CandidatesController::addh() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'addh',
+)
+Request URL: /candidates/addh
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 20:57:27 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:57:27 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:58:52 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:58:52 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:58:59 Error: [MissingActionException] Action CandidatesController::adds() could not be found.
+Exception Attributes: array (
+  'controller' => 'CandidatesController',
+  'action' => 'adds',
+)
+Request URL: /candidates/adds
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-27 20:59:04 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 20:59:04 Error: [ForbiddenException] Forbidden
+Request URL: /candidates/add
+Stack Trace:
+#0 [internal function]: CandidatesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 21:13:50 Error: [MissingControllerException] Controller class HNAP1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'HNAP1Controller',
+  'plugin' => NULL,
+)
+Request URL: /HNAP1/
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 21:13:54 Error: [MissingControllerException] Controller class TEADevInfoController could not be found.
+Exception Attributes: array (
+  'class' => 'TEADevInfoController',
+  'plugin' => NULL,
+)
+Request URL: /TEADevInfo/
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 21:13:57 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 22:54:39 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:44 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:47 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:48 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:48 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:48 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:49 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:54:51 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:55:18 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:56:11 Error: [ForbiddenException] Forbidden
+Request URL: /companies/add
+Stack Trace:
+#0 [internal function]: CompaniesController->add()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:56:12 Error: [ForbiddenException] Forbidden
+Request URL: /companies/edit/1
+Stack Trace:
+#0 [internal function]: CompaniesController->edit('1')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:56:17 Error: [ForbiddenException] Forbidden
+Request URL: /companies/edit
+Stack Trace:
+#0 [internal function]: CompaniesController->edit()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:56:21 Error: [ForbiddenException] Forbidden
+Request URL: /companies/edit
+Stack Trace:
+#0 [internal function]: CompaniesController->edit()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:56:22 Error: [ForbiddenException] Forbidden
+Request URL: /companies/edit
+Stack Trace:
+#0 [internal function]: CompaniesController->edit()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:56:24 Error: [ForbiddenException] Forbidden
+Request URL: /companies/edit
+Stack Trace:
+#0 [internal function]: CompaniesController->edit()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 22:58:40 Error: [ForbiddenException] Forbidden
+Request URL: /info
+Stack Trace:
+#0 [internal function]: InfoController->beforeFilter(Object(CakeEvent))
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#4 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(InfoController), Object(CakeRequest), Object(CakeResponse))
+#5 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-27 23:06:43 Error: [MissingControllerException] Controller class CusersController could not be found.
+Exception Attributes: array (
+  'class' => 'CusersController',
+  'plugin' => NULL,
+)
+Request URL: /cusers
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-27 23:06:47 Error: [ForbiddenException] Forbidden
+Request URL: /users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 23:06:47 Error: [ForbiddenException] Forbidden
+Request URL: /users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-27 23:12:17 Warning: Warning (2): Missing argument 2 for ProcessesController::events() in [/Library/WebServer/Documents/Kanri/app/Controller/ProcessesController.php, line 49]
+Trace:
+ProcessesController::events() - APP/Controller/ProcessesController.php, line 49
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-27 23:15:10 Warning: Warning (2): Missing argument 2 for ProcessesController::events() in [/Library/WebServer/Documents/Kanri/app/Controller/ProcessesController.php, line 49]
+Trace:
+ProcessesController::events() - APP/Controller/ProcessesController.php, line 49
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 486
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-27 23:23:09 Error: [MissingTableException] Table permissions for model Permission was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'permissions',
+  'class' => 'Permission',
+  'ds' => 'default',
+)
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('permissions')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('Permission', 'fields')
+#4 /Library/WebServer/Documents/Kanri/app/View/Users/permissions.ctp(55): FormHelper->create('Permission', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(947): include('/Library/WebSer...')
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(909): View->_evaluate('/Library/WebSer...', Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(471): View->_render('/Library/WebSer...')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-27 23:23:57 Error: [MissingTableException] Table permissions for model Permission was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'permissions',
+  'class' => 'Permission',
+  'ds' => 'default',
+)
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('permissions')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('Permission', 'fields')
+#4 /Library/WebServer/Documents/Kanri/app/View/Users/permissions.ctp(55): FormHelper->create('Permission', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(947): include('/Library/WebSer...')
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(909): View->_evaluate('/Library/WebSer...', Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(471): View->_render('/Library/WebSer...')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-27 23:24:17 Error: [MissingTableException] Table permissions for model Permission was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'permissions',
+  'class' => 'Permission',
+  'ds' => 'default',
+)
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('permissions')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('Permission', 'fields')
+#4 /Library/WebServer/Documents/Kanri/app/View/Users/permissions.ctp(55): FormHelper->create('Permission', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(947): include('/Library/WebSer...')
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(909): View->_evaluate('/Library/WebSer...', Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(471): View->_render('/Library/WebSer...')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-27 23:24:26 Error: [MissingTableException] Table permissions for model Permission was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'permissions',
+  'class' => 'Permission',
+  'ds' => 'default',
+)
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(3243): Model->setSource('permissions')
+#1 /Library/WebServer/Documents/Kanri/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('Permission', 'fields')
+#4 /Library/WebServer/Documents/Kanri/app/View/Users/permissions.ctp(55): FormHelper->create('Permission', Array)
+#5 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(947): include('/Library/WebSer...')
+#6 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(909): View->_evaluate('/Library/WebSer...', Array)
+#7 /Library/WebServer/Documents/Kanri/lib/Cake/View/View.php(471): View->_render('/Library/WebSer...')
+#8 /Library/WebServer/Documents/Kanri/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#9 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /Library/WebServer/Documents/Kanri/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Library/WebServer/Documents/Kanri/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-27 23:27:14 Error: Fatal Error (1): Call to undefined function set() in [/Library/WebServer/Documents/Kanri/app/Controller/UsersController.php, line 80]
+2013-06-27 23:27:14 Error: [InternalErrorException] Internal Server Error
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Library/WebSer...', 80)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Library/WebSer...', 80, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Library/WebSer...', 80, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 23:45:21 Error: Fatal Error (1): Cannot use string offset as an array in [/Library/WebServer/Documents/Kanri/app/Model/User.php, line 31]
+2013-06-27 23:45:21 Error: [InternalErrorException] Internal Server Error
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use stri...', '/Library/WebSer...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use stri...', '/Library/WebSer...', 31, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use stri...', '/Library/WebSer...', 31, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-27 23:45:41 Error: Fatal Error (1): Cannot use string offset as an array in [/Library/WebServer/Documents/Kanri/app/Model/User.php, line 31]
+2013-06-27 23:45:41 Error: [FatalErrorException] Cannot use string offset as an array
+Request URL: /users/permissions
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use stri...', '/Library/WebSer...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use stri...', '/Library/WebSer...', 31, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use stri...', '/Library/WebSer...', 31, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-28 00:49:44 Error: Fatal Error (4): parse error in [/Library/WebServer/Documents/Kanri/app/Model/Permission.php, line 17]
+2013-06-28 00:49:44 Error: [InternalErrorException] Internal Server Error
+Request URL: /dashboard
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'parse error', '/Library/WebSer...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'parse error', '/Library/WebSer...', 17, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'parse error', '/Library/WebSer...', 17, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-28 00:49:58 Error: Fatal Error (64): Can't use method return value in write context in [/Library/WebServer/Documents/Kanri/app/Model/Permission.php, line 17]
+2013-06-28 00:49:58 Error: [InternalErrorException] Internal Server Error
+Request URL: /dashboard
+Stack Trace:
+#0 /Library/WebServer/Documents/Kanri/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/Library/WebSer...', 17)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', '/Library/WebSer...', 17, Array)
+#2 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', '/Library/WebSer...', 17, Array)
+#3 /Library/WebServer/Documents/Kanri/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-28 00:53:47 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Dashboard/index.ctp, line 26]
+Trace:
+include - APP/View/Dashboard/index.ctp, line 26
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-28 00:54:25 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Dashboard/index.ctp, line 26]
+Trace:
+include - APP/View/Dashboard/index.ctp, line 26
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+
+2013-06-28 00:55:00 Warning: Warning (2): Invalid argument supplied for foreach() in [/Library/WebServer/Documents/Kanri/app/View/Dashboard/index.ctp, line 26]
+Trace:
+include - APP/View/Dashboard/index.ctp, line 26
+View::_evaluate() - CORE/Cake/View/View.php, line 947
+View::_render() - CORE/Cake/View/View.php, line 909
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 948
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 109
+

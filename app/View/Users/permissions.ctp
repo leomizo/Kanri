@@ -1,3 +1,5 @@
+<?php $this->Html->script('permission.js', array('inline' => false)); ?>
+
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner">
 		<div class="container">
@@ -32,14 +34,16 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><a href="users_show.html">Leilly Tamamaro</a></td>
-					<td>De 20/05/2013 às 14:00h até 21/05/2013 às 23:59h</td>
-					<td>
-						<button class="btn btn-mini">Editar</button>
-						<button class="btn btn-mini btn-danger">Revogar</button>
+				<?php foreach ($permissions as $permission): ?>
+				<tr permission-id="<?php echo $permission['Permission']['id']; ?>" user-id="<?php echo $permission['User']['id']; ?>" start="<?php echo date('d/m/Y H:i:s', strtotime($permission['Permission']['start'])); ?>" end="<?php echo date('d/m/Y H:i:s', strtotime($permission['Permission']['end'])); ?>" >
+					<td><?php echo $this->Html->link($permission['User']['name'], array('controller' => 'users', 'action' => 'show', $permission['User']['id'])); ?></td>
+					<td>De <?php echo formatDate($permission['Permission']['start']); ?> até <?php echo formatDate($permission['Permission']['end']); ?></td>
+					<td class='permission-options'>
+						<button class="btn btn-mini" onclick='Permission.editPermission(this)'>Editar</button>
+						<?php echo $this->Form->postLink('Revogar', array('controller' => 'permissions', 'action' => 'delete', $permission['Permission']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?'); ?>
 					</td>
 				</tr>
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 	</div>
@@ -48,44 +52,41 @@
 <div class="content-block container-fluid">
 
 	<div class="row-fluid content-title">
-		<h2>Conceder permissão</h2>
+		<h2 id='permission-form-title'>Conceder permissão</h2>
 	</div>
 
 	<div class="row-fluid">
-		<form class="form-horizontal">
+		<?php echo $this->Form->create('Permission', array('class' => 'form-horizontal', 'controller' => 'permissions', 'action' => 'add', 'id' => 'permission-form')); ?>
+			<?php echo $this->Form->input('Permission.id', array('type' => 'hidden', 'value' => '-1')); ?>
 			<div class="control-group">
-				<label class="control-label">Usuário beneficiário:</label>
+				<?php echo $this->Form->label('Permission.user_id', "Usuário beneficiário: ", array('div' => false, 'class' => 'control-label')); ?>
 				<div class="controls">
-					<select>
-						<option>Leilly Tamamaro</option>
-					</select>
+					<?php echo $this->Form->input('Permission.user_id', array('div' => false, 'label' => false, 'options' => $users, 'required' => true)); ?>
 				</div>
 			</div>
 			<div class="control-group">
-				<label class="control-label">Início:</label>
+				<?php echo $this->Form->label('Permission.start', "Início: ", array('div' => false, 'class' => 'control-label')); ?>
 				<div class="controls date-time-picker input-append" style="position: absolute; left: 20px;">
-					<input data-format="dd/MM/yyyy hh:mm:ss" type="text" />
+					<input data-format="dd/MM/yyyy hh:mm:ss" name='data[Permission][start]' id='PermissionStart' type="text" required='required' />
 				    <span class="add-on">
 				      	<i class="icon-calendar"></i>
 				    </span>
 				</div>
 			</div>
 			<div class="control-group">
-				<label class="control-label">Fim:</label>
+				<?php echo $this->Form->label('Permission.end', "Fim: ", array('div' => false, 'class' => 'control-label')); ?>
 				<div class="controls date-time-picker input-append" style="position: absolute; left: 20px;">
-					<input data-format="dd/MM/yyyy hh:mm:ss" type="text" />
+					<input data-format="dd/MM/yyyy hh:mm:ss" name='data[Permission][end]' id='PermissionEnd' type="text" required='required' />
 				    <span class="add-on">
 				      	<i class="icon-calendar"></i>
 				    </span>
 				</div>
 			</div>
-		</form>
-	</div>
-
-	<div class="row-fluid">
-		<div class="form-actions">
-			<button class="btn btn-primary">Conceder</button>
-		</div>
+			<div class="form-actions" style='padding-left: 30px'>
+				<button type='submit' id='permission-submit-btn' class="btn btn-primary">Conceder</button>
+				<button type='submit' id='permission-cancel-edit-btn' class="btn" style="display: none" onclick="Permission.cancelPermissionEdit()">Cancelar</button>
+			</div>
+		<?php echo $this->Form->end(); ?>
 	</div>
 
 </div>

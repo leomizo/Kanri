@@ -16,6 +16,18 @@ class ProcessesController extends AppController {
 		$this->set('companies', $this->paginate('Company'));
 	}
 
+	public function view($id, $is_company = false) {
+		if ($is_company) {
+			$this->Process->Company->id = $id;
+			$this->set('title', $this->Process->Company->field('name'));
+		}
+		else {
+			$this->Process->Candidate->id = $id;
+			$this->set('title', $this->Process->Candidate->field('name'));
+		}
+		$this->set('processes', $this->Process->view($id, $is_company));
+	}
+
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->request->data['Process']['Event'][0]['event_type'] = 0;

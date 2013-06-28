@@ -19,4 +19,16 @@ class Process extends AppModel {
 		return $pagination;
 	}
 
+	public function view($id, $is_company) {
+		$options = array(
+			'joins' => array(array('table' => 'candidates', 'alias' => 'Candidate', 'type' => 'INNER', 'conditions' => array("Candidate.id = Process.candidate_id")), array('table' => 'companies', 'alias' => 'Company', 'type' => 'INNER', 'conditions' => array("Company.id = Process.company_id")), array('table' => 'events', 'alias' => 'Event', 'type' => 'INNER', 'conditions' => array('Process.id = Event.process_id'))),
+			'group' => 'Event.process_id',
+			'order' => 'last_occurrence DESC',
+			'fields' => array('Candidate.id', 'Candidate.first_name', 'Candidate.middle_names', 'Candidate.last_name', 'Company.id', 'Company.name', 'Process.id', 'MAX(Event.occurrence) as last_occurrence'),
+			'recursive' => -1
+		);
+		$options['conditions'] = $is_company ? array('Process.company_id' => $id) : array('Process.candidate_id' => $id);
+		return $this->find('all', $options);
+	}
+
 }

@@ -5,14 +5,16 @@
 		<div class="container">
 			<ul id="context-options" class="nav">
 				<li>
-					<a href="candidate_index.html">Visualizar candidatos</a>
+					<?php echo $this->Html->link('Visualizar candidatos', '/candidates'); ?>
 				</li>
 				<li class="active">
-					<a href="candidate_search.html">Busca avançada de candidatos</a>
+					<?php echo $this->Html->link('Busca avançada de candidatos', '/candidates/search'); ?>
 				</li>
+				<?php if ($visibility == 0 || $visibility == 2): ?>
 				<li>
-					<a href="candidate_add.html">Adicionar candidato</a>
+					<?php echo $this->Html->link('Adicionar candidatos', '/candidates/add'); ?>
 				</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>

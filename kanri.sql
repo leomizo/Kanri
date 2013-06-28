@@ -278,6 +278,16 @@ CREATE TABLE `event_conclusions`(
 	created DATETIME NULL
 );
 
+DROP TABLE IF EXISTS `permissions`;
+
+CREATE TABLE `permissions` (
+	id SERIAL PRIMARY KEY,
+	user_id BIGINT UNSIGNED NULL,
+	start DATETIME,
+	end DATETIME,
+	created DATETIME NULL
+);
+
 INSERT INTO `users` (`name`, `email`, `password`, `type`)
 VALUES ("Edson Tamamaro", "edson@kanri.com", "64bbf816abf3fd1f415b1826b78f5b3a8d22ac84", "0");
 
@@ -287,14 +297,7 @@ VALUES ("Edson Tamamaro", "edson@kanri.com", "64bbf816abf3fd1f415b1826b78f5b3a8d
 
  
 
--- DROP TABLE IF EXISTS `permissions`;
 
--- CREATE TABLE `permissions` (
--- 	id SERIAL PRIMARY KEY,
--- 	privileged_user BIGINT UNSIGNED NULL,
--- 	start_time DATETIME,
--- 	end_time DATETIME
--- );
 
 
 

@@ -2,6 +2,11 @@
 
 class LanguagesController extends AppController {
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		if ($this->UserVisibility != 0 && $this->UserVisibility != 2) throw new ForbiddenException();
+	}
+
 	public function add() {
 		if ($this->request->is('post')) {
 			if($this->Language->save($this->request->data)) {

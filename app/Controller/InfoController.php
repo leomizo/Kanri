@@ -11,6 +11,11 @@ class InfoController extends AppController {
 						 'Formation',
 						 'Course',
 						 'Workplace');
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		if ($this->UserVisibility != 0 && $this->UserVisibility != 2) throw new ForbiddenException();
+	}
 	
 	public function index() {
 		$this->paginate = $this->Language->pagination($search);

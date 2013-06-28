@@ -1,0 +1,14 @@
+#message-container {
+	width: 600px;
+	height: 250px;
+	top: 170px;
+	opacity: 0;
+	margin: auto;
+	text-align: center;
+}
+
+#message-icon {
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}

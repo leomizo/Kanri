@@ -8,9 +8,11 @@
 				<li class="active">
 					<?php echo $this->Html->link('Busca avançada de candidatos', '/candidates/search'); ?>
 				</li>
+				<?php if ($visibility == 0 || $visibility == 2): ?>
 				<li>
 					<?php echo $this->Html->link('Adicionar candidatos', '/candidates/add'); ?>
 				</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>
@@ -30,7 +32,7 @@
 					<th>Idade</th>
 					<th>Cidade</th>
 					<th>Cargo mais recente</th>
-					<th style="width: 200px">Opções</th>
+					<th style="width: <?php if ($visibility == 0 || $visibility == 2) echo '200px'; else echo '95px'; ?>">Opções</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -49,8 +51,11 @@
 						<?php echo $candidate['Candidate']['current_job']; ?>
 					</td>
 					<td>
-						<?php echo $this->Html->link('Editar', array('controller' => 'candidates', 'action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-mini', 'style' => 'margin-right: 6px'));
-						      echo $this->Form->postLink('Remover', array('controller' => 'candidates', 'action' => 'delete', $candidate['Candidates']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?'); ?>
+						<?php if ($visibility == 0 || $visibility == 2) {
+								    echo $this->Html->link('Editar', array('controller' => 'candidates', 'action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-mini', 'style' => 'margin-right: 6px'));
+							        echo $this->Form->postLink('Remover', array('controller' => 'candidates', 'action' => 'delete', $candidate['Candidates']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você está certo disso?');
+						  	  }
+						      echo $this->Html->link('Ver processos', array('controller' => 'processes', 'action' => 'view', $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-primary', 'style' => 'margin-left: 4px')); ?>
 					</td>
 				</tr>
 				<?php endforeach; ?>
