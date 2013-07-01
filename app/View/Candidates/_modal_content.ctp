@@ -5,7 +5,7 @@
 		<?php foreach ($modal_data as $entry): ?>
 		<tr>
 			<td>
-				<?php echo $this->Html->link($entry[ucfirst($modal_table)]['name'], "", array('name-input' => '#'.$modal_table.'-name-input', 'id-input' => '#'.$modal_table.'-input', 'entry-id' => $entry[ucfirst($modal_table)]['id'], 'onclick' => 'return Candidate.handleModalSelection(this)')); ?>
+				<?php echo $this->Html->link($entry[ucfirst($modal_table)]['name'], "", array('name-input' => '#'.$modal_table.'-name-input', 'id-input' => '#'.$modal_table.'-input', 'entry-id' => $entry[ucfirst($modal_table)]['id'], 'onclick' => 'return Candidate.handleModalSelection(this, Candidate.check'.ucfirst($modal_table).'Data)')); ?>
 			</td>
 		</tr>
 		<?php endforeach; ?>	

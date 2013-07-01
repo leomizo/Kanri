@@ -59,7 +59,7 @@
 				<div class="pull-left">
 					<label class="control-label">Segmento da empresa</label>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => $market_sectors, 'empty' => 'Todos', 'name' => 'data[market_sector]')); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => $market_sectors, 'empty' => 'Todos', 'name' => 'data[market_sector]', 'id' => false)); ?>
 					</div>
 				</div>
 			</fieldset>
@@ -73,19 +73,19 @@
 				<div id="country-select" class="controls" style="margin-left: 0; margin-top: 20px">
 					<label class="control-label">País</label>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => $countries, 'empty' => 'Todos', 'onchange' => 'Candidate.selectSearchCountry()', 'name' => false)); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => $countries, 'empty' => 'Todos', 'name' => false, 'onchange' => 'Candidate.selectSearchCountry()', 'id' => false)); ?>
 					</div>
 				</div>
 				<div id="state-select" class="controls" style="margin-left: 0; margin-top: 20px; display: none">
 					<label class="control-label">Estado / Província</label>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array(), 'empty' => 'Todos', 'onchange' => 'Candidate.selectSearchState()', 'name' => false)); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array(), 'empty' => 'Todos', 'onchange' => 'Candidate.selectSearchState()', 'name' => false, 'id' => false)); ?>
 					</div>
 				</div>
 				<div id="city-select" class="controls" style="margin-left: 0; margin-top: 20px; display: none">
 					<label class="control-label">Cidade</label>
 					<div class="controls">
-						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array(), 'empty' => 'Todos', 'name' => false)); ?>
+						<?php echo $this->Form->input(null, array('div' => false, 'label' => false, 'options' => array(), 'empty' => 'Todos', 'name' => false, 'id' => false)); ?>
 					</div>
 				</div>
 				<br />

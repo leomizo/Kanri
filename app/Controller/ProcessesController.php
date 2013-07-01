@@ -53,16 +53,16 @@ class ProcessesController extends AppController {
 	}
 
 	public function get_companies() {
-		$search = $this->request->query['search'];
-		$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+		$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
+		$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 		$this->paginate = $this->Process->Company->ajaxPagination($search, $page);
 		$this->set('companies', $this->paginate('Company'));
 		$this->render('_company_table', false);
 	}
 
 	public function get_candidates() {
-		$search = $this->request->query['search'];
-		$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+		$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
+		$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 		$this->paginate = $this->Process->Candidate->ajaxPagination($search, $page);
 		$this->set('candidates', $this->paginate('Candidate'));
 		$this->set('visible', true);

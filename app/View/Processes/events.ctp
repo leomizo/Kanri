@@ -21,7 +21,7 @@
 					<?php echo $this->Form->input('Event.id', array('div' => false, 'label' => false, 'type' => 'hidden', 'value' => "-1")); ?>
 					<?php echo $this->Form->label('Event.event_type', 'Tipo de evento', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls pull-left" style="margin-left: 20px; margin-right: 33px">
-						<?php echo $this->Form->input('Event.event_type', array('div' => false, 'label' => false, 'class' => 'input-xlarge', 'onchange' => 'Process.selectEventType(this)', 'options' => array("1" => "Contato com o candidato", "2" => "Contato com a empresa", "3" => "Entrevista com o candidato", "4" => "Entrevista do candidato na empresa", "5" => "Feedback do candidato", "6" =>  "Feedback da empresa", "7" => "Conclusão do processo"), 'empty' => 'Selecione...')); ?>
+						<?php echo $this->Form->input('Event.event_type', array('div' => false, 'label' => false, 'class' => 'input-xlarge', 'onchange' => 'Process.selectEventType(this)', 'options' => array("1" => "Contato com o candidato", "2" => "Contato com a empresa", "3" => "Entrevista com o candidato", "4" => "Entrevista do candidato na empresa", "5" => "Feedback do candidato", "6" =>  "Feedback da empresa", "7" => "Conclusão do processo"), 'empty' => 'Selecione...', 'required' => 'required')); ?>
 					</div>
 					<?php echo $this->Form->label('Event.occurrence', 'Data e horário', array('div' => false, 'class' => 'control-label')); ?>
 					<div class="controls date-time-picker input-append" style="margin-left: 20px">

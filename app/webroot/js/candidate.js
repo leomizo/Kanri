@@ -5,21 +5,29 @@ Candidate.handleAsynchronousPagination = function(link) {
 	return false;
 }
 
-Candidate.handleModalSelection = function(link) {
+Candidate.handleModalSelection = function(link, callback) {
 	$($(link).attr('name-input')).text($(link).text());
 	$($(link).attr('id-input')).val($(link).attr('entry-id'));
 	$(link).parents('.modal').modal('hide');
+	if (callback) callback();
 	return false;
 }
 
 // Dependents
 
 Candidate.addDependent = function() {
-	var dependentIndex = $('#dependent-table > tr').length;
-	$('#dependent-table').append('<tr><td style="text-align: center">' + $('#dependent-age-input').val() + '</td><td style="text-align: center">' + $('#dependent-gender-input option:selected').text() + '</td><td><button type="button" class="btn btn-mini btn-danger" onclick="Candidate.removeDependent(this)"><i class="icon-remove icon-white"></i></button></td></tr>');
-	$('#dependent-inputs').append('<input class="candidate-dependent-age" type="hidden" name="data[Dependent][' + dependentIndex + '][age]" value="' + $('#dependent-age-input').val() + '" index="' + dependentIndex + '" />');
-	$('#dependent-inputs').append('<input class="candidate-dependent-gender" type="hidden" name="data[Dependent][' + dependentIndex + '][gender]" value="' + $('#dependent-gender-input').val() + '" index="' + dependentIndex + '" />');
-	$('#dependent-age-input').val("");
+	if ($("#dependent-age-input").val() != "") {
+		var dependentIndex = $('#dependent-table > tr').length;
+		$('#dependent-table').append('<tr><td style="text-align: center">' + $('#dependent-age-input').val() + '</td><td style="text-align: center">' + $('#dependent-gender-input option:selected').text() + '</td><td><button type="button" class="btn btn-mini btn-danger" onclick="Candidate.removeDependent(this)"><i class="icon-remove icon-white"></i></button></td></tr>');
+		$('#dependent-inputs').append('<input class="candidate-dependent-age" type="hidden" name="data[Dependent][' + dependentIndex + '][age]" value="' + $('#dependent-age-input').val() + '" index="' + dependentIndex + '" />');
+		$('#dependent-inputs').append('<input class="candidate-dependent-gender" type="hidden" name="data[Dependent][' + dependentIndex + '][gender]" value="' + $('#dependent-gender-input').val() + '" index="' + dependentIndex + '" />');
+		$('#dependent-age-input').val("");
+		$("#add-dependent-btn").addClass("disabled");
+	}
+	else {
+		Kanri.elementJump($("#dependent-age-input"));
+		$("#dependent-age-input")[0].focus();
+	}
 }
 
 Candidate.removeDependent = function(btn) {
@@ -41,6 +49,11 @@ Candidate.correctDependentIndexes = function() {
 	});
 }
 
+Candidate.checkDependentData = function() {
+	if ($("#dependent-age-input").val() != '') $("#add-dependent-btn").removeClass("disabled")
+	else $("#add-dependent-btn").addClass("disabled");
+}
+
 // Locations
 
 Candidate.selectCountry = function(select) {
@@ -52,8 +65,12 @@ Candidate.selectCountry = function(select) {
 		$("#country-name-input").show("150");
 		$('#state-label, #state-name-input, #state-divider').show();
 		$('#city-label, #city-name-input, #city-divider').show();
+		$("#country-name-input, #state-name-input, #city-name-input").prop('required', true);
+		$("#state-input")[0].selectedIndex = $("#state-input > option").index($("#state-input > option[value='null']"));
+		$("#city-input")[0].selectedIndex = $("#city-input > option").index($("#city-input > option[value='null']"));
 	}
 	else if ($(select).val() != '') {
+		$("#country-name-input, #state-name-input, #city-name-input").prop('required', false);
 		$("#country-name-label, #country-name-input").hide("100");
 		$("#state-input").load('/states/get_states_by_country/' + $(select).val(), function() {
 			$('#state-label, #state-divider, #state-input').show();
@@ -68,8 +85,11 @@ Candidate.selectState = function(select) {
 		$("#state-name-label").css('display', 'inline');
 		$("#state-name-input").show("150");
 		$('#city-label, #city-name-input, #city-divider').show();
+		$("#state-name-input, #city-name-input").prop('required', true);
+		$("#city-input")[0].selectedIndex = $("#city-input > option").index($("#city-input > option[value='null']"));
 	}
 	else if ($(select).val() != '') {
+		$("#state-name-input, #city-name-input").prop('required', false);
 		$("#state-name-label, #state-name-input").hide("100");
 		$("#city-input").load('/cities/get_cities_by_state/' + $(select).val(), function() {
 			$('#city-label, #city-divider, #city-input').show();
@@ -82,6 +102,10 @@ Candidate.selectCity = function(select) {
 	if ($(select).val() == 'null') {
 		$("#city-name-label").css('display', 'inline');
 		$("#city-name-input").show("150");
+		$("#city-name-input").prop('required', true);
+	}
+	else {
+		$("#city-name-input").prop('required', false);
 	}
 }
 
@@ -93,29 +117,41 @@ Candidate.searchFormation = function(form) {
 }
 
 Candidate.addFormation = function() {
-	$.post('/formations/add', {Formation: {name: $('#formation-new-input').val()}}, function(data) {
-		$('#formation-name-input').text($('#formation-new-input').val());
-		$('#formation-new-input').val("");
-		$('#formation-input').val($.parseJSON(data).id);
-		$('#formation-modal').modal('hide');
-		$('#formation-content').load('get_formations');
-	}).fail(function() {
+	if ($("#formation-new-input").val() != "") {
+		$.post('/formations/add', {Formation: {name: $('#formation-new-input').val()}}, function(data) {
+			$('#formation-name-input').text($('#formation-new-input').val());
+			$('#formation-new-input').val("");
+			$('#formation-input').val($.parseJSON(data).id);
+			$('#formation-modal').modal('hide');
+			$('#formation-content').load('get_formations');
+			Candidate.checkFormationData();
+		}).fail(function() {
 
-	});
+		});
+	}
 }
 
 Candidate.addCandidateFormation = function() {
-	$("#formation-list").append("<li style='margin-bottom: 10px' editing='false'><strong><span class='formation-name'>" + $("#formation-name-input").text() + "</span></strong><br /><span class='formation-institution'>" + $("#formation-institution-input").val() + "</span><br />Conclusão em: <span class='formation-year'>" + $("#formation-year-input").val() + "</span><br /><button type='button' class='btn btn-primary btn-mini formation-edit-btn' style='margin-right: 5px; margin-top: 5px' onclick='Candidate.editCandidateFormation(this)'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini formation-remove-btn' type='button' onclick='Candidate.removeCandidateFormation(this)' style='margin-top: 5px'><i class='icon-remove icon-white'></i></button></li>");
-	
-	var formationIndex = $('#candidate-formation-inputs > .formation-id-input').length;
-	$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][formation_id]" class="formation-id-input" value="' + $('#formation-input').val() + '" index="' + formationIndex + '" />');
-	$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][institution]" class="formation-institution-input" value="' + $('#formation-institution-input').val() + '" index="' + formationIndex + '" />');
-	$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][conclusion_year]" class="formation-year-input" value="' + $('#formation-year-input').val() + '" index="' + formationIndex + '" />');
+	if ($("#formation-input").val() != "" && $("#formation-institution-input").val() != "" && $("#formation-year-input").val() != "") {
+		$("#formation-list").append("<li style='margin-bottom: 10px' editing='false'><strong><span class='formation-name'>" + $("#formation-name-input").text() + "</span></strong><br /><span class='formation-institution'>" + $("#formation-institution-input").val() + "</span><br />Conclusão em: <span class='formation-year'>" + $("#formation-year-input").val() + "</span><br /><button type='button' class='btn btn-primary btn-mini formation-edit-btn' style='margin-right: 5px; margin-top: 5px' onclick='Candidate.editCandidateFormation(this)'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini formation-remove-btn' type='button' onclick='Candidate.removeCandidateFormation(this)' style='margin-top: 5px'><i class='icon-remove icon-white'></i></button></li>");
+		
+		var formationIndex = $('#candidate-formation-inputs > .formation-id-input').length;
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][formation_id]" class="formation-id-input" value="' + $('#formation-input').val() + '" index="' + formationIndex + '" />');
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][institution]" class="formation-institution-input" value="' + $('#formation-institution-input').val() + '" index="' + formationIndex + '" />');
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][conclusion_year]" class="formation-year-input" value="' + $('#formation-year-input').val() + '" index="' + formationIndex + '" />');
 
-	$("#formation-name-input").text("");
-	$("#formation-input").val("");
-	$("#formation-institution-input").val("");
-	$("#formation-year-input").val("");
+		$("#formation-name-input").text("");
+		$("#formation-input").val("");
+		$("#formation-institution-input").val("");
+		$("#formation-year-input").val("");
+
+		$("#add-formation-btn").addClass("disabled");
+	}
+	else {
+		if ($("#formation-input").val() == "") Kanri.shakeElement($("#formation-name-input"));
+		if ($("#formation-institution-input").val() == "") Kanri.shakeElement($("#formation-institution-input"));
+		if ($("#formation-year-input").val() == "") Kanri.shakeElement($("#formation-year-input"));
+	}
 }
 
 Candidate.editCandidateFormation = function(btn) {
@@ -133,16 +169,23 @@ Candidate.editCandidateFormation = function(btn) {
 }
 
 Candidate.updateCandidateFormation = function() {
-	$("#formation-list > li[editing='true']").find(".formation-name").text($("#formation-name-input").text());
-	$("#formation-list > li[editing='true']").children(".formation-institution").text($("#formation-institution-input").val());
-	$("#formation-list > li[editing='true']").children(".formation-year").text($("#formation-year-input").val());
+	if ($("#formation-input").val() != "" && $("#formation-institution-input").val() != "" && $("#formation-year-input").val() != "") {
+		$("#formation-list > li[editing='true']").find(".formation-name").text($("#formation-name-input").text());
+		$("#formation-list > li[editing='true']").children(".formation-institution").text($("#formation-institution-input").val());
+		$("#formation-list > li[editing='true']").children(".formation-year").text($("#formation-year-input").val());
 
-	var formationIndex = $('#formation-list > li').index($('#formation-list > li[editing="true"]'));
-	$('#candidate-formation-inputs > .formation-id-input[index="' + formationIndex + '"]').val($('#formation-input').val());
-	$('#candidate-formation-inputs > .formation-institution-input[index="' + formationIndex + '"]').val($('#formation-institution-input').val());
-	$('#candidate-formation-inputs > .formation-year-input[index="' + formationIndex + '"]').val($('#formation-year-input').val());
+		var formationIndex = $('#formation-list > li').index($('#formation-list > li[editing="true"]'));
+		$('#candidate-formation-inputs > .formation-id-input[index="' + formationIndex + '"]').val($('#formation-input').val());
+		$('#candidate-formation-inputs > .formation-institution-input[index="' + formationIndex + '"]').val($('#formation-institution-input').val());
+		$('#candidate-formation-inputs > .formation-year-input[index="' + formationIndex + '"]').val($('#formation-year-input').val());
 
-	Candidate.cancelEditCandidateFormation();
+		Candidate.cancelEditCandidateFormation();
+	}
+	else {
+		if ($("#formation-input").val() == "") Kanri.shakeElement($("#formation-name-input"));
+		if ($("#formation-institution-input").val() == "") Kanri.shakeElement($("#formation-institution-input"));
+		if ($("#formation-year-input").val() == "") Kanri.shakeElement($("#formation-year-input"));
+	}
 }
 
 Candidate.cancelEditCandidateFormation = function() {
@@ -155,6 +198,7 @@ Candidate.cancelEditCandidateFormation = function() {
 	$("#formation-input").val("");
 	$("#formation-institution-input").val("");
 	$("#formation-year-input").val("");
+	$("#update-formation-btn").removeClass('disabled');
 }
 
 Candidate.removeCandidateFormation = function(btn) {
@@ -181,6 +225,12 @@ Candidate.correctCandidateFormationIndexes = function() {
 	});
 }
 
+Candidate.checkFormationData = function() {
+	if ($("#formation-input").val() != "" && $("#formation-institution-input").val() != "" && $("#formation-year-input").val() != "") {
+		$("#add-formation-btn, #update-formation-btn").removeClass("disabled");
+	} else $("#add-formation-btn, #update-formation-btn").addClass("disabled");
+}
+
 // Courses
 
 Candidate.searchCourse = function(form) {
@@ -189,56 +239,75 @@ Candidate.searchCourse = function(form) {
 }
 
 Candidate.addCourse = function() {
-	$.post('/courses/add', {Course: {name: $('#course-new-input').val()}}, function(data) {
-		$('#course-name-input').text($('#course-new-input').val());
-		$('#course-new-input').val("");
-		$('#course-input').val($.parseJSON(data).id);
-		$('#course-modal').modal('hide');
-		$('#course-content').load('get_courses');
-	}).fail(function() {
+	if ($('#course-new-input').val() != '') {
+		$.post('/courses/add', {Course: {name: $('#course-new-input').val()}}, function(data) {
+			$('#course-name-input').text($('#course-new-input').val());
+			$('#course-new-input').val("");
+			$('#course-input').val($.parseJSON(data).id);
+			$('#course-modal').modal('hide');
+			$('#course-content').load('get_courses');
+			Candidate.checkCourseData();
+		}).fail(function() {
 
-	});
+		});
+	}
 }
 
 Candidate.addCandidateCourse = function() {
-	$("#course-list").append("<li style='margin-bottom: 10px' editing='false'><strong><span class='course-name'>" + $("#course-name-input").text() + "</span></strong><br /><span class='course-institution'>" + $("#course-institution-input").val() + "</span><br />Conclusão em: <span class='course-year'>" + $("#course-year-input").val() + "</span><br /><button type='button' class='btn btn-primary btn-mini course-edit-btn' style='margin-right: 5px; margin-top: 5px' onclick='Candidate.editCandidateCourse(this)'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini course-remove-btn' type='button' onclick='Candidate.removeCandidateCourse(this)' style='margin-top: 5px'><i class='icon-remove icon-white'></i></button></li>");
-	
-	var courseIndex = $('#candidate-course-inputs > .course-id-input').length;
-	$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][course_id]" class="course-id-input" value="' + $('#course-input').val() + '" index="' + courseIndex + '" />');
-	$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][institution]" class="course-institution-input" value="' + $('#course-institution-input').val() + '" index="' + courseIndex + '" />');
-	$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][conclusion_year]" class="course-year-input" value="' + $('#course-year-input').val() + '" index="' + courseIndex + '" />');
+	if ($("#course-input").val() != "" && $("#course-institution-input").val() != "" && $("#course-year-input").val() != "") {
+		$("#course-list").append("<li style='margin-bottom: 10px' editing='false'><strong><span class='course-name'>" + $("#course-name-input").text() + "</span></strong><br /><span class='course-institution'>" + $("#course-institution-input").val() + "</span><br />Conclusão em: <span class='course-year'>" + $("#course-year-input").val() + "</span><br /><button type='button' class='btn btn-primary btn-mini course-edit-btn' style='margin-right: 5px; margin-top: 5px' onclick='Candidate.editCandidateCourse(this)'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini course-remove-btn' type='button' onclick='Candidate.removeCandidateCourse(this)' style='margin-top: 5px'><i class='icon-remove icon-white'></i></button></li>");
+		
+		var courseIndex = $('#candidate-course-inputs > .course-id-input').length;
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][course_id]" class="course-id-input" value="' + $('#course-input').val() + '" index="' + courseIndex + '" />');
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][institution]" class="course-institution-input" value="' + $('#course-institution-input').val() + '" index="' + courseIndex + '" />');
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][conclusion_year]" class="course-year-input" value="' + $('#course-year-input').val() + '" index="' + courseIndex + '" />');
 
-	$("#course-name-input").text("");
-	$("#course-input").val("");
-	$("#course-institution-input").val("");
-	$("#course-year-input").val("");
+		$("#course-name-input").text("");
+		$("#course-input").val("");
+		$("#course-institution-input").val("");
+		$("#course-year-input").val("");
+
+		$("#add-course-btn").addClass("disabled");
+	}
+	else {
+		if ($("#course-input").val() == "") Kanri.shakeElement($("#course-name-input"));
+		if ($("#course-institution-input").val() == "") Kanri.shakeElement($("#course-institution-input"));
+		if ($("#course-year-input").val() == "") Kanri.shakeElement($("#course-year-input"));
+	}
 }
 
 Candidate.editCandidateCourse = function(btn) {
-	var courseIndex = $('.course-edit-btn').index(btn);
-	$("#course-name-input").text($(btn).parent("li").find(".course-name").text());
-	$('#course-input').val($('#candidate-course-inputs > .course-id-input[index="' + courseIndex + '"]').val());
-	$("#course-institution-input").val($('#candidate-course-inputs > .course-institution-input[index="' + courseIndex + '"]').val());
-	$("#course-year-input").val($('#candidate-course-inputs > .course-year-input[index="' + courseIndex + '"]').val());
-	$("#add-course-btn").hide();
-	$("#update-course-btn").show();
-	$("#update-course-cancel-btn").show();
-	$(btn).parent("li").attr("editing", "true");
-	$(btn).parent("li").children("button").hide();
-	$('#course-list > li[editing="false"]').hide("70");
+		var courseIndex = $('.course-edit-btn').index(btn);
+		$("#course-name-input").text($(btn).parent("li").find(".course-name").text());
+		$('#course-input').val($('#candidate-course-inputs > .course-id-input[index="' + courseIndex + '"]').val());
+		$("#course-institution-input").val($('#candidate-course-inputs > .course-institution-input[index="' + courseIndex + '"]').val());
+		$("#course-year-input").val($('#candidate-course-inputs > .course-year-input[index="' + courseIndex + '"]').val());
+		$("#add-course-btn").hide();
+		$("#update-course-btn").show();
+		$("#update-course-cancel-btn").show();
+		$(btn).parent("li").attr("editing", "true");
+		$(btn).parent("li").children("button").hide();
+		$('#course-list > li[editing="false"]').hide("70");
 }
 
 Candidate.updateCandidateCourse = function() {
-	$("#course-list > li[editing='true']").find(".course-name").text($("#course-name-input").text());
-	$("#course-list > li[editing='true']").children(".course-institution").text($("#course-institution-input").val());
-	$("#course-list > li[editing='true']").children(".course-year").text($("#course-year-input").val());
+	if ($("#course-input").val() != "" && $("#course-institution-input").val() != "" && $("#course-year-input").val() != "") {
+		$("#course-list > li[editing='true']").find(".course-name").text($("#course-name-input").text());
+		$("#course-list > li[editing='true']").children(".course-institution").text($("#course-institution-input").val());
+		$("#course-list > li[editing='true']").children(".course-year").text($("#course-year-input").val());
 
-	var courseIndex = $('#course-list > li').index($('#course-list > li[editing="true"]'));
-	$('#candidate-course-inputs > .course-id-input[index="' + courseIndex + '"]').val($('#course-input').val());
-	$('#candidate-course-inputs > .course-institution-input[index="' + courseIndex + '"]').val($('#course-institution-input').val());
-	$('#candidate-course-inputs > .course-year-input[index="' + courseIndex + '"]').val($('#course-year-input').val());
+		var courseIndex = $('#course-list > li').index($('#course-list > li[editing="true"]'));
+		$('#candidate-course-inputs > .course-id-input[index="' + courseIndex + '"]').val($('#course-input').val());
+		$('#candidate-course-inputs > .course-institution-input[index="' + courseIndex + '"]').val($('#course-institution-input').val());
+		$('#candidate-course-inputs > .course-year-input[index="' + courseIndex + '"]').val($('#course-year-input').val());
 
-	Candidate.cancelEditCandidateCourse();
+		Candidate.cancelEditCandidateCourse();
+	}
+	else {
+		if ($("#course-input").val() == "") Kanri.shakeElement($("#course-name-input"));
+		if ($("#course-institution-input").val() == "") Kanri.shakeElement($("#course-institution-input"));
+		if ($("#course-year-input").val() == "") Kanri.shakeElement($("#course-year-input"));
+	}
 }
 
 Candidate.cancelEditCandidateCourse = function() {
@@ -251,6 +320,7 @@ Candidate.cancelEditCandidateCourse = function() {
 	$("#course-input").val("");
 	$("#course-institution-input").val("");
 	$("#course-year-input").val("");
+	$("#update-course-btn").removeClass('disabled');
 }
 
 Candidate.removeCandidateCourse = function(btn) {
@@ -277,32 +347,46 @@ Candidate.correctCandidateCourseIndexes = function() {
 	});
 }
 
+Candidate.checkCourseData = function() {
+	if ($("#course-input").val() != "" && $("#course-institution-input").val() != "" && $("#course-year-input").val() != "") {
+		$("#add-course-btn, #update-course-btn").removeClass("disabled");
+	} else $("#add-course-btn, #update-course-btn").addClass("disabled");
+}
+
 // Languages
 
 Candidate.selectLanguage = function(select) {
 	if ($(select).val() == 'null') {
 		$('#language-name-label').css('display', 'inline');
 		$('#language-name-input').show(150);
+		$("#add-language-btn").addClass('disabled');
 	}
 	else {
 		$('#language-name-input, #language-name-label').hide(100);
 		$('#language-name-input').val("");
+		if ($(select).val() != '') $("#add-language-btn").removeClass('disabled');
 	}
 }
 
 Candidate.addCandidateLanguage = function() {
-	var languageIndex = $("#candidate-language-inputs > .language-level-input").length;
-	if ($("#language-input").val() == 'null') {
-		$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-name-input").val() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
-		$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-name-input" name="data[CandidateLanguage][' + languageIndex + '][Language][name]" value="' + $("#language-name-input").val() + '" index="' + languageIndex + '" />');
+	if (($("#language-input").val() != "" && $("#language-input").val() != "null") || ($("#language-input").val() == "null" && $("#language-name-input").val() != "")) {
+		var languageIndex = $("#candidate-language-inputs > .language-level-input").length;
+		if ($("#language-input").val() == 'null') {
+			$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-name-input").val() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
+			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-name-input" name="data[CandidateLanguage][' + languageIndex + '][Language][name]" value="' + $("#language-name-input").val() + '" index="' + languageIndex + '" />');
+		}
+		else {
+			$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-input > option:selected").text() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
+			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-id-input" name="data[CandidateLanguage][' + languageIndex + '][language_id]" value="' + $("#language-input").val() + '" index="' + languageIndex + '" />');
+		}
+		$("#candidate-language-inputs").append('<input type="hidden" class="language-level-input" name="data[CandidateLanguage][' + languageIndex + '][level]" value="' + $("input[name='language-level']:checked").val() + '" index="' + languageIndex + '" />');
+		$("#language-input")[0].selectedIndex = 0;
+		Candidate.selectLanguage($("#language-input")[0]);
+		$("#add-language-btn").addClass('disabled');
 	}
 	else {
-		$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-input > option:selected").text() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
-		$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-id-input" name="data[CandidateLanguage][' + languageIndex + '][language_id]" value="' + $("#language-input").val() + '" index="' + languageIndex + '" />');
+		Kanri.shakeElement($("#language-input"));
 	}
-	$("#candidate-language-inputs").append('<input type="hidden" class="language-level-input" name="data[CandidateLanguage][' + languageIndex + '][level]" value="' + $("input[name='language-level']:checked").val() + '" index="' + languageIndex + '" />');
-	$("#language-input")[0].selectedIndex = 0;
-	Candidate.selectLanguage($("#language-input")[0]);
 }
 
 Candidate.removeCandidateLanguage = function(btn) {
@@ -325,6 +409,11 @@ Candidate.correctCandidateLanguageIndexes = function() {
 		$(this).attr('name', 'data[CandidateLanguage][' + $('.language-level-input').index(this) + '][level]');
 		$(this).attr('index', $('.language-level-input').index(this));
 	});
+}
+
+Candidate.checkLanguageData = function() {
+	if ($("#language-name-input").val() != '') $("#add-language-btn").removeClass('disabled')
+	else $("#add-language-btn").addClass('disabled');
 }
 
 // Income
@@ -359,9 +448,14 @@ Candidate.addJob = function() {
 		$('#job-new-input').val("");
 		$('#job-modal').modal('hide');
 		$('#job-content').load('get_jobs');
+		Candidate.checkExperienceData();
 	}).fail(function() {
 
 	});
+}
+
+Candidate.checkJobData = function() {
+	Candidate.checkExperienceData();
 }
 
 // Workplaces
@@ -419,6 +513,7 @@ Candidate.addWorkplace = function() {
 		$('#workplace-content').load('get_workplaces');
 		$('#workplace-market-sector-new-input').load('/market_sectors/refresh_select?add=true');
 		Candidate.cancelWorkplaceMarketSectorAdd();
+		Candidate.checkExperienceData();
 	}).fail(function() {
 
 	});
@@ -430,51 +525,60 @@ Candidate.handleWorkplaceSelection = function(link) {
 	$("#workplace-nationality-input").text($(link).parents('tr').children('td:nth-of-type(2)').text());
 	$("#workplace-market-sector-input").text($(link).parents('tr').children('td:nth-of-type(3)').text());
 	$(link).parents('.modal').modal('hide');
+	Candidate.checkExperienceData();
 	return false;
 }
 
 // Experiences
 
 Candidate.addExperience = function() {
-	var experienceIndex = $(".form-workplace").length;
-	$("#experience-inputs").append("<input class='form-workplace' name='data[Experience][" + experienceIndex + "][workplace_id]' type='hidden' value='" + $("#workplace-id-input").text() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-	$("#experience-inputs").append("<input class='form-job' name='data[Experience][" + experienceIndex + "][job_id]' type='hidden' value='" + $("#job-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-	$("#experience-inputs").append("<input class='form-start' name='data[Experience][" + experienceIndex + "][start_date]' type='hidden' value='" + $("#experience-start-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-	$("#experience-inputs").append("<input class='form-end' name='data[Experience][" + experienceIndex + "][final_date]' type='hidden' value='" + $("#experience-end-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-	$("#experience-inputs").append("<input class='form-report' name='data[Experience][" + experienceIndex + "][report]' type='hidden' value='" + $("#experience-report-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-	$("#experience-inputs").append("<input class='form-team' name='data[Experience][" + experienceIndex + "][team]' type='hidden' value='" + $("#experience-team-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+	if ($("#workplace-id-input").text() != "" && $("#job-input").val() != "" && $("#experience-start-input").val() != "") {
+		var experienceIndex = $(".form-workplace").length;
+		$("#experience-inputs").append("<input class='form-workplace' name='data[Experience][" + experienceIndex + "][workplace_id]' type='hidden' value='" + $("#workplace-id-input").text() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-job' name='data[Experience][" + experienceIndex + "][job_id]' type='hidden' value='" + $("#job-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-start' name='data[Experience][" + experienceIndex + "][start_date]' type='hidden' value='" + $("#experience-start-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-end' name='data[Experience][" + experienceIndex + "][final_date]' type='hidden' value='" + $("#experience-end-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-report' name='data[Experience][" + experienceIndex + "][report]' type='hidden' value='" + $("#experience-report-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-team' name='data[Experience][" + experienceIndex + "][team]' type='hidden' value='" + $("#experience-team-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 
-	if ($("#experience-list > li[workplace-id='" + $("#workplace-id-input").text() + "']").length == 0) {
-		$("#experience-list").append("<li workplace-id='" + $("#workplace-id-input").text() + "' workplace-name='" + $("#workplace-input").text() + "' workplace-nationality='" + $("#workplace-nationality-input").text() + "' workplace-market-sector='" + $("#workplace-market-sector-input").text() + "' editing='false'><strong>Empresa: " + $("#workplace-input").text() + "</strong><br /><span class='workplace-details'>Empresa " + $("#workplace-nationality-input").text() + " - Segmento " + $("#workplace-market-sector-input").text() + "</span><br /><button class='btn btn-primary btn-mini workplace-edit-btn' style='margin-right: 4px' onclick='Candidate.editWorkplace(this)' type='button'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini workplace-remove-btn' onclick='Candidate.removeWorkplace(this)'><i class='icon-remove icon-white'></i></button><ul class='achievement-list'></ul></li>");
+		if ($("#experience-list > li[workplace-id='" + $("#workplace-id-input").text() + "']").length == 0) {
+			$("#experience-list").append("<li workplace-id='" + $("#workplace-id-input").text() + "' workplace-name='" + $("#workplace-input").text() + "' workplace-nationality='" + $("#workplace-nationality-input").text() + "' workplace-market-sector='" + $("#workplace-market-sector-input").text() + "' editing='false'><strong>Empresa: " + $("#workplace-input").text() + "</strong><br /><span class='workplace-details'>Empresa " + $("#workplace-nationality-input").text() + " - Segmento " + $("#workplace-market-sector-input").text() + "</span><br /><button class='btn btn-primary btn-mini workplace-edit-btn' style='margin-right: 4px' onclick='Candidate.editWorkplace(this)' type='button'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini workplace-remove-btn' onclick='Candidate.removeWorkplace(this)'><i class='icon-remove icon-white'></i></button><ul class='achievement-list'></ul></li>");
+		}
+
+		var achievements_list = $("#experience-list > li[workplace-id='" + $("#workplace-id-input").text() + "'] > ul.achievement-list");
+
+		var experience_period = $("#experience-start-input").val() + " a " + $("#experience-end-input").val();
+
+		var experience_report = "<span class='experience-report just-added'>Reporte: " + $("#experience-report-input").val() + "</span><br class='experience-report-break just-added'/>";
+		
+		var experience_team = "<span class='experience-team just-added'>Equipe: " + $("#experience-team-input").val() + "</span><br class='experience-team-break just-added' />";
+
+		$(achievements_list).append("<li index='" + experienceIndex + "' experience-job-name='" + $("#job-name-input").text() + "' experience-job-id='" + $("#job-input").val() + "' experience-start='" + $("#experience-start-input").val() + "' experience-end='" + $("#experience-end-input").val() + "' experience-report='" + $("#experience-report-input").val() + "' experience-team='" + $("#experience-team-input").val() + "' editing='false'><strong class='experience-period'>" + experience_period + "</strong><br /><strong class='experience-job'>" + $("#job-name-input").text() + "</strong><br />" + experience_report + experience_team + "<button type='button' class='btn btn-primary btn-mini experience-edit-btn' style='margin-right: 4px' onclick='Candidate.editExperience(this)'><i class='icon-edit icon-white'></i></button><button type='button' class='btn btn-danger btn-mini experience-remove-btn' onclick='Candidate.removeExperience(this)'><i class='icon-remove icon-white'></i></button></li>");
+
+		if ($("#experience-team-input").val() == "") {
+			$(achievements_list).find(".experience-team.just-added, .experience-team-break.just-added").hide();
+		}
+
+		if ($("#experience-report-input").val() == "") {
+			$(achievements_list).find(".experience-report.just-added, .experience-report-break.just-added").hide();
+		}
+
+		$(".just-added").removeClass('just-added');
+
+		$("#job-name-input").text("");
+		$("#job-input").val("");
+		$("#experience-start-input").val("");
+		$("#experience-end-input").val("");
+		$("#experience-report-input").val("");
+		$("#experience-team-input").val("");
+
+		$("#add-experience-btn").addClass("disabled");
 	}
-
-	var achievements_list = $("#experience-list > li[workplace-id='" + $("#workplace-id-input").text() + "'] > ul.achievement-list");
-
-	var experience_period = $("#experience-start-input").val() + " a " + $("#experience-end-input").val();
-
-	var experience_report = "<span class='experience-report just-added'>Reporte: " + $("#experience-report-input").val() + "</span><br class='experience-report-break just-added'/>";
-	
-	var experience_team = "<span class='experience-team just-added'>Equipe: " + $("#experience-team-input").val() + "</span><br class='experience-team-break just-added' />";
-
-	$(achievements_list).append("<li index='" + experienceIndex + "' experience-job-name='" + $("#job-name-input").text() + "' experience-job-id='" + $("#job-input").val() + "' experience-start='" + $("#experience-start-input").val() + "' experience-end='" + $("#experience-end-input").val() + "' experience-report='" + $("#experience-report-input").val() + "' experience-team='" + $("#experience-team-input").val() + "' editing='false'><strong class='experience-period'>" + experience_period + "</strong><br /><strong class='experience-job'>" + $("#job-name-input").text() + "</strong><br />" + experience_report + experience_team + "<button type='button' class='btn btn-primary btn-mini experience-edit-btn' style='margin-right: 4px' onclick='Candidate.editExperience(this)'><i class='icon-edit icon-white'></i></button><button type='button' class='btn btn-danger btn-mini experience-remove-btn' onclick='Candidate.removeExperience(this)'><i class='icon-remove icon-white'></i></button></li>");
-
-	if ($("#experience-team-input").val() == "") {
-		$(achievements_list).find(".experience-team.just-added, .experience-team-break.just-added").hide();
-
+	else {
+		if ($("#workplace-input").text() == "") Kanri.shakeElement($("#workplace-input"));
+		if ($("#job-name-input").text() == "") Kanri.shakeElement($("#job-name-input"));
+		if ($("#experience-start-input").val() == "") Kanri.shakeElement($("#experience-start-input"));
 	}
-
-	if ($("#experience-report-input").val() == "") {
-		$(achievements_list).find(".experience-report.just-added, .experience-report-break.just-added").hide();
-	}
-
-	$(".just-added").removeClass('just-added');
-
-	$("#job-name-input").text("");
-	$("#job-input").val("");
-	$("#experience-start-input").val("");
-	$("#experience-end-input").val("");
-	$("#experience-report-input").val("");
-	$("#experience-team-input").val("");
 }
 
 Candidate.editWorkplace = function(btn) {
@@ -558,43 +662,50 @@ Candidate.cancelExperienceEdit = function() {
 	$("#experience-end-input").val("");
 	$("#experience-report-input").val("");
 	$("#experience-team-input").val("");
+
+	$("#experience-edit-btn").removeClass("disabled");
 }
 
 Candidate.updateExperience = function() {
-	var experienceIndex = $("li[editing='true']").attr('index');
-	$("li[editing='true']").attr("experience-job-name", $("#job-name-input").text());
-	$("li[editing='true']").attr("experience-job-id", $("#job-input").val());
-	$("li[editing='true']").attr("experience-start", $("#experience-start-input").val());
-	$("li[editing='true']").attr("experience-end", $("#experience-end-input").val());
-	$("li[editing='true']").attr("experience-report", $("#experience-report-input").val());
-	$("li[editing='true']").attr("experience-team", $("#experience-team-input").val());
+	if ($("#job-input").val() != "" && $("#experience-start-input").val() != "") {
+		var experienceIndex = $("li[editing='true']").attr('index');
+		$("li[editing='true']").attr("experience-job-name", $("#job-name-input").text());
+		$("li[editing='true']").attr("experience-job-id", $("#job-input").val());
+		$("li[editing='true']").attr("experience-start", $("#experience-start-input").val());
+		$("li[editing='true']").attr("experience-end", $("#experience-end-input").val());
+		$("li[editing='true']").attr("experience-report", $("#experience-report-input").val());
+		$("li[editing='true']").attr("experience-team", $("#experience-team-input").val());
 
-	$("li[editing='true']").children(".experience-period").text($("#experience-start-input").val() + " a " + $("#experience-end-input").val());
-	$("li[editing='true']").children(".experience-job").text($("#job-name-input").text());
-	$("li[editing='true']").children(".experience-team").text("Equipe: " + $("#experience-team-input").val());
-	$("li[editing='true']").children(".experience-report").text("Reporte: " + $("#experience-report-input").val());
+		$("li[editing='true']").children(".experience-period").text($("#experience-start-input").val() + " a " + $("#experience-end-input").val());
+		$("li[editing='true']").children(".experience-job").text($("#job-name-input").text());
+		$("li[editing='true']").children(".experience-team").text("Equipe: " + $("#experience-team-input").val());
+		$("li[editing='true']").children(".experience-report").text("Reporte: " + $("#experience-report-input").val());
 
-	$(".form-job[index='" + experienceIndex + "']").val($("#job-input").val());
-	$(".form-start[index='" + experienceIndex + "']").val($("#experience-start-input").val());
-	$(".form-end[index='" + experienceIndex + "']").val($("#experience-end-input").val());
-	$(".form-report[index='" + experienceIndex + "']").val($("#experience-report-input").val());
-	$(".form-team[index='" + experienceIndex + "']").val($("#experience-team-input").val());
+		$(".form-job[index='" + experienceIndex + "']").val($("#job-input").val());
+		$(".form-start[index='" + experienceIndex + "']").val($("#experience-start-input").val());
+		$(".form-end[index='" + experienceIndex + "']").val($("#experience-end-input").val());
+		$(".form-report[index='" + experienceIndex + "']").val($("#experience-report-input").val());
+		$(".form-team[index='" + experienceIndex + "']").val($("#experience-team-input").val());
 
-	if ($("#experience-team-input").val() == "") {
-		$("li[editing='true']").find(".experience-team, .experience-team-break").hide();
+		if ($("#experience-team-input").val() == "") {
+			$("li[editing='true']").find(".experience-team, .experience-team-break").hide();
+		}
+		else {
+			$("li[editing='true']").find(".experience-team, .experience-team-break").show();
+		}
+
+		if ($("#experience-report-input").val() == "") {
+			$("li[editing='true']").find(".experience-report, .experience-report-break").hide();
+		}
+		else {
+			$("li[editing='true']").find(".experience-report, .experience-report-break").show();
+		}
+
+		Candidate.cancelExperienceEdit();
 	}
 	else {
-		$("li[editing='true']").find(".experience-team, .experience-team-break").show();
+		if ($("#experience-start-input").val() == "") Kanri.shakeElement($("#experience-start-input"));
 	}
-
-	if ($("#experience-report-input").val() == "") {
-		$("li[editing='true']").find(".experience-report, .experience-report-break").hide();
-	}
-	else {
-		$("li[editing='true']").find(".experience-report, .experience-report-break").show();
-	}
-
-	Candidate.cancelExperienceEdit();
 }
 
 Candidate.removeWorkplace = function(btn) {
@@ -639,6 +750,13 @@ Candidate.correctExperienceIndexes = function() {
 	});
 }
 
+Candidate.checkExperienceData = function() {
+	if ($("#workplace-id-input").text() != "" && $("#job-input").val() != "" && $("#experience-start-input").val() != "") {
+		$("#add-experience-btn, #experience-edit-btn").removeClass("disabled");
+	}
+	else $("#add-experience-btn, #experience-edit-btn").addClass("disabled"); 
+}
+
 // SEARCH
 
 Candidate.addSearchLanguage = function() {
@@ -651,7 +769,7 @@ Candidate.addSearchLanguage = function() {
 	});
 	language_select += '</select>';
 
-	var levels = '<label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="0">Básico</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="1"> Intermediário</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="2"> Avançado</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="3"> Fluente</label>';
+	var levels = '<label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="0" checked>Básico</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="1"> Intermediário</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="2"> Avançado</label><label class="radio inline"><input type="radio" name="data[language][' + index + '][level]" value="3"> Fluente</label>';
 	$("#language-table > tbody").append("<tr><td>" + language_select + "</td><td>" + levels + "</td><td style='vertical-align: middle'><button type='button' class='btn btn-danger btn-mini' onclick='Candidate.removeSearchLanguage(this)'>Remover</button></td></tr>");
 	
 }
@@ -736,6 +854,3 @@ Candidate.generateLocationInputs = function() {
 		}
 	});
 }
-
-
-

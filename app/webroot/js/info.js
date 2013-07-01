@@ -8,7 +8,7 @@ Info.handleAsynchronousPagination = function(link) {
 // Language
 
 Info.Language.add = function(form) {
-	var language_data = $('input.language-add-input').val();
+	var language_data = $('#language-add-input').val();
 	if (language_data != "") {
 		$.post('languages/add', $(form).serialize(), function() {
 			$('#language-content').load('/info/get_languages');
@@ -18,6 +18,9 @@ Info.Language.add = function(form) {
 		}).fail(function() {
 			Info.Language.showMessage('Erro!', 'Não foi possível adicionar idioma!', true);
 		});
+	}
+	else {
+		Kanri.elementJump($('#language-add-input'));
 	}
 	return false;
 }
@@ -35,6 +38,9 @@ Info.Language.update = function(btn) {
 		}).fail(function() {
 			Info.Language.showMessage('Erro!', 'Não foi possível atualizar idioma!', true);
 		});
+	}
+	else {
+		Kanri.shakeElement(cell.find('input.language-input'));
 	}
 }
 
@@ -75,7 +81,7 @@ Info.Language.showMessage = function(title, message, error) {
 // Market Sector
 
 Info.MarketSector.add = function(form) {
-	var market_sector_data = $('input.market-sector-add-input').val();
+	var market_sector_data = $('#market-sector-add-input').val();
 	if (market_sector_data != "") {
 		$.post('market_sectors/add', $(form).serialize(), function() {
 			$('#market-sector-content').load('/info/get_market_sectors');
@@ -86,6 +92,9 @@ Info.MarketSector.add = function(form) {
 		}).fail(function() {
 			Info.MarketSector.showMessage('Erro!', 'Não foi possível adicionar segmento!', true);
 		});
+	}
+	else {
+		Kanri.elementJump($('#market-sector-add-input'));
 	}
 	return false;
 }
@@ -105,6 +114,9 @@ Info.MarketSector.update = function(btn) {
 		}).fail(function() {
 			Info.MarketSector.showMessage('Erro!', 'Não foi possível atualizar segmento!', true);
 		});
+	}
+	else {
+		Kanri.shakeElement(cell.find('input.market-sector-input'));
 	}
 }
 
@@ -150,7 +162,7 @@ Info.MarketSector.updateWorkplaceSelect = function() {
 // Job
 
 Info.Job.add = function(form) {
-	var job_data = $('input.job-add-input').val();
+	var job_data = $('#job-add-input').val();
 	if (job_data != "") {
 		$.post('jobs/add', $(form).serialize(), function() {
 			$('#job-content').load('/info/get_jobs');
@@ -160,6 +172,9 @@ Info.Job.add = function(form) {
 		}).fail(function() {
 			Info.Job.showMessage('Erro!', 'Não foi possível adicionar cargo!', true);
 		});
+	}
+	else {
+		Kanri.elementJump($('#job-add-input'));
 	}
 	return false;
 }
@@ -177,6 +192,9 @@ Info.Job.update = function(btn) {
 		}).fail(function() {
 			Info.Job.showMessage('Erro!', 'Não foi possível atualizar cargo!', true);
 		});
+	}
+	else {
+		Kanri.shakeElement(cell.find('input.job-input'));
 	}
 }
 
@@ -217,7 +235,7 @@ Info.Job.showMessage = function(title, message, error) {
 // Formation
 
 Info.Formation.add = function(form) {
-	var Formation_data = $('input.formation-add-input').val();
+	var Formation_data = $('#formation-add-input').val();
 	if (Formation_data != "") {
 		$.post('formations/add', $(form).serialize(), function() {
 			$('#formation-content').load('/info/get_formations');
@@ -227,6 +245,9 @@ Info.Formation.add = function(form) {
 		}).fail(function() {
 			Info.Formation.showMessage('Erro!', 'Não foi possível adicionar formação acad!', true);
 		});
+	}
+	else {
+		Kanri.elementJump($('#formation-add-input'));
 	}
 	return false;
 }
@@ -244,6 +265,9 @@ Info.Formation.update = function(btn) {
 		}).fail(function() {
 			Info.Formation.showMessage('Erro!', 'Não foi possível atualizar formação acad!', true);
 		});
+	}
+	else {
+		Kanri.shakeElement(cell.find('input.formation-input'));
 	}
 }
 
@@ -284,7 +308,7 @@ Info.Formation.showMessage = function(title, message, error) {
 // Course
 
 Info.Course.add = function(form) {
-	var course_data = $('input.course-add-input').val();
+	var course_data = $('#course-add-input').val();
 	if (course_data != "") {
 		$.post('courses/add', $(form).serialize(), function() {
 			$('#course-content').load('/info/get_courses');
@@ -294,6 +318,9 @@ Info.Course.add = function(form) {
 		}).fail(function() {
 			Info.Course.showMessage('Erro!', 'Não foi possível adicionar curso/especialização!', true);
 		});
+	}
+	else {
+		Kanri.elementJump($('#course-add-input'));
 	}
 	return false;
 }
@@ -310,6 +337,9 @@ Info.Course.update = function(btn) {
 		}).fail(function() {
 			Info.Course.showMessage('Erro!', 'Não foi possível atualizar curso/especialização!', true);
 		});
+	}
+	else {
+		Kanri.shakeElement(cell.find('input.course-input'));
 	}
 }
 
@@ -367,25 +397,27 @@ Info.Workplace.add = function(form) {
 }
 
 Info.Workplace.update = function(form) {
-	$.post('workplaces/edit', $(form).serialize(), function(data) {
-		data = $.parseJSON(data);
-		var cell = $(form).parents('tr');
-		cell.find('span.workplace-name').text(cell.find('input.workplace-name-input').val());
-		cell.find('span.workplace-nationality').text(cell.find('input.workplace-nationality-input').val());
-		if (cell.find('select.workplace-market-sector-input > option[value="' + data.id + '"]').length > 0)
-			cell.find('span.workplace-market-sector-name').text(cell.find('select.workplace-market-sector-input > option[value="' + data.id + '"]').text());
-		else 
-			cell.find('span.workplace-market-sector-name').text(cell.find('input.workplace-market-sector-name-input').val());
-		cell.find('select.workplace-market-sector-input').attr('current', data.id);
-		Info.Workplace.cancel(form);
-		if (data.new_sector) {
-			Info.MarketSector.updateWorkplaceSelect();
-			$('#market-sector-content').load('/info/get_market_sectors');	
-		}
-		Info.Workplace.showMessage('Sucesso!', 'Local de trabalho atualizado com sucesso!');
-	}).fail(function() {
-		Info.Workplace.showMessage('Erro!', 'Não foi possível atualizar local de trabalho!', true);
-	});
+	var cell = $(form).parents('tr');
+	if (cell.find('.workplace-market-sector-input')[0].selectedIndex > 0) {
+		$.post('workplaces/edit', $(form).serialize(), function(data) {
+			data = $.parseJSON(data);
+			cell.find('span.workplace-name').text(cell.find('input.workplace-name-input').val());
+			cell.find('span.workplace-nationality').text(cell.find('input.workplace-nationality-input').val());
+			if (cell.find('select.workplace-market-sector-input > option[value="' + data.id + '"]').length > 0)
+				cell.find('span.workplace-market-sector-name').text(cell.find('select.workplace-market-sector-input > option[value="' + data.id + '"]').text());
+			else 
+				cell.find('span.workplace-market-sector-name').text(cell.find('input.workplace-market-sector-name-input').val());
+			cell.find('select.workplace-market-sector-input').attr('current', data.id);
+			Info.Workplace.cancel(form);
+			if (data.new_sector) {
+				Info.MarketSector.updateWorkplaceSelect();
+				$('#market-sector-content').load('/info/get_market_sectors');	
+			}
+			Info.Workplace.showMessage('Sucesso!', 'Local de trabalho atualizado com sucesso!');
+		}).fail(function() {
+			Info.Workplace.showMessage('Erro!', 'Não foi possível atualizar local de trabalho!', true);
+		});
+	}
 	return false;
 }
 
@@ -405,7 +437,7 @@ Info.Workplace.edit = function(btn) {
 	cell.find('span.workplace-name, span.workplace-market-sector-name, span.workplace-nationality, button.edit-btn, button.remove-btn').hide();
 	cell.find('input.workplace-name-input, select.workplace-market-sector-input, input.workplace-nationality-input, button.confirm-btn, button.cancel-btn').show();
 	cell.find('select.workplace-market-sector-input').load('market_sectors/refresh_select?add=true', function() {
-		cell.find('select.workplace-market-sector-input > option[value="' + cell.find('select.workplace-market-sector-input').attr('current') + '"]').attr('selected', 'selected');
+		cell.find('select.workplace-market-sector-input > option[value="' + cell.find('select.workplace-market-sector-input').attr('current') + '"]').prop('selected', true);
 	});
 }
 
@@ -432,10 +464,12 @@ Info.Workplace.addNewMarketSector = function() {
 	if ($('#workplace-market-sector-input').val() == 'null') {
 		$('#workplace-market-sector-name-label').css('display', 'inline-block');
 		$("#workplace-market-sector-name-input").show('200');
+		$("#workplace-market-sector-name-input").prop("required", true);
 	}
 	else {
 		$("#workplace-market-sector-name-input, #workplace-market-sector-name-label").hide("100");
 		$("#workplace-market-sector-name-input").val("");
+		$("#workplace-market-sector-name-input").prop("required", false);
 	}
 }
 
@@ -443,10 +477,12 @@ Info.Workplace.editNewMarketSector = function(select) {
 	if ($(select).val() == 'null') {
 		$(select).parent('div').children('label.workplace-market-sector-name-label').css('display', 'inline-block');
 		$(select).parent('div').children("input.workplace-market-sector-name-input").show('200');
+		$(select).parent('div').children("input.workplace-market-sector-name-input").prop('required', true);
 	}
 	else {
 		$(select).parent('div').children("input.workplace-market-sector-name-input, label.workplace-market-sector-name-label").hide("100");
 		$(select).parent('div').children("input.workplace-market-sector-name-input").val("");
+		$(select).parent('div').children("input.workplace-market-sector-name-input").prop('required', false);
 	}
 }
 

@@ -36,13 +36,13 @@
 		<?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'onsubmit' => 'return Users.validatePasswordConfirmation()')); ?>
 			<?php $this->Form->inputDefaults(array('errorMessage' => false)); ?>
 			<div class="control-group">
-				<?php echo $this->Form->label('User.name', 'Nome do usuário: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('User.name', '* Nome do usuário: ', array("class" => 'control-label')); ?>
 				<div class='controls'>
 					  <?php echo $this->Form->input('User.name', array('div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>
 			</div>
 			<div class="control-group <?php if ($this->Form->isFieldError('User.email')) echo 'error' ?>">
-				<?php echo $this->Form->label('User.email', 'E-mail: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('User.email', '* E-mail: ', array("class" => 'control-label')); ?>
 				<div class='controls'>
 					  <?php echo $this->Form->input('User.email', array('div' => false, 'label' => false));
 					  		if ($this->Form->isFieldError('User.email')) echo $this->Form->error('User.email', $this->validationErrors['User']['email'][0], array('class' => 'help-inline', 'wrap' => 'span'))
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<div class="control-group <?php if ($this->Form->isFieldError('User.password')) echo 'error' ?>">
-				<?php echo $this->Form->label('User.password', 'Senha: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('User.password', '* Senha: ', array("class" => 'control-label')); ?>
 				<div class='controls'>
 					  <?php echo $this->Form->input('User.password', array('div' => false, 'label' => false));
 					  		if ($this->Form->isFieldError('User.password')) echo $this->Form->error('User.password', $this->validationErrors['User']['password'][0], array('class' => 'help-inline', 'wrap' => 'span'))
@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<div class="control-group">
-				<?php echo $this->Form->label('User.password_confirm', 'Confirmar senha: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('User.password_confirm', '* Confirmar senha: ', array("class" => 'control-label')); ?>
 				<div class='controls'>
 					  <input id='UserPasswordConfirm' type='password' required='required' />
 					  <span class='help-inline' style='display: none'>As senhas não batem!</span>

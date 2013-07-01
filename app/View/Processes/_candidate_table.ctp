@@ -5,7 +5,7 @@
 		<?php foreach ($candidates as $candidate): ?>
 		<tr>
 			<td>
-				<?php echo $this->Html->link($candidate['Candidate']['name'], '', array('class' => 'candidate-selector', 'onclick' => 'return Process.selectCandidate(this)', 'city' => $candidate['City']['name'], 'job' => avoid_blank($candidate['Candidate']['current_job']), 'age' => $candidate['Candidate']['age'], 'candidate-id' => $candidate['Candidate']['id'])); ?>
+				<?php echo $this->Html->link($candidate['Candidate']['name'], '', array('class' => 'candidate-selector', 'onclick' => 'return Process.selectCandidate(this)', 'city' => $candidate['City']['name'], 'age' => $candidate['Candidate']['age'], 'candidate-id' => $candidate['Candidate']['id'])); ?>
 			</td>
 		</tr>
 		<?php endforeach;?>

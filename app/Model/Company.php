@@ -4,10 +4,6 @@ App::uses('AppModel', 'Model');
 
 class Company extends AppModel {
 
-	public $validate = array(
-
-	);
-
 	public function pagination($search = null) {
 		$pagination = array('limit' => 10);
 		if ($search) $pagination['conditions'] = array('Company.name LIKE' => '%'.$search.'%');

@@ -126,6 +126,23 @@
 	</div>
 
 	<div class="row-fluid">
+		<legend>Cursos / especializações</legend>
+		<div class="span12" style="padding-left: 20px">
+			<ul class="experience-list">
+				<?php foreach ($candidate['CandidateCourse'] as $course): ?>
+				<li>
+					<strong><?php echo $course['Course']['name']; ?></strong>
+					<br />
+					<span><?php echo $course['institution']; ?></span>
+					<br />
+					<span><?php echo 'Conclusão em '.$course['conclusion_year']; ?></span>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
 		<legend>Experiência internacional</legend>
 		<div class="span11" style="margin-left: 0;">
 			<dl class="dl-horizontal">
@@ -144,7 +161,7 @@
 				<?php endif; ?>
 				<?php if ($candidate['Candidate']['income_type'] == 1 || $candidate['Candidate']['income_type'] == 2): ?>
 				<dt>Salário PJ:</dt>
-				<dd><?php echo avoid_blank($candidate['Candidate']['income_pj']); ?></dd>
+				<dd><?php echo formatCurrency($candidate['Candidate']['income_pj']); ?></dd>
 				<?php endif; ?>
 				<dt>Bônus</dt>
 				<dd><?php echo avoid_blank($candidate['Candidate']['income_bonus']); ?></dd>
@@ -253,6 +270,7 @@
 				  	  echo $this->Form->postLink('Remover', array('action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-left: 5px'), 'Você está certo disso?');
 				  }
 				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()'));
+				  echo $this->Html->link('Exportar arquivo Word', array('action' => 'report', $candidate['Candidate']['id']), array('class' => 'btn btn-primary pull-right')); 
 			?>
 		</div>
 	</div>

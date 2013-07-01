@@ -24,37 +24,37 @@
 			<?php $this->Form->inputDefaults(array('errorMessage' => false)); ?>
 			<div class="control-group">
 				<?php echo $this->Form->input('Company.id', array('type' => 'hidden')); ?>
-				<?php echo $this->Form->label('Company.name', 'Nome da empresa: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('Company.name', '* Nome da empresa: ', array("class" => 'control-label')); ?>
 				<div class="controls">
 					<?php echo $this->Form->input('Company.name', array('div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>
 			</div>
 			<div class="control-group">
-				<?php echo $this->Form->label('Company.contact_name', 'Contato: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('Company.contact_name', '* Contato: ', array("class" => 'control-label')); ?>
 				<div class="controls">
 					<?php echo $this->Form->input('Company.contact_name', array('div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>
 			</div>
 			<div class="control-group">
-				<?php echo $this->Form->label('Company.contact_email', 'E-mail: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('Company.contact_email', '* E-mail: ', array("class" => 'control-label')); ?>
 				<div class="controls">
 					<?php echo $this->Form->input('Company.contact_email', array('div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>
 			</div>
 			<div class="control-group">
-				<?php echo $this->Form->label('Company.contact_telephone', 'Telefone: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('Company.contact_telephone', '* Telefone: ', array("class" => 'control-label')); ?>
 				<div class="controls">
 					<?php echo $this->Form->input('Company.contact_telephone', array('div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>
 			</div>
 			<div class="control-group">
-				<?php echo $this->Form->label('Company.address', 'Endereço: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('Company.address', '* Endereço: ', array("class" => 'control-label')); ?>
 				<div class="controls">
 					<?php echo $this->Form->input('Company.address', array('div' => false, 'label' => false, 'required' => 'required', 'class' => 'input-xxlarge')); ?>
 				</div>
 			</div>
 			<div class="control-group">
-				<?php echo $this->Form->label('Company.cnpj', 'CNPJ: ', array("class" => 'control-label')); ?>
+				<?php echo $this->Form->label('Company.cnpj', '* CNPJ: ', array("class" => 'control-label')); ?>
 				<div class="controls">
 					<?php echo $this->Form->input('Company.cnpj', array('div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>
@@ -62,13 +62,13 @@
 			<div class="control-group">
 				<?php echo $this->Form->label('Company.state_inscription', 'Inscrição estadual: ', array("class" => 'control-label')); ?>
 				<div class="controls">
-					<?php echo $this->Form->input('Company.state_inscription', array('div' => false, 'label' => false, 'required' => 'required')); ?>
+					<?php echo $this->Form->input('Company.state_inscription', array('div' => false, 'label' => false)); ?>
 				</div>
 			</div>
 			<div class="control-group">
 				<?php echo $this->Form->label('Company.city_inscription', 'Inscrição municipal: ', array("class" => 'control-label')); ?>
 				<div class="controls">
-					<?php echo $this->Form->input('Company.city_inscription', array('div' => false, 'label' => false, 'required' => 'required')); ?>
+					<?php echo $this->Form->input('Company.city_inscription', array('div' => false, 'label' => false)); ?>
 				</div>
 			</div>
 			<div class="form-actions" style="padding-left: 20px">

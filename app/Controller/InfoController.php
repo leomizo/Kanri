@@ -75,7 +75,7 @@ class InfoController extends AppController {
 
 	public function get_workplaces() {
 		$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
-		$sort = isset($this->request->query['sort']) ? : null;
+		$sort = isset($this->request->query['sort']) ? $this->request->query['sort'] : null;
 		$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 		$this->paginate = $this->Workplace->pagination($search, $sort, $page);
 		$this->set('workplaces', $this->paginate('Workplace'));

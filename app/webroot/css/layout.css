@@ -128,3 +128,7 @@ li {
 tr[editing="true"] > td > div.event-cell, tr[editing="true"] > td > div.event-cell > div.event-info > ul > li {
 	color: red;
 }
+
+.shakeable {
+	position: relative;
+}

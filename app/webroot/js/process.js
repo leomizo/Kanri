@@ -10,7 +10,7 @@ Process.initializePopovers = function() {
 			trigger: 'hover',
 			title: '',
 			html: true,
-			content: '<strong>Idade: </strong>' + $(this).attr('age') + '<br /><strong>Cidade: </strong>' + $(this).attr('city') + '<br /><strong>Cargo: </strong>' + $(this).attr('job')
+			content: '<strong>Idade: </strong>' + $(this).attr('age') + '<br /><strong>Cidade: </strong>' + $(this).attr('city')
 		});
 	}); 
 }
@@ -32,6 +32,8 @@ Process.selectCompany = function(link) {
 		$("#candidate-table, #candidate-pagination").show();
 		$("#candidate-table, #candidate-pagination").animate({left: 0, opacity: 1}, 300);
 		$("#process-return-btn").show();
+		$("#company-content").attr('focused', 'false');
+		$("#candidate-content").attr('focused', 'true');
 	});
 	$("#company-pagination").animate({left: "-100px", opacity: 0}, 300);
 	return false;
@@ -45,6 +47,8 @@ Process.returnToCompanySelection = function() {
 		$("#company-table, #company-pagination").show();
 		$("#company-table, #company-pagination").animate({left: 0, opacity: 1}, 300);
 		$("#process-return-btn").hide();
+		$("#company-content").attr('focused', 'true');
+		$("#candidate-content").attr('focused', 'false');
 	});
 }
 
@@ -53,6 +57,15 @@ Process.selectCandidate = function(link) {
 	$("#candidate-input").val($(link).attr('candidate-id'));
 	$("#process-ok-btn").show();
 	return false;
+}
+
+Process.performSearch = function() {
+	if ($("#company-content").attr('focused') == 'true') {
+		$("#company-content").load('/processes/get_companies?search=' + $("#process-add-search-input").val());
+	}
+	else if ($("#candidate-content").attr('focused') == 'true') {
+		$("#candidate-content").load('/processes/get_candidates?search=' + $("#process-add-search-input").val());
+	}
 }
 
 Process.selectEventType = function(select) {

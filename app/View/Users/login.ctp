@@ -1,5 +1,5 @@
 <div id="main_container" class="container">
-	<?php echo $this->Html->image('login_ico_kanri', array('id' => 'ico_kanri')); ?>
+	<?php echo $this->Html->image('login_ico_kanri.png', array('id' => 'ico_kanri')); ?>
 	<h1>Kanri</h1>
 	<div id="bkg_login" class="container">
 		<?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'id' => 'form_login')); ?>

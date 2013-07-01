@@ -287,5 +287,13 @@ class CandidatesController extends AppController {
 	public function curriculum($id) {
 		$this->set('curriculum', $this->Candidate->Curriculum->findByCandidateId($id));
 	}
+
+	public function report($id) {
+		$this->layout = false;
+		$candidate = $this->Candidate->find('first', array('conditions' => array('Candidate.id' => $id), 'recursive' => 3));
+		if ($candidate) {
+			$this->Set('candidate', $candidate);
+		}
+	}
 	
 }

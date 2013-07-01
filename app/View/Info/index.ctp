@@ -58,7 +58,7 @@
 			<div class='control-group' style='margin-bottom: 0'>
 			    <?php echo $this->Form->label('Language', 'Adicionar idioma: ', array('class' => 'control-label', 'style' => 'margin-right: 10px; text-align: left')); ?>
 			    <div class='controls' style='margin-left: 0'>
-			  		<?php echo $this->Form->input('name', array('class' => 'input-large', 'id' => 'language-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
+			  		<?php echo $this->Form->input('name', array('class' => 'input-large shakeable', 'id' => 'language-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
 			  			  echo $this->Form->submit('Adicionar', array('class' => 'btn btn-primary', 'div' => false)); ?>
 				</div>  	
 			</div>
@@ -96,7 +96,7 @@
 			<div class='control-group' style='margin-bottom: 0'>
 			    <?php echo $this->Form->label('MarketSector', 'Adicionar segmento: ', array('class' => 'control-label', 'style' => 'margin-right: 10px; text-align: left')); ?>
 			    <div class='controls' style='margin-left: 0'>
-			  		<?php echo $this->Form->input('name', array('class' => 'input-large', 'id' => 'market-sector-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
+			  		<?php echo $this->Form->input('name', array('class' => 'input-large shakeable', 'id' => 'market-sector-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
 			  			  echo $this->Form->submit('Adicionar', array('class' => 'btn btn-primary', 'div' => false)); ?>
 				</div>  	
 			</div>
@@ -134,7 +134,7 @@
 			<div class='control-group' style='margin-bottom: 0'>
 			    <?php echo $this->Form->label('Job', 'Adicionar cargo: ', array('class' => 'control-label', 'style' => 'margin-right: 10px; text-align: left')); ?>
 			    <div class='controls' style='margin-left: 0'>
-			  		<?php echo $this->Form->input('name', array('class' => 'input-large', 'id' => 'job-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
+			  		<?php echo $this->Form->input('name', array('class' => 'input-large shakeable', 'id' => 'job-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
 			  			  echo $this->Form->submit('Adicionar', array('class' => 'btn btn-primary', 'div' => false)); ?>
 				</div>  	
 			</div>
@@ -172,7 +172,7 @@
 			<div class='control-group' style='margin-bottom: 0'>
 			    <?php echo $this->Form->label('Formation', 'Adicionar formação acadêmica: ', array('class' => 'control-label', 'style' => 'margin-right: 10px; text-align: left')); ?>
 			    <div class='controls' style='margin-left: 0'>
-			  		<?php echo $this->Form->input('name', array('class' => 'input-xxlarge', 'id' => 'formation-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
+			  		<?php echo $this->Form->input('name', array('class' => 'input-xxlarge shakeable', 'id' => 'formation-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
 			  			  echo $this->Form->submit('Adicionar', array('class' => 'btn btn-primary', 'div' => false)); ?>
 				</div>  	
 			</div>
@@ -210,7 +210,7 @@
 			<div class='control-group' style='margin-bottom: 0'>
 			    <?php echo $this->Form->label('Course', 'Adicionar curso/especialização: ', array('class' => 'control-label', 'style' => 'margin-right: 10px; text-align: left')); ?>
 			    <div class='controls' style='margin-left: 0'>
-			  		<?php echo $this->Form->input('name', array('class' => 'input-xxlarge', 'id' => 'course-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
+			  		<?php echo $this->Form->input('name', array('class' => 'input-xxlarge shakeable', 'id' => 'course-add-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false));
 			  			  echo $this->Form->submit('Adicionar', array('class' => 'btn btn-primary', 'div' => false)); ?>
 				</div>  	
 			</div>
@@ -250,13 +250,13 @@
 			<div class='control-group'>
 			    <?php echo $this->Form->label('name', 'Nome: ', array('class' => 'control-label')); ?>
 			    <div class='controls'>
-			  		<?php echo $this->Form->input('name', array('class' => 'input-xlarge', 'id' => 'workplace-name-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false)); ?>
+			  		<?php echo $this->Form->input('name', array('class' => 'input-xlarge', 'id' => 'workplace-name-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>  	
 			</div>
 			<div class='control-group'>
 			    <?php echo $this->Form->label('MarketSector.name', 'Segmento: ', array('class' => 'control-label')); ?>
 			    <div class='controls'>
-			    	<?php echo $this->Form->input('MarketSector.id', array('class' => 'input-large', 'id' => 'workplace-market-sector-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false, 'options' => $workplace_market_sectors, 'onchange' => 'Info.Workplace.addNewMarketSector()')); ?>
+			    	<?php echo $this->Form->input('MarketSector.id', array('class' => 'input-large', 'id' => 'workplace-market-sector-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false, 'options' => $workplace_market_sectors, 'onchange' => 'Info.Workplace.addNewMarketSector()', 'empty' => 'Selecione...', 'required' => 'required')); ?>
 			  		<?php echo $this->Form->label('MarketSector.name', 'Qual?', array('id' => 'workplace-market-sector-name-label', 'style' => 'display: none; margin-right: 10px'));
 			  			  echo $this->Form->input('MarketSector.name', array('class' => 'input-large', 'id' => 'workplace-market-sector-name-input', 'style' => 'margin-right: 10px; display: none', 'div' => false, 'label' => false)); ?>
 				</div>  	
@@ -264,7 +264,7 @@
 			<div class='control-group'>
 			    <?php echo $this->Form->label('nationality', 'Nacionalidade: ', array('class' => 'control-label')); ?>
 			    <div class='controls'>
-			  		<?php echo $this->Form->input('nationality', array('class' => 'input-large', 'id' => 'workplace-nationality-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false)); ?>
+			  		<?php echo $this->Form->input('nationality', array('class' => 'input-large', 'id' => 'workplace-nationality-input', 'style' => 'margin-right: 10px', 'div' => false, 'label' => false, 'required' => 'required')); ?>
 				</div>  	
 			</div>
 			<div class='control-group'>
@@ -275,7 +275,3 @@
 		<?php echo $this->Form->end(); ?>	
 	</div>
 </div>
-
-<script type="text/javascript">
-	$(function(){Info.Workplace.addNewMarketSector()});
-</script>

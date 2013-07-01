@@ -2,18 +2,18 @@
 	<?php if ($edit) echo $this->Form->input('EventContact.id', array('div' => false, 'label' => false, 'type' => 'hidden')); ?>
 	<?php echo $this->Form->label('EventContact.contact_reason', 'Razão do contato', array('div' => false, 'class' => 'control-label')); ?>
 	<div class="controls pull-left" style="margin-left: 20px; margin-right: 20px">
-		<?php echo $this->Form->input('EventContact.contact_reason', array('div' => false, 'label' => false, 'class' => 'input-xlarge')); ?>
+		<?php echo $this->Form->input('EventContact.contact_reason', array('div' => false, 'label' => false, 'class' => 'input-xlarge', 'required' => 'required')); ?>
 	</div>
 	<?php echo $this->Form->label('EventContact.contact_sender', 'Quem realizou o contato', array('div' => false, 'class' => 'control-label')); ?>
 	<div class="controls pull-left" style="margin-left: 20px">
-		<?php echo $this->Form->input('EventContact.contact_sender', array('div' => false, 'label' => false, 'class' => 'input-xlarge')); ?>
+		<?php echo $this->Form->input('EventContact.contact_sender', array('div' => false, 'label' => false, 'class' => 'input-xlarge', 'required' => 'required')); ?>
 	</div>
 </div>
 
 <div class="control-group" style="margin-bottom: 0">
 	<?php echo $this->Form->label('EventContact.contact_receiver', 'Pessoa com que foi feito o contato', array('div' => false, 'class' => 'control-label')); ?>
 	<div class="controls pull-left" style="margin-left: 20px; margin-right: 20px">
-		<?php echo $this->Form->input('EventContact.contact_receiver', array('div' => false, 'label' => false, 'class' => 'input-xlarge')); ?>
+		<?php echo $this->Form->input('EventContact.contact_receiver', array('div' => false, 'label' => false, 'class' => 'input-xlarge', 'required' => 'required')); ?>
 	</div>
 	<?php echo $this->Form->label('EventContact.contact_type', 'Tipo de contato', array('div' => false, 'class' => 'control-label')); ?>
 	<div class="controls pull-left" style="margin-left: 20px">

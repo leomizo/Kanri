@@ -71,15 +71,15 @@
     	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     	<h3>Selecione uma empresa</h3>
     	<form class="form-search" style="margin: 10px 0 0 0">
-		  	<input type="text" class="input-medium search-query" style="width: 415px">
-		  	<button type="submit" class="btn" style="margin-left: 5px">Buscar</button>
+		  	<input type="text" class="input-medium search-query" id='process-add-search-input' style="width: 415px">
+		  	<button type="button" class="btn" style="margin-left: 5px" onclick="Process.performSearch()">Buscar</button>
 		</form>
   	</div>
   	<div class="modal-body">
-  		<div id='company-content'>
+  		<div id='company-content' focused='true'>
   			<?php include '_company_table.ctp' ?>
   		</div>
-  		<div id='candidate-content'>
+  		<div id='candidate-content' focused='false'>
   			<?php $visible = false;
   				  include '_candidate_table.ctp'; ?>
   		</div>
