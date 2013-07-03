@@ -46,9 +46,9 @@
 		<div class="form-actions">
 			<?php if ($visibility == 0 || $visibility == 2) {
 					  echo $this->Html->link('Editar', array('controller' => 'companies', 'action' => 'edit', $company['Company']['id']), array('class' => 'btn btn-primary', 'style' => 'margin-right: 6px'));
-					  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-right: 6px'), 'Você está certo disso?'); 
+					  echo $this->Form->postLink('Remover', array('controller' => 'companies', 'action' => 'delete', $company['Company']['id']), array('class' => 'btn btn-danger'), 'Você está certo disso?'); 
 				  }
-				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()')); ?>
+				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 6px', 'onclick' => 'parent.history.back()')); ?>
 		</div>
 	</div>
 </div>

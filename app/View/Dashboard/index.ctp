@@ -12,7 +12,7 @@
 	<?php if ($visibility == 0 || $visibility == 2): ?>
 	<div class="row-fluid">
 		<div class="span10 offset1 dashboard-block">
-			<h3>Candidatos aniversariantes</h3>
+			<h3>Candidatos aniversariantes (<?php echo date("d/m/Y"); ?>)</h3>
 			<table class="table table-striped table-bordered">
 				<thead>
 					<tr>
@@ -23,14 +23,20 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($birthdays as $candidate): ?>
+					<?php if (isset($birthdays)) foreach ($birthdays as $candidate): ?>
 					<tr>
-						<td><?php echo $this->Html->link($candidate['Candidate']['name'], array('controller' => 'candidates', 'action' => 'show', $candidate['Candidate']['id'])); ?></td>
+						<td><?php echo $this->Html->link($candidate[0]['name'], array('controller' => 'candidates', 'action' => 'show', $candidate['Candidate']['id'])); ?></td>
 						<td><?php echo $candidate['Candidate']['age']; ?></td>
 						<td><?php echo $candidate['Candidate']['personal_email']; ?></td>
 						<td style="text-align: center">
-							<a href="#" class="btn btn-primary btn-mini">Enviar</a>
-							<a href="#" class="btn btn-danger btn-mini">Ignorar</a>
+							<?php if ($candidate['CandidateBirthday']['status'] == 0): ?>
+								<?php echo $this->Form->postLink('Enviar', array('action' => 'send_candidate_birthday_email', $candidate['CandidateBirthday']['id'], $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-primary', 'style' => 'margin-right: 5px'));
+									  echo $this->Form->postLink('Ignorar', array('action' => 'ignore_candidate_birthday', $candidate['CandidateBirthday']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você tem certeza?'); ?>
+							<?php elseif ($candidate['CandidateBirthday']['status'] == 1): ?>
+								<span style='color: #0A1'>Enviado!</span>
+							<?php elseif ($candidate['CandidateBirthday']['status'] == 2): ?>
+								<span style='color: #C20000'>Ignorado</span>
+							<?php endif;?>
 						</td>
 					</tr>
 					<?php endforeach; ?>

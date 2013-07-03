@@ -6,8 +6,8 @@ class EventsController extends AppController {
 		if ($this->request->is('post')) {
 			unset($this->request->data['Event']['id']);
 			$process_id = $this->request->data['Event']['process_id'];
-			$occurrence = date_parse_from_format('d/m/Y H:i:s', $this->request->data['Event']['occurrence']);
-			$this->request->data['Event']['occurrence'] = date('Y-m-d H:i:s', mktime($occurrence['hour'], $occurrence['minute'], $occurrence['second'], $occurrence['month'], $occurrence['day'], $occurrence['year']));
+			$occurrence = $this->request->data['Event']['occurrence'];
+			$this->request->data['Event']['occurrence'] = date('Y-m-d H:i:s', mktime(substr($occurrence, 11, 2), substr($occurrence, 14, 2), substr($occurrence, 17, 2), substr($occurrence, 3, 2), substr($occurrence, 0, 2), substr($occurrence, 6, 4)));
 			if ($this->Event->saveAll($this->request->data)) {
 				$this->redirect(array('controller' => 'processes', 'action' => 'events', $process_id, 'add'));
 			}
@@ -17,8 +17,8 @@ class EventsController extends AppController {
 	public function edit() {
 		if ($this->request->is('post')) {
 			$process_id = $this->request->data['Event']['process_id'];
-			$occurrence = date_parse_from_format('d/m/Y H:i:s', $this->request->data['Event']['occurrence']);
-			$this->request->data['Event']['occurrence'] = date('Y-m-d H:i:s', mktime($occurrence['hour'], $occurrence['minute'], $occurrence['second'], $occurrence['month'], $occurrence['day'], $occurrence['year']));
+			$occurrence = $this->request->data['Event']['occurrence'];
+			$this->request->data['Event']['occurrence'] = date('Y-m-d H:i:s', mktime(substr($occurrence, 11, 2), substr($occurrence, 14, 2), substr($occurrence, 17, 2), substr($occurrence, 3, 2), substr($occurrence, 0, 2), substr($occurrence, 6, 4)));
 			if ($this->Event->saveAll($this->request->data)) {
 				$this->redirect(array('controller' => 'processes', 'action' => 'events', $process_id, 'edit'));
 			}

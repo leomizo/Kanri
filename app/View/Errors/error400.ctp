@@ -23,13 +23,13 @@
 
 <?php if ($error instanceof ForbiddenException): ?>
 	<div class="content-block" id='message-container'>
-		<?php echo $this->Html->image('warning-icon', array('id' => 'message-icon')); ?>
+		<?php echo $this->Html->image('warning-icon.png', array('id' => 'message-icon')); ?>
 		<br />
 		<h2>Sem permissão para executar ação!</h2>
 	</div>
 <?php else : ?>
 	<div class="content-block" id='message-container'>
-		<?php echo $this->Html->image('error-icon', array('id' => 'message-icon')); ?>
+		<?php echo $this->Html->image('error-icon.png', array('id' => 'message-icon')); ?>
 		<br />
 		<h2>404: Página não encontrada!</h2>
 	</div>

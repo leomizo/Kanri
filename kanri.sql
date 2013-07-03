@@ -288,17 +288,13 @@ CREATE TABLE `permissions` (
 	created DATETIME NULL
 );
 
+DROP TABLE IF EXISTS `candidate_birthdays`;
+
+CREATE TABLE `candidate_birthdays` (
+	id SERIAL PRIMARY KEY,
+	candidate_id BIGINT UNSIGNED NOT NULL,
+	status TINYINT DEFAULT 0 NOT NULL
+);
+
 INSERT INTO `users` (`name`, `email`, `password`, `type`)
 VALUES ("Edson Tamamaro", "edson@kanri.com", "64bbf816abf3fd1f415b1826b78f5b3a8d22ac84", "0");
-
-
-
-
-
- 
-
-
-
-
-
-
