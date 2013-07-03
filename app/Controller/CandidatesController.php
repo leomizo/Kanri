@@ -243,8 +243,8 @@ class CandidatesController extends AppController {
 
 	public function get_formations() {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
-			$search = $this->request->query['search'];
-			$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+			$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
+			$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 			$this->paginate = $this->Formation->pagination($search, $page);
 			$this->set('modal_data', $this->paginate('Formation'));
 			$this->set('modal_table', 'formation');
@@ -254,8 +254,8 @@ class CandidatesController extends AppController {
 
 	public function get_courses() {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
-			$search = $this->request->query['search'];
-			$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+			$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
+			$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 			$this->paginate = $this->Course->pagination($search, $page);
 			$this->set('modal_data', $this->paginate('Course'));
 			$this->set('modal_table', 'course');
@@ -265,8 +265,8 @@ class CandidatesController extends AppController {
 
 	public function get_jobs() {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
-			$search = $this->request->query['search'];
-			$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+			$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
+			$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 			$this->paginate = $this->Job->pagination($search, $page);
 			$this->set('modal_data', $this->paginate('Job'));
 			$this->set('modal_table', 'job');
@@ -276,8 +276,8 @@ class CandidatesController extends AppController {
 
 	public function get_workplaces() {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
-			$search = $this->request->query['search'];
-			$page = $this->request->query['page'] ? $this->request->query['page'] : 1;
+			$search = isset($this->request->query['search']) ? $this->request->query['search'] : null;
+			$page = isset($this->request->query['page']) ? $this->request->query['page'] : 1;
 			$this->paginate = $this->Workplace->pagination($search, null, $page);
 			$this->set('workplaces', $this->paginate('Workplace'));
 			$this->render('_modal_workplace', false);
