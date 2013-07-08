@@ -37,6 +37,154 @@ class CandidatesController extends AppController {
 		}
 	}
 
+	public function new_add() {
+		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
+			if ($this->request->is('post')) {
+				if ($this->request->data['City']['State']['Country']['id'] == 'null' || $this->request->data['City']['State']['Country']['id'] == '') {
+					unset($this->request->data['City']['State']['Country']['id']);
+				}
+				else {
+					unset($this->request->data['City']['State']['Country']['name']);
+				}
+				if (isset($this->request->data['City']['State']['id']) && ($this->request->data['City']['State']['id'] == 'null' || $this->request->data['City']['State']['id'] == '')) {
+					unset($this->request->data['City']['State']['id']);
+				}
+				else {
+					unset($this->request->data['City']['State']['name']);
+				}
+				if (isset($this->request->data['City']['id']) && ($this->request->data['City']['id'] == 'null' || $this->request->data['City']['id'] == '')) {
+					unset($this->request->data['City']['id']);
+				}
+				else {
+					unset($this->request->data['City']['name']);
+				}
+				if ($this->Candidate->saveAll($this->request->data, array('deep' => true))) {
+					if ($page < 6) $this->redirect(array('controller' => 'candidates', 'action' => 'new_edit', '?' => array('page' => 1), $this->Candidate->id));
+					else $this->redirect(array('controller' => 'candidates', 'action' => 'index'));
+				}
+				else {
+					$this->set('alert', true);
+				}
+			}
+			else {
+				$countries = $this->Country->getCountryNames();
+				$countries['null'] = 'Outro...';
+				$this->set('countries', $countries);
+			}
+		}
+		else throw new ForbiddenException();
+	}
+
+	public function new_edit($id = null) {
+		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
+			$step = isset($this->request->query['step']) ? $this->request->query['step'] : 0;
+			if ($id > 0) {
+				if ($this->request->is('post') || $this->request->is('put')) {
+					switch ($step) {
+						case 0:
+							if ($this->request->data['City']['State']['Country']['id'] == 'null' || $this->request->data['City']['State']['Country']['id'] == '') {
+								unset($this->request->data['City']['State']['Country']['id']);
+							}
+							else {
+								unset($this->request->data['City']['State']['Country']['name']);
+							}
+							if (isset($this->request->data['City']['State']['id']) && ($this->request->data['City']['State']['id'] == 'null' || $this->request->data['City']['State']['id'] == '')) {
+								unset($this->request->data['City']['State']['id']);
+							}
+							else {
+								unset($this->request->data['City']['State']['name']);
+							}
+							if (isset($this->request->data['City']['id']) && ($this->request->data['City']['id'] == 'null' || $this->request->data['City']['id'] == '')) {
+								unset($this->request->data['City']['id']);
+							}
+							else {
+								unset($this->request->data['City']['name']);
+							}
+							if ($this->Candidate->saveAll($this->request->data, array('deep' => true))) {
+								$this->redirect(array('?' => array('step' => 1), $id));
+							}
+							else {
+								$this->set('alert', true);
+							}
+							break;
+						case 1:
+							if ($this->Candidate->CandidateFormation->saveMany($this->request->data)) {
+								$this->Candidate->CandidateFormation->deleteAll(array('CandidateFormation.candidate_id' => $id, 'CandidateFormation.created <' => date('Y-m-d H:i:s')));
+								$this->redirect(array('?' => array('step' => 2), $id));
+							}
+							else {
+								$this->set('alert', true);
+							}
+							break;
+						case 2:
+							unset($this->request->data['language-level']);
+							if ($this->Candidate->CandidateLanguage->saveMany($this->request->data, array('deep' => true))) {
+								$this->Candidate->CandidateLanguage->deleteAll(array('CandidateLanguage.candidate_id' => $id, 'CandidateLanguage.created <' => date('Y-m-d H:i:s')));
+								$this->redirect(array('?' => array('step' => 3), $id));
+							}
+							else {
+								$this->set('alert', true);
+							}
+							break;
+						case 3:
+							if ($this->Candidate->CandidateCourse->saveMany($this->request->data)) {
+								$this->Candidate->CandidateCourse->deleteAll(array('CandidateCourse.candidate_id' => $id, 'CandidateCourse.created <' => date('Y-m-d H:i:s')));
+								$this->redirect(array('?' => array('step' => 4), $id));
+							}
+							else {
+								$this->set('alert', true);
+							}
+							break;
+						case 4:
+							if ($this->Candidate->saveAll($this->request->data)) {
+								$this->Candidate->Remuneration->deleteAll(array('Remuneration.candidate_id' => $id, 'Remuneration.created <' => date('Y-m-d H:i:s')));
+								$this->redirect(array('?' => array('step' => 5), $id));
+							}
+							else {
+								$this->set('alert', true);
+							}
+							break;
+					}
+				}
+				else {
+					$this->set('step', $step);
+					$candidate = $this->Candidate->find('first', array('conditions' => array('Candidate.id' => $id), 'recursive' => 3));
+					switch ($step) {
+						case 0:
+							$countries = $this->Country->getCountryNames();
+							$countries['null'] = 'Outro...';
+							$this->set('countries', $countries);
+
+							$states = $this->State->getStatesByCountry($candidate['City']['State']['Country']['id']);
+							$states['null'] = 'Outro...';
+							$this->set('states', $states);
+
+							$cities = $this->City->getCitiesByState($candidate['City']['State']['id']);
+							$cities['null'] = 'Outro...';
+							$this->set('cities', $cities);
+							break;
+						case 1:
+							$this->paginate = $this->Formation->pagination();
+							$this->set('formations', $this->paginate('Formation'));
+							break;
+						case 2:
+							$languages = $this->Language->getLanguageNames();
+							$languages['null'] = 'Outro...';
+							$this->set('languages', $languages);
+							break;
+						case 3:
+							$this->paginate = $this->Course->pagination();
+							$this->set('courses', $this->paginate('Course'));
+							break;
+					}
+					$this->request->data = $candidate;
+				}
+			}
+			else throw new InternalErrorException();
+		}
+		else throw new ForbiddenException();
+	}
+
 	public function add() {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
 			if ($this->request->is('post')) {

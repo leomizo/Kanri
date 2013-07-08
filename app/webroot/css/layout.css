@@ -132,3 +132,35 @@ tr[editing="true"] > td > div.event-cell, tr[editing="true"] > td > div.event-ce
 .shakeable {
 	position: relative;
 }
+
+#event-table * tr.event-row-type-0 > td {
+	background-color: #F9F9F9;
+}
+
+#event-table * tr.event-row-type-1 > td {
+	background-color: #FEE;
+}
+
+#event-table * tr.event-row-type-2 > td {
+	background-color: #FFE;
+}
+
+#event-table * tr.event-row-type-3 > td {
+	background-color: #EFE;
+}
+
+#event-table * tr.event-row-type-4 > td {
+	background-color: #EFF;
+}
+
+#event-table * tr.event-row-type-5 > td {
+	background-color: #EEF;
+}
+
+#event-table * tr.event-row-type-6 > td {
+	background-color: #FEF;
+}
+
+#event-table * tr.event-row-type-7 > td {
+	background-color: #FFF;
+}

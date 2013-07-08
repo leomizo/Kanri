@@ -43,7 +43,7 @@ CREATE TABLE `candidates` (
 	dental_insurance VARCHAR(128),
 	private_pension VARCHAR(128),
 	meal_ticket_type TINYINT UNSIGNED,
-	meal_ticket_value DECIMAL(6, 2),
+	meal_ticket_value VARCHAR(64),
 	vehicle_type TINYINT UNSIGNED,
 	vehicle_description VARCHAR(128),
 	fuel_voucher VARCHAR(64),
@@ -187,6 +187,24 @@ CREATE TABLE `experiences` (
 	created DATETIME NULL
 );
 
+DROP TABLE IF EXISTS `experience_descriptions`;
+
+CREATE TABLE `experience_descriptions` (
+	id SERIAL PRIMARY KEY,
+	experience_id BIGINT UNSIGNED NOT NULL,
+	type TINYINT NOT NULL,
+	description TEXT
+);
+
+DROP TABLE IF EXISTS `remunerations`;
+
+CREATE TABLE `remunerations` (
+	id SERIAL PRIMARY KEY,
+	candidate_id BIGINT UNSIGNED NOT NULL,
+	type VARCHAR(32),
+	value VARCHAR(64)
+);
+
 DROP TABLE IF EXISTS `companies`;
 
 CREATE TABLE `companies` (
@@ -243,6 +261,7 @@ CREATE TABLE `event_contacts` (
 	contact_receiver VARCHAR(128) NOT NULL,
 	contact_type TINYINT NOT NULL,
 	contact_type_description VARCHAR(32),
+	description TEXT,
 	created DATETIME NULL
 );
 
@@ -255,6 +274,7 @@ CREATE TABLE `event_interviews` (
 	contact_type TINYINT NOT NULL,
 	contact_type_description VARCHAR(32),
 	attendance_justification VARCHAR(256),
+	description TEXT,
 	created DATETIME NULL
 );
 

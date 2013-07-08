@@ -37,6 +37,13 @@
 	</div>
 </div>
 
+<div class="control-group">
+	<?php echo $this->Form->label('EventContact.description', 'Comentários', array('div' => false, 'class' => 'control-label')); ?>
+	<div class="controls">
+		<?php echo $this->Form->input('EventContact.description', array('div' => false, 'label' => false)); ?>
+	</div>
+</div>
+
 <div class="control-group" style="margin-bottom: 0">
 	<div class="controls">
 		<?php if (!$edit): ?>

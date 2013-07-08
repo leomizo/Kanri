@@ -40,7 +40,7 @@
 
 	<div class="row-fluid">
 		<h3>Eventos</h3>
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped table-bordered" id='event-table'>
 			<thead>
 				<tr>
 					<th style="width: 250px">Data de ocorrência</th>
@@ -50,7 +50,7 @@
 			</thead>
 			<tbody>
 				<?php foreach ($process['Event'] as $event): ?>
-				<tr editing='false'>
+				<tr editing='false' class=<?php echo 'event-row-type-'.$event['event_type']; ?>>
 					<td style="text-align: center; vertical-align: middle">
 						<div class='event-cell'>
 							<?php echo formatDate($event['occurrence']); ?>

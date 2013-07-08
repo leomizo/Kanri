@@ -123,7 +123,7 @@ Candidate.addFormation = function() {
 			$('#formation-new-input').val("");
 			$('#formation-input').val($.parseJSON(data).id);
 			$('#formation-modal').modal('hide');
-			$('#formation-content').load('get_formations');
+			$('#formation-content').load('/candidates/get_formations');
 			Candidate.checkFormationData();
 		}).fail(function() {
 
@@ -136,9 +136,10 @@ Candidate.addCandidateFormation = function() {
 		$("#formation-list").append("<li style='margin-bottom: 10px' editing='false'><strong><span class='formation-name'>" + $("#formation-name-input").text() + "</span></strong><br /><span class='formation-institution'>" + $("#formation-institution-input").val() + "</span><br />Conclusão em: <span class='formation-year'>" + $("#formation-year-input").val() + "</span><br /><button type='button' class='btn btn-primary btn-mini formation-edit-btn' style='margin-right: 5px; margin-top: 5px' onclick='Candidate.editCandidateFormation(this)'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini formation-remove-btn' type='button' onclick='Candidate.removeCandidateFormation(this)' style='margin-top: 5px'><i class='icon-remove icon-white'></i></button></li>");
 		
 		var formationIndex = $('#candidate-formation-inputs > .formation-id-input').length;
-		$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][formation_id]" class="formation-id-input" value="' + $('#formation-input').val() + '" index="' + formationIndex + '" />');
-		$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][institution]" class="formation-institution-input" value="' + $('#formation-institution-input').val() + '" index="' + formationIndex + '" />');
-		$('#candidate-formation-inputs').append('<input type="hidden" name="data[CandidateFormation][' + formationIndex + '][conclusion_year]" class="formation-year-input" value="' + $('#formation-year-input').val() + '" index="' + formationIndex + '" />');
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[' + formationIndex + '][CandidateFormation][formation_id]" class="formation-id-input" value="' + $('#formation-input').val() + '" index="' + formationIndex + '" />');
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[' + formationIndex + '][CandidateFormation][institution]" class="formation-institution-input" value="' + $('#formation-institution-input').val() + '" index="' + formationIndex + '" />');
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[' + formationIndex + '][CandidateFormation][conclusion_year]" class="formation-year-input" value="' + $('#formation-year-input').val() + '" index="' + formationIndex + '" />');
+		$('#candidate-formation-inputs').append('<input type="hidden" name="data[' + formationIndex + '][CandidateFormation][candidate_id]" class="formation-candidate-input" value="' + $('#formation-candidate-input').val() + '" index="' + formationIndex + '" />');
 
 		$("#formation-name-input").text("");
 		$("#formation-input").val("");
@@ -212,16 +213,20 @@ Candidate.removeCandidateFormation = function(btn) {
 
 Candidate.correctCandidateFormationIndexes = function() {
 	$('.formation-id-input').each(function() {
-		$(this).attr('name', 'data[CandidateFormation][' + $('.formation-id-input').index(this) + '][formation_id]');
+		$(this).attr('name', 'data[' + $('.formation-id-input').index(this) + '][CandidateFormation][formation_id]');
 		$(this).attr('index', $('.formation-id-input').index(this));
 	});
 	$('.formation-institution-input').each(function() {
-		$(this).attr('name', 'data[CandidateFormation][' + $('.formation-institution-input').index(this) + '][institution]');
+		$(this).attr('name', 'data[' + $('.formation-institution-input').index(this) + '][CandidateFormation][institution]');
 		$(this).attr('index', $('.formation-institution-input').index(this));
 	});
 	$('.formation-year-input').each(function() {
-		$(this).attr('name', 'data[CandidateFormation][' + $('.formation-year-input').index(this) + '][conclusion_year]');
+		$(this).attr('name', 'data[' + $('.formation-year-input').index(this) + '][CandidateFormation][conclusion_year]');
 		$(this).attr('index', $('.formation-year-input').index(this));
+	});
+	$('.formation-candidate-input').each(function() {
+		$(this).attr('name', 'data[' + $('.formation-candidate-input').index(this) + '][CandidateFormation][candidate_id]');
+		$(this).attr('index', $('.formation-candidate-input').index(this));
 	});
 }
 
@@ -245,7 +250,7 @@ Candidate.addCourse = function() {
 			$('#course-new-input').val("");
 			$('#course-input').val($.parseJSON(data).id);
 			$('#course-modal').modal('hide');
-			$('#course-content').load('get_courses');
+			$('#course-content').load('/candidates/get_courses');
 			Candidate.checkCourseData();
 		}).fail(function() {
 
@@ -258,9 +263,10 @@ Candidate.addCandidateCourse = function() {
 		$("#course-list").append("<li style='margin-bottom: 10px' editing='false'><strong><span class='course-name'>" + $("#course-name-input").text() + "</span></strong><br /><span class='course-institution'>" + $("#course-institution-input").val() + "</span><br />Conclusão em: <span class='course-year'>" + $("#course-year-input").val() + "</span><br /><button type='button' class='btn btn-primary btn-mini course-edit-btn' style='margin-right: 5px; margin-top: 5px' onclick='Candidate.editCandidateCourse(this)'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini course-remove-btn' type='button' onclick='Candidate.removeCandidateCourse(this)' style='margin-top: 5px'><i class='icon-remove icon-white'></i></button></li>");
 		
 		var courseIndex = $('#candidate-course-inputs > .course-id-input').length;
-		$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][course_id]" class="course-id-input" value="' + $('#course-input').val() + '" index="' + courseIndex + '" />');
-		$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][institution]" class="course-institution-input" value="' + $('#course-institution-input').val() + '" index="' + courseIndex + '" />');
-		$('#candidate-course-inputs').append('<input type="hidden" name="data[CandidateCourse][' + courseIndex + '][conclusion_year]" class="course-year-input" value="' + $('#course-year-input').val() + '" index="' + courseIndex + '" />');
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[' + courseIndex + '][CandidateCourse][course_id]" class="course-id-input" value="' + $('#course-input').val() + '" index="' + courseIndex + '" />');
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[' + courseIndex + '][CandidateCourse][institution]" class="course-institution-input" value="' + $('#course-institution-input').val() + '" index="' + courseIndex + '" />');
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[' + courseIndex + '][CandidateCourse][conclusion_year]" class="course-year-input" value="' + $('#course-year-input').val() + '" index="' + courseIndex + '" />');
+		$('#candidate-course-inputs').append('<input type="hidden" name="data[' + courseIndex + '][CandidateCourse][candidate_id]" class="course-candidate-input" value="' + $('#course-candidate-input').val() + '" index="' + courseIndex + '" />');
 
 		$("#course-name-input").text("");
 		$("#course-input").val("");
@@ -334,16 +340,20 @@ Candidate.removeCandidateCourse = function(btn) {
 
 Candidate.correctCandidateCourseIndexes = function() {
 	$('.course-id-input').each(function() {
-		$(this).attr('name', 'data[CandidateCourse][' + $('.course-id-input').index(this) + '][course_id]');
+		$(this).attr('name', 'data[' + $('.course-id-input').index(this) + '][CandidateCourse][course_id]');
 		$(this).attr('index', $('.course-id-input').index(this));
 	});
 	$('.course-institution-input').each(function() {
-		$(this).attr('name', 'data[CandidateCourse][' + $('.course-institution-input').index(this) + '][institution]');
+		$(this).attr('name', 'data[' + $('.course-institution-input').index(this) + '][CandidateCourse][institution]');
 		$(this).attr('index', $('.course-institution-input').index(this));
 	});
 	$('.course-year-input').each(function() {
-		$(this).attr('name', 'data[CandidateCourse][' + $('.course-year-input').index(this) + '][conclusion_year]');
+		$(this).attr('name', 'data[' + $('.course-year-input').index(this) + '][CandidateCourse][conclusion_year]');
 		$(this).attr('index', $('.course-year-input').index(this));
+	});
+	$('.course-candidate-input').each(function() {
+		$(this).attr('name', 'data[' + $('.course-candidate-input').index(this) + '][CandidateCourse][candidate_id]');
+		$(this).attr('index', $('.course-candidate-input').index(this));
 	});
 }
 
@@ -373,13 +383,15 @@ Candidate.addCandidateLanguage = function() {
 		var languageIndex = $("#candidate-language-inputs > .language-level-input").length;
 		if ($("#language-input").val() == 'null') {
 			$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-name-input").val() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
-			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-name-input" name="data[CandidateLanguage][' + languageIndex + '][Language][name]" value="' + $("#language-name-input").val() + '" index="' + languageIndex + '" />');
+			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-name-input" name="data[' + languageIndex + '][CandidateLanguage][Language][name]" value="' + $("#language-name-input").val() + '" index="' + languageIndex + '" />');
+			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-candidate-input" name="data[' + languageIndex + '][CandidateLanguage][candidate_id]" value="' + $("#language-candidate-input").val() + '" index="' + languageIndex + '" />');
 		}
 		else {
 			$("#language-list").append("<li style='margin-bottom: 5px'><strong>" + $("#language-input > option:selected").text() + ": </strong> " + $("input[name='language-level']:checked").attr('label') + "<button type='button' class='btn btn-danger btn-mini btn-micro language-remove-btn' style='margin-left: 5px' onclick='Candidate.removeCandidateLanguage(this)'>X</button></li>");
-			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-id-input" name="data[CandidateLanguage][' + languageIndex + '][language_id]" value="' + $("#language-input").val() + '" index="' + languageIndex + '" />');
+			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-id-input" name="data[' + languageIndex + '][CandidateLanguage][language_id]" value="' + $("#language-input").val() + '" index="' + languageIndex + '" />');
+			$("#candidate-language-inputs").append('<input type="hidden" class="language-input language-candidate-input" name="data[' + languageIndex + '][CandidateLanguage][candidate_id]" value="' + $("#language-candidate-input").val() + '" index="' + languageIndex + '" />');
 		}
-		$("#candidate-language-inputs").append('<input type="hidden" class="language-level-input" name="data[CandidateLanguage][' + languageIndex + '][level]" value="' + $("input[name='language-level']:checked").val() + '" index="' + languageIndex + '" />');
+		$("#candidate-language-inputs").append('<input type="hidden" class="language-level-input" name="data[' + languageIndex + '][CandidateLanguage][level]" value="' + $("input[name='language-level']:checked").val() + '" index="' + languageIndex + '" />');
 		$("#language-input")[0].selectedIndex = 0;
 		Candidate.selectLanguage($("#language-input")[0]);
 		$("#add-language-btn").addClass('disabled');
@@ -398,16 +410,20 @@ Candidate.removeCandidateLanguage = function(btn) {
 
 Candidate.correctCandidateLanguageIndexes = function() {
 	$('.language-name-input').each(function() {
-		$(this).attr('name', 'data[CandidateLanguage][' + $('.language-input').index(this) + '][Language][name]');
+		$(this).attr('name', 'data[' + $('.language-input').index(this) + '][CandidateLanguage][Language][name]');
 		$(this).attr('index', $('.language-input').index(this));
 	});
 	$('.language-id-input').each(function() {
-		$(this).attr('name', 'data[CandidateLanguage][' + $('.language-input').index(this) + '][language_id]');
+		$(this).attr('name', 'data[' + $('.language-input').index(this) + '][CandidateLanguage][language_id]');
 		$(this).attr('index', $('.language-input').index(this));
 	});
 	$('.language-level-input').each(function() {
-		$(this).attr('name', 'data[CandidateLanguage][' + $('.language-level-input').index(this) + '][level]');
+		$(this).attr('name', 'data[' + $('.language-level-input').index(this) + '][CandidateLanguage][level]');
 		$(this).attr('index', $('.language-level-input').index(this));
+	});
+	$('.language-candidate-input').each(function() {
+		$(this).attr('name', 'data[' + $('.language-candidate-input').index(this) + '][CandidateLanguage][candidate_id]');
+		$(this).attr('index', $('.language-candidate-input').index(this));
 	});
 }
 
@@ -416,7 +432,7 @@ Candidate.checkLanguageData = function() {
 	else $("#add-language-btn").addClass('disabled');
 }
 
-// Income
+// Remuneration
 
 Candidate.selectIncomeType = function(select) {
 	$(".income-clt-field, .income-pj-field").hide();
@@ -434,6 +450,64 @@ Candidate.selectIncomeType = function(select) {
 	}
 }
 
+Candidate.addRemuneration = function() {
+	if ($("#remuneration-name-input").val() != "") {
+		var index = $(".custom-remuneration").length;
+		$("fieldset").append("<div class='control-group custom-remuneration'><label class='control-label' editing='false'>" + $("#remuneration-name-input").val() + "</label><div class='controls'><input type='hidden' class='remuneration-name-input' name='data[Remuneration][" + index + "][type]' value='" + $("#remuneration-name-input").val() + "'  /><input type='text' class='input-xxlarge remuneration-value-input' name='data[Remuneration][" + index + "][value]' /><button type='button' class='btn btn-primary btn-mini remuneration-edit-btn' style='margin-left: 10px' onclick='Candidate.editRemuneration(this)'><i class='icon-edit icon-white'></i></button><button type='button' class='btn btn-danger btn-mini remuneration-remove-btn' style='margin-left: 5px' onclick='Candidate.removeRemuneration(this)'><i class='icon-remove icon-white'></i></button></div></div>");
+		$("#remuneration-name-input").val("");
+	}
+	else {
+		Kanri.elementJump($("#remuneration-name-input"));
+	}
+}
+
+Candidate.editRemuneration = function(btn) {
+	$("#add-remuneration-btn, .remuneration-edit-btn, .remuneration-remove-btn").hide();
+	$("#update-remuneration-btn, #cancel-remuneration-edit-btn").show();
+	var label = $(btn).parents('.control-group').children('label');
+	label.attr('editing', 'true');
+	label.css('color', 'red');
+	$("#remuneration-name-input").val(label.text());
+	$("#remuneration-label").text("Remuneração: ");
+
+}
+
+Candidate.updateRemuneration = function() {
+	if ($("#remuneration-name-input").val() != "") {
+		var label = $('label[editing="true"]');
+		label.text($("#remuneration-name-input").val());
+		label.parent('.control-group').find('.remuneration-name-input').val($("#remuneration-name-input").val());
+		Candidate.cancelRemunerationEdit();
+	}
+	else {
+		Kanri.elementJump($("#remuneration-name-input"));
+	}
+}
+
+Candidate.removeRemuneration = function(btn) {
+	$(btn).parents('.control-group').remove();
+	Candidate.correctRemunerationIndexes();
+}
+
+Candidate.cancelRemunerationEdit = function() {
+	$("#add-remuneration-btn, .remuneration-edit-btn, .remuneration-remove-btn").show();
+	$("#update-remuneration-btn, #cancel-remuneration-edit-btn").hide();
+	$("#remuneration-name-input").val("");
+	$("#remuneration-label").text("Nova remuneração: ");
+	var label = $('label[editing="true"]');
+	label.css('color', 'black');
+	label.attr('editing', 'false');
+}
+
+Candidate.correctRemunerationIndexes = function() {
+	$(".remuneration-name-input").each(function(index) {
+		$(this).attr('name', 'data[Remuneration][' + index + '][type]');
+	});
+	$(".remuneration-value-input").each(function(index) {
+		$(this).attr('name', 'data[Remuneration][' + index + '][value]');
+	});
+}
+
 // Jobs
 
 Candidate.searchJob = function(form) {
@@ -447,7 +521,7 @@ Candidate.addJob = function() {
 		$('#job-name-input').text($('#job-new-input').val());
 		$('#job-new-input').val("");
 		$('#job-modal').modal('hide');
-		$('#job-content').load('get_jobs');
+		$('#job-content').load('/candidates/get_jobs');
 		Candidate.checkExperienceData();
 	}).fail(function() {
 
@@ -461,7 +535,7 @@ Candidate.checkJobData = function() {
 // Workplaces
 
 Candidate.searchWorkplace = function(form) {
-	$('#workplace-content').load('get_workplaces?search=' + $(form).children('input').val());
+	$('#workplace-content').load('/candidates/get_workplaces?search=' + $(form).children('input').val());
 	return false;
 }
 
@@ -510,7 +584,7 @@ Candidate.addWorkplace = function() {
 		else $("#workplace-market-sector-input").text($('#workplace-market-sector-new-input > option:selected').text());
 		$('#workplace-name-new-input, #workplace-nationality-new-input, #workplace-market-sector-add-input > input').val("");
 		$('#workplace-modal').modal('hide');
-		$('#workplace-content').load('get_workplaces');
+		$('#workplace-content').load('/candidates/get_workplaces');
 		$('#workplace-market-sector-new-input').load('/market_sectors/refresh_select?add=true');
 		Candidate.cancelWorkplaceMarketSectorAdd();
 		Candidate.checkExperienceData();

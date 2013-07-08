@@ -5,5 +5,7 @@
 	<br />
 	<?php if (!$event['EventInterview']['attendance']): ?>
 	<strong>Justificativa: </strong><?php echo $event['EventInterview']['attendance_justification']; ?>
+	<br />
 	<?php endif; ?>	
+	<strong>Comentários: </strong><?php echo $event['EventInterview']['description']; ?>
 </li>

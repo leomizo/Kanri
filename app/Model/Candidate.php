@@ -10,7 +10,8 @@ class Candidate extends AppModel {
 						    'CandidateFormation' => array('dependent' => true),
 						    'CandidateLanguage' => array('dependent' => true),
 						    'CandidateCourse' => array('dependent' => true),
-						    'Experience' => array('dependent' => true));
+						    'Experience' => array('dependent' => true),
+						    'Remuneration' => array('dependent' => true));
 
 	public $virtualFields = array('name' => 'CONCAT(Candidate.first_name, " ", Candidate.middle_names, " ", Candidate.last_name)');
 
