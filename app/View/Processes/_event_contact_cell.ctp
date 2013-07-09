@@ -1,4 +1,4 @@
-<li>
+<li style='text-align: justify; padding-right: 10px'>
 	<strong>Razão do contato: </strong><?php echo $event['EventContact']['contact_reason']; ?>
 	<br />
 	<strong>Quem realizou o contato: </strong><?php echo $event['EventContact']['contact_sender']; ?>

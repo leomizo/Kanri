@@ -608,12 +608,13 @@ Candidate.handleWorkplaceSelection = function(link) {
 Candidate.addExperience = function() {
 	if ($("#workplace-id-input").text() != "" && $("#job-input").val() != "" && $("#experience-start-input").val() != "") {
 		var experienceIndex = $(".form-workplace").length;
-		$("#experience-inputs").append("<input class='form-workplace' name='data[Experience][" + experienceIndex + "][workplace_id]' type='hidden' value='" + $("#workplace-id-input").text() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-		$("#experience-inputs").append("<input class='form-job' name='data[Experience][" + experienceIndex + "][job_id]' type='hidden' value='" + $("#job-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-		$("#experience-inputs").append("<input class='form-start' name='data[Experience][" + experienceIndex + "][start_date]' type='hidden' value='" + $("#experience-start-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-		$("#experience-inputs").append("<input class='form-end' name='data[Experience][" + experienceIndex + "][final_date]' type='hidden' value='" + $("#experience-end-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-		$("#experience-inputs").append("<input class='form-report' name='data[Experience][" + experienceIndex + "][report]' type='hidden' value='" + $("#experience-report-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
-		$("#experience-inputs").append("<input class='form-team' name='data[Experience][" + experienceIndex + "][team]' type='hidden' value='" + $("#experience-team-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-workplace' name='data[" + experienceIndex + "][Experience][workplace_id]' type='hidden' value='" + $("#workplace-id-input").text() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-job' name='data[" + experienceIndex + "][Experience][job_id]' type='hidden' value='" + $("#job-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-start' name='data[" + experienceIndex + "][Experience][start_date]' type='hidden' value='" + $("#experience-start-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-end' name='data[" + experienceIndex + "][Experience][final_date]' type='hidden' value='" + $("#experience-end-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-report' name='data[" + experienceIndex + "][Experience][report]' type='hidden' value='" + $("#experience-report-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-team' name='data[" + experienceIndex + "][Experience][team]' type='hidden' value='" + $("#experience-team-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
+		$("#experience-inputs").append("<input class='form-candidate' name='data[" + experienceIndex + "][Experience][candidate_id]' type='hidden' value='" + $("#experience-candidate-input").val() + "' workplace-id='" + $("#workplace-id-input").text() + "' index='" + experienceIndex + "' />");
 
 		if ($("#experience-list > li[workplace-id='" + $("#workplace-id-input").text() + "']").length == 0) {
 			$("#experience-list").append("<li workplace-id='" + $("#workplace-id-input").text() + "' workplace-name='" + $("#workplace-input").text() + "' workplace-nationality='" + $("#workplace-nationality-input").text() + "' workplace-market-sector='" + $("#workplace-market-sector-input").text() + "' editing='false'><strong>Empresa: " + $("#workplace-input").text() + "</strong><br /><span class='workplace-details'>Empresa " + $("#workplace-nationality-input").text() + " - Segmento " + $("#workplace-market-sector-input").text() + "</span><br /><button class='btn btn-primary btn-mini workplace-edit-btn' style='margin-right: 4px' onclick='Candidate.editWorkplace(this)' type='button'><i class='icon-edit icon-white'></i></button><button class='btn btn-danger btn-mini workplace-remove-btn' onclick='Candidate.removeWorkplace(this)'><i class='icon-remove icon-white'></i></button><ul class='achievement-list'></ul></li>");
@@ -621,7 +622,7 @@ Candidate.addExperience = function() {
 
 		var achievements_list = $("#experience-list > li[workplace-id='" + $("#workplace-id-input").text() + "'] > ul.achievement-list");
 
-		var experience_period = $("#experience-start-input").val() + " a " + $("#experience-end-input").val();
+		var experience_period = $("#experience-start-input").val() + " a " + ($("#experience-end-input").val() == "" ? "atual" : $("#experience-end-input").val());
 
 		var experience_report = "<span class='experience-report just-added'>Reporte: " + $("#experience-report-input").val() + "</span><br class='experience-report-break just-added'/>";
 		
@@ -682,6 +683,7 @@ Candidate.updateWorkplace = function() {
 	$("#experience-list > li[editing='true'] > .workplace-details").text("Empresa " + $("#workplace-nationality-input").text() + " - Segmento " + $("#workplace-market-sector-input").text());
 
 	$(".experience-input[workplace-id='" + formerWorkplaceId + "']").val($("#workplace-id-input").text());
+	$("input.form-workplace[workplace-id='" + formerWorkplaceId  + "']").val($("#workplace-id-input").text());
 	$("input[workplace-id='" + formerWorkplaceId  + "']").attr('workplace-id', $("#workplace-id-input").text());
 
 	$("#job-name-input").text("");
@@ -800,35 +802,67 @@ Candidate.correctExperienceIndexes = function() {
 	});
 	$("#experience-inputs > .form-workplace").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-workplace").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-workplace").index(this) + '][workplace_id]');
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-workplace").index(this) + '][Experience][workplace_id]');
 	});
 	$("#experience-inputs > .form-job").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-job").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-job").index(this) + '][job_id]');
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-job").index(this) + '][Experience][job_id]');
 	});
 	$("#experience-inputs > .form-start").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-start").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-start").index(this) + '][start_date]');
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-start").index(this) + '][Experience][start_date]');
 	});
 	$("#experience-inputs > .form-end").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-end").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-end").index(this) + '][final_date]');
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-end").index(this) + '][Experience][final_date]');
 	});
 	$("#experience-inputs > .form-report").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-report").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-report").index(this) + '][report]');
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-report").index(this) + '][Experience][report]');
 	});
 	$("#experience-inputs > .form-team").each(function() {
 		$(this).attr('index', $("#experience-inputs > .form-team").index(this));
-		$(this).attr('name', 'data[Experience][' + $("#experience-inputs > .form-team").index(this) + '][team]');
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-team").index(this) + '][Experience][team]');
+	});
+	$("#experience-inputs > .form-candidate").each(function() {
+		$(this).attr('index', $("#experience-inputs > .form-candidate").index(this));
+		$(this).attr('name', 'data[' + $("#experience-inputs > .form-candidate").index(this) + '][Experience][candidate_id]');
 	});
 }
 
 Candidate.checkExperienceData = function() {
 	if ($("#workplace-id-input").text() != "" && $("#job-input").val() != "" && $("#experience-start-input").val() != "") {
-		$("#add-experience-btn, #experience-edit-btn").removeClass("disabled");
+		$("#add-experience-btn").removeClass("disabled");
 	}
-	else $("#add-experience-btn, #experience-edit-btn").addClass("disabled"); 
+	else {
+		$("#add-experience-btn").addClass("disabled"); 
+	}
+	if ($("#job-input").val() != "" && $("#experience-start-input").val() != "") $("#experience-edit-btn").removeClass("disabled");
+	else $("#experience-edit-btn").addClass("disabled");
+}
+
+Candidate.addExperienceDescription = function(btn) {
+	var experienceIndex = $(btn).parent('li').attr('index');
+	var descriptionIndex = $(btn).parent('li').find('.description-item').length;
+	$(btn).parent('li').children('.description-list').append('<li style="margin-top: 5px; margin-bottom: 5px" class="description-item"><input type="hidden" name="data[' + experienceIndex + '][Experience][ExperienceDescription][' + descriptionIndex + '][type]" value="0" /><textarea class="span10" name="data[' + experienceIndex + '][Experience][ExperienceDescription][' + descriptionIndex + '][description]"></textarea><button type="button" class="btn btn-mini btn-danger" style="margin-left: 10px" onclick="Candidate.removeExperienceDescription(this)"><i class="icon-remove icon-white"></i></button></li>');
+}
+
+Candidate.addExperienceResult = function(btn) {
+	var experienceIndex = $(btn).parent('li').attr('index');
+	var descriptionIndex = $(btn).parent('li').find('.description-item').length;
+	$(btn).parent('li').children('.result-list').append('<li style="margin-top: 5px; margin-bottom: 5px" class="description-item"><input type="hidden" name="data[' + experienceIndex + '][Experience][ExperienceDescription][' + descriptionIndex + '][type]" value="1" /><textarea class="span10" name="data[' + experienceIndex + '][Experience][ExperienceDescription][' + descriptionIndex + '][description]"></textarea><button type="button" class="btn btn-mini btn-danger" style="margin-left: 10px" onclick="Candidate.removeExperienceDescription(this)"><i class="icon-remove icon-white"></i></button></li>');
+	$(btn).parent('li').children('.result-toggle').show();
+}
+
+Candidate.removeExperienceDescription = function(btn) {
+	var experienceItem = $(btn).parent('li').parents('li');
+	var experienceIndex = experienceItem.attr('index');
+	$(btn).parent('li').remove();
+	if (experienceItem.find('.result-list > li').length == 0) experienceItem.children('.result-toggle').hide();
+	experienceItem.find('.description-item').each(function(index) {
+		$(this).children('input').attr('name', 'data[' + experienceIndex + '][Experience][ExperienceDescription][' + index + '][type]');
+		$(this).children('textarea').attr('name', 'data[' + experienceIndex + '][Experience][ExperienceDescription][' + index + '][description]');
+	});
 }
 
 // SEARCH

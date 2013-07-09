@@ -146,7 +146,7 @@
 		<legend>Experiência internacional</legend>
 		<div class="span11" style="margin-left: 0;">
 			<dl class="dl-horizontal">
-				<dd><?php echo $candidate['Candidate']['international_experience']; ?></dd>
+				<dd style='text-align: justify'><?php echo $candidate['Candidate']['international_experience']; ?></dd>
 			</dl>
 		</div>
 	</div>
@@ -188,7 +188,7 @@
 				<dd><?php echo avoid_blank($candidate['Candidate']['private_pension']); ?></dd>
 				<br />
 				<dt>Vale Refeição:</dt>
-				<dd><?php if ($candidate['Candidate']['meal_ticket_value'] != '') echo formatCurrency($candidate['Candidate']['meal_ticket_value']).' '.$candidate['Candidate']['meal_ticket_type_string']; else echo '-'; ?></dd>
+				<dd><?php if ($candidate['Candidate']['meal_ticket_type'] < 2 && $candidate['Candidate']['meal_ticket_value'] != '') echo formatCurrency($candidate['Candidate']['meal_ticket_value']).' '.$candidate['Candidate']['meal_ticket_type_string']; else echo avoid_blank($candidate['Candidate']['meal_ticket_value']); ?></dd>
 				<br />
 				<dt>Veículo:</dt>
 				<dd><?php echo avoid_blank($candidate['Candidate']['vehicle_description']); ?></dd>
@@ -206,6 +206,12 @@
 				<br />
 				<dt>PLR:</dt>
 				<dd><?php echo avoid_blank($candidate['Candidate']['profit_sharing']); ?></dd>
+				<br />
+				<?php foreach ($candidate['Remuneration'] as $remuneration): ?>
+				<dt><?php echo $remuneration['type'].':'; ?></dt>
+				<dd><?php echo avoid_blank($remuneration['value']); ?></dd>
+				<br />
+				<?php endforeach; ?>
 			</dl>
 		</div>
 	</div>
@@ -214,7 +220,7 @@
 		<legend>Comentários do consultor</legend>
 		<div class="span11" style="margin-left: 0;">
 			<dl class="dl-horizontal">
-				<dd><?php echo $candidate['Candidate']['comments']; ?></dd>
+				<dd style='text-align: justify'><?php echo $candidate['Candidate']['comments']; ?></dd>
 			</dl>
 		</div>
 	</div>
@@ -231,7 +237,7 @@
 					<ul>
 						<?php foreach ($workplace as $experience): ?>
 						<li>
-							<strong><?php if ($experience['final_date'] && $experience['final_date'] != '') echo $experience['start_date_string'].' a '.$experience['final_date_string']; else echo $experience['start_date_string']; ?></strong>
+							<strong><?php if ($experience['final_date'] && $experience['final_date'] != '' && $experience['final_date'] != "0000-00-00") echo $experience['start_date_string'].' a '.$experience['final_date_string']; else echo $experience['start_date_string'].' a atual'; ?></strong>
 							<br />
 							<strong><?php echo $experience['Job']['name']; ?></strong>
 							<br />
@@ -243,6 +249,34 @@
 							<span>Equipe: <?php echo $experience['team']; ?></span>
 							<br />
 							<?php endif; ?>
+							<ul class='description-list'>
+								<?php foreach ($experience['ExperienceDescription'] as $description): ?>
+									<?php if ($description['type'] == 0): ?>
+										<li style="margin-top: 5px; margin-bottom: 5px; text-align: justify">
+											<?php echo $description['description']; ?>
+										</li>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</ul>
+							<?php
+								$hasResult = false; 
+								foreach ($experience['ExperienceDescription'] as $description) {
+									if ($description['type'] == 1) {
+										$hasResult = true;
+									    break;
+									}
+								} ?>
+							<strong class='result-toggle' style='margin-left: 25px;<?php if (!$hasResult) echo "display: none"; ?>'>Resultados obtidos: </strong>
+							<br class='result-toggle' <?php if (!$hasResult) echo "style='display: none'"; ?> />
+							<ul class='result-list'>
+								<?php foreach ($experience['ExperienceDescription'] as $description): ?>
+									<?php if ($description['type'] == 1): ?>
+										<li style="margin-top: 5px; margin-bottom: 5px; text-align: justify">
+											<?php echo $description['description']; ?>
+										</li>
+									<?php endif; ?>
+								<?php endforeach; ?>	
+							</ul>
 						</li>
 						<?php endforeach; ?>
 					</ul>
@@ -266,7 +300,7 @@
 	<div class="row-fluid">
 		<div class="form-actions">
 			<?php if ($visibility == 0 || $visibility == 2) {
-				  	  echo $this->Html->link('Editar', array('action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-primary')); 
+				  	  echo $this->Html->link('Editar', array('action' => 'new_edit', $candidate['Candidate']['id']), array('class' => 'btn btn-primary')); 
 				  	  echo $this->Form->postLink('Remover', array('action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-left: 5px'), 'Você está certo disso?');
 				  }
 				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()'));

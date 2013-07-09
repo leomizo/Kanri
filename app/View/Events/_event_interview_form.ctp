@@ -38,7 +38,7 @@
 <div class="control-group">
 	<?php echo $this->Form->label('EventInterview.description', 'Comentários', array('div' => false, 'class' => 'control-label')); ?>
 	<div class="controls">
-		<?php echo $this->Form->input('EventInterview.description', array('div' => false, 'label' => false)); ?>
+		<?php echo $this->Form->input('EventInterview.description', array('div' => false, 'label' => false, 'class' => 'span10')); ?>
 	</div>
 </div>
 

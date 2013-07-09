@@ -1,4 +1,4 @@
-<li>
+<li style='text-align: justify; padding-right: 10px'>
 	<strong>Comparecimento: </strong><?php if ($event['EventInterview']['attendance']) echo 'Sim'; else echo 'Não'; ?>
 	<br />
 	<strong>Tipo de contato: </strong><?php echo $event['EventInterview']['contact_type_string']; ?>

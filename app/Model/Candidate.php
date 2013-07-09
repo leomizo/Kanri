@@ -128,8 +128,10 @@ class Candidate extends AppModel {
 	}
 
 	public function beforeSave($options = array()) {
-		$birthdate = $this->data['Candidate']['birthdate'];
-		$this->data['Candidate']['birthdate'] = substr($birthdate, 6, 4).'-'.substr($birthdate, 3, 2).'-'.substr($birthdate, 0, 2);
+		if (isset($this->data['Candidate']['birthdate'])) {
+			$birthdate = $this->data['Candidate']['birthdate'];
+			$this->data['Candidate']['birthdate'] = substr($birthdate, 6, 4).'-'.substr($birthdate, 3, 2).'-'.substr($birthdate, 0, 2);
+		}
 		return true;
 	}
 

@@ -122,7 +122,7 @@ foreach ($candidate['CandidateCourse'] as $course) {
 echo "</ul>";
 echo "<b style='font-size: 16px'>Experiência internacional</b>";
 echo "<hr /><br />";
-echo "<p style='font-size: 12px'>".$candidate['Candidate']['international_experience']."</p>";
+echo "<p style='font-size: 12px; text-align: justify'>".$candidate['Candidate']['international_experience']."</p>";
 echo "<br /><br />";
 echo "<b style='font-size: 16px'>Remuneração</b>";
 echo "<hr /><br />";
@@ -169,7 +169,7 @@ echo "<br />";
 echo "<br />";
 echo "<b style='font-size: 12px'>Vale Refeição: </b>";
 echo "<span style='font-size: 12px'>";
-if ($candidate['Candidate']['meal_ticket_value'] != '') echo formatCurrency($candidate['Candidate']['meal_ticket_value']).' '.$candidate['Candidate']['meal_ticket_type_string']; else echo '-';
+if ($candidate['Candidate']['meal_ticket_type'] < 2 && $candidate['Candidate']['meal_ticket_value'] != '') echo formatCurrency($candidate['Candidate']['meal_ticket_value']).' '.$candidate['Candidate']['meal_ticket_type_string']; else echo avoid_blank($candidate['Candidate']['meal_ticket_value']);
 echo "</span>";
 echo "<br />";
 echo "<br />";
@@ -196,24 +196,32 @@ echo "<br />";
 echo "<br />";
 echo "<b style='font-size: 12px'>PLR: </b>";
 echo "<span style='font-size: 12px'>".avoid_blank($candidate['Candidate']['profit_sharing'])."</span>";
+echo "<br />";
+echo "<br />";
+foreach ($candidate['Remuneration'] as $remuneration) {
+	echo "<b style='font-size: 12px'>".$remuneration['type'].": </b>";
+	echo "<span style='font-size: 12px'>".avoid_blank($remuneration['value'])."</span>";
+	echo "<br />";
+	echo "<br />";
+}
 echo "<br /><br />";
 echo "<b style='font-size: 16px'>Comentários do consultor</b>";
 echo "<hr /><br />";
-echo "<p style='font-size: 12px'>".$candidate['Candidate']['comments']."</p>";
+echo "<p style='font-size: 12px; text-align: justify'>".$candidate['Candidate']['comments']."</p>";
 echo "<br /><br />";
 echo "<b style='font-size: 16px'>Experiências profissionais</b>";
 echo "<hr /><br />";
 echo "<ul>";
 foreach ($candidate['Experience'] as $workplace) {
-	echo "<li>";
+	echo "<li style='margin-top: 10px; margin-bottom: 10px'>";
 	echo "<b style='font-size: 12px'>Empresa: ".$workplace[0]['Workplace']['name']."</b>";
 	echo "<br />";
 	echo "<span style='font-size: 12px'> Empresa ".$workplace[0]['Workplace']['nationality'].' - Segmento '.$workplace[0]['Workplace']['MarketSector']['name']."</span>";
 	echo "<ul>";
 	foreach ($workplace as $experience) {
-		echo "<li>";
+		echo "<li style='margin-top: 10px; margin-bottom: 10px'>";
 		echo "<b style='font-size: 12px'>";
-		if ($experience['final_date'] && $experience['final_date'] != '') echo $experience['start_date_string'].' a '.$experience['final_date_string']; else echo $experience['start_date_string'];
+		if ($experience['final_date'] && $experience['final_date'] != '' && $experience['final_date'] != '0000-00-00') echo $experience['start_date_string'].' a '.$experience['final_date_string']; else echo $experience['start_date_string'].' a atual';
 		echo "</b>";
 		echo "<br />";
 		echo "<b style='font-size: 12px'>".$experience['Job']['name']."</b>";
@@ -226,6 +234,32 @@ foreach ($candidate['Experience'] as $workplace) {
 			echo "<span style='font-size: 12px'>Equipe: ".$experience['team']."</span>";
 			echo "<br />";
 		}
+		echo "<ul>";
+		foreach ($experience['ExperienceDescription'] as $description) {
+			if ($description['type'] == 0) {
+				echo "<li style='text-align: justify; font-size: 12px; margin-top: 5px'>";
+				echo $description['description'];
+				echo "</li>";
+			}
+		}
+		echo "</ul>";
+		$hasResult = false; 
+		foreach ($experience['ExperienceDescription'] as $description) {
+			if ($description['type'] == 1) {
+				$hasResult = true;
+			    break;
+			}
+		}
+		if ($hasResult) echo "<b style='font-size: 12px'>Resultados obtidos: </b>";
+		echo "<ul>";
+		foreach ($experience['ExperienceDescription'] as $description) {
+			if ($description['type'] == 1) {
+				echo "<li style='text-align: justify; font-size: 12px; margin-top: 5px'>";
+				echo $description['description'];
+				echo "</li>";
+			}
+		}	
+		echo "</ul>";
 		echo "</li>";
 	}
 	echo "</ul>";

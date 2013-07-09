@@ -14,7 +14,7 @@
 <div class="control-group">
 	<?php echo $this->Form->label('EventConclusion.comments', 'Comentários', array('div' => false, 'class' => 'control-label')); ?>
 	<div class="controls">
-		<?php echo $this->Form->input('EventConclusion.comments', array('div' => false, 'label' => false)); ?>
+		<?php echo $this->Form->input('EventConclusion.comments', array('div' => false, 'label' => false, 'class' => 'span10')); ?>
 	</div>
 </div>
 
