@@ -300,7 +300,7 @@
 	<div class="row-fluid">
 		<div class="form-actions">
 			<?php if ($visibility == 0 || $visibility == 2) {
-				  	  echo $this->Html->link('Editar', array('action' => 'new_edit', $candidate['Candidate']['id']), array('class' => 'btn btn-primary')); 
+				  	  echo $this->Html->link('Editar', array('action' => 'edit', $candidate['Candidate']['id']), array('class' => 'btn btn-primary')); 
 				  	  echo $this->Form->postLink('Remover', array('action' => 'delete', $candidate['Candidate']['id']), array('class' => 'btn btn-danger', 'style' => 'margin-left: 5px'), 'Você está certo disso?');
 				  }
 				  echo $this->Form->button('Voltar', array('type' => 'button', 'class' => 'btn', 'style' => 'margin-left: 5px', 'onclick' => 'parent.history.back()'));

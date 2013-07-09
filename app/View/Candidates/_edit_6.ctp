@@ -47,7 +47,7 @@
 		</fieldset>
 		<div class="form-actions" style="padding-left: 20px">
 			<?php echo $this->Form->submit('Salvar dados', array('class' => 'btn btn-primary', 'div' => false));
-				  echo $this->Html->link('Etapa anterior', array('action' => 'new_edit', '?' => array('step' => 5), $this->request->data['Candidate']['id']), array('class' => 'btn', 'style' => 'margin-left: 10px')); 
+				  echo $this->Html->link('Etapa anterior', array('action' => 'edit', '?' => array('step' => 5), $this->request->data['Candidate']['id']), array('class' => 'btn', 'style' => 'margin-left: 10px')); 
 				  echo $this->Html->link('Visualizar candidato', array('action' => 'show', $this->request->data['Candidate']['id']), array('class' => 'btn', 'style' => 'margin-left: 10px'));?>
 		</div>
 	<?php echo $this->Form->end(); ?>

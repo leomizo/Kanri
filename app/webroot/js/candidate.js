@@ -667,7 +667,7 @@ Candidate.editWorkplace = function(btn) {
 	$("#workplace-market-sector-input").text($(btn).parents("li").attr("workplace-market-sector"));
 
 	$(btn).parent("li").attr("editing", "true");
-	$("#experience-list > li[editing='false'], li[editing='true'] > .workplace-edit-btn, li[editing='true'] > .workplace-remove-btn, li[editing='true'] > .achievement-list > li > .experience-edit-btn, li[editing='true'] > .achievement-list > li > .experience-remove-btn").hide("50");
+	$("#experience-list > li[editing='false'], li[editing='true'] > .workplace-edit-btn, li[editing='true'] > .workplace-remove-btn, li[editing='true'] > .achievement-list > li > .experience-edit-btn, li[editing='true'] > .achievement-list > li > .experience-remove-btn, li[editing='true'] > .achievement-list > li > .experience-add-description-btn, li[editing='true'] > .achievement-list > li > .experience-add-result-btn, .description-item, .result-toggle").hide("50");
 }
 
 Candidate.updateWorkplace = function() {
@@ -701,8 +701,9 @@ Candidate.cancelWorkplaceEdit = function() {
 	$("#workplace-cancel-btn").hide();
 	$("#add-experience-btn").show();
 	$("#job-group, #period-group, #details-group").show();
-	$("#experience-list > li[editing='false'], li[editing='true'] > .workplace-edit-btn, li[editing='true'] > .workplace-remove-btn, li[editing='true'] > .achievement-list > li > .experience-edit-btn, li[editing='true'] > .achievement-list > li > .experience-remove-btn").show("50");
+	$("#experience-list > li[editing='false'], li[editing='true'] > .workplace-edit-btn, li[editing='true'] > .workplace-remove-btn, li[editing='true'] > .achievement-list > li > .experience-edit-btn, li[editing='true'] > .achievement-list > li > .experience-remove-btn, li[editing='true'] > .achievement-list > li > .experience-add-description-btn, li[editing='true'] > .achievement-list > li > .experience-add-result-btn, .description-item").show("50");
 	$("#experience-list > li[editing='true']").attr("editing", "false");
+	Candidate.showResultToggle();
 }
 
 Candidate.editExperience = function(btn) {
@@ -720,7 +721,7 @@ Candidate.editExperience = function(btn) {
 
 	$(btn).parent("li").attr("editing", "true");
 
-	$("#experience-list > li:not(:has(li[editing='true'])), .achievement-list:has(li[editing='true']) > li[editing='false'], li[editing='true'] > .experience-edit-btn, li[editing='true'] > .experience-remove-btn, #experience-list > li:has(li[editing='true']) > button").hide('50');
+	$("#experience-list > li:not(:has(li[editing='true'])), .achievement-list:has(li[editing='true']) > li[editing='false'], li[editing='true'] > .experience-edit-btn, li[editing='true'] > .experience-remove-btn, li[editing='true'] > .experience-add-description-btn, li[editing='true'] > .experience-add-result-btn, #experience-list > li:has(li[editing='true']) > button, .description-item, .result-toggle").hide('50');
 
 }
 
@@ -729,8 +730,9 @@ Candidate.cancelExperienceEdit = function() {
 	$("#experience-cancel-btn").hide();
 	$("#add-experience-btn").show();
 	$("#workplace-group").show();
-	$("#experience-list > li:not(:has(li[editing='true'])), .achievement-list:has(li[editing='true']) > li[editing='false'], li[editing='true'] > .experience-edit-btn, li[editing='true'] > .experience-remove-btn, #experience-list > li:has(li[editing='true']) > button").show('50');
+	$("#experience-list > li:not(:has(li[editing='true'])), .achievement-list:has(li[editing='true']) > li[editing='false'], li[editing='true'] > .experience-edit-btn, li[editing='true'] > .experience-remove-btn, #experience-list > li:has(li[editing='true']) > button, li[editing='true'] > .achievement-list > li > .experience-add-description-btn, li[editing='true'] > .achievement-list > li > .experience-add-result-btn, .description-item").show('50');
 	$("li[editing='true']").attr("editing", "false");
+	Candidate.showResultToggle();
 
 	$("#job-name-input").text("");
 	$("#job-input").val("");
@@ -862,6 +864,14 @@ Candidate.removeExperienceDescription = function(btn) {
 	experienceItem.find('.description-item').each(function(index) {
 		$(this).children('input').attr('name', 'data[' + experienceIndex + '][Experience][ExperienceDescription][' + index + '][type]');
 		$(this).children('textarea').attr('name', 'data[' + experienceIndex + '][Experience][ExperienceDescription][' + index + '][description]');
+	});
+}
+
+Candidate.showResultToggle = function() {
+	$(".result-list").each(function() {
+		if ($(this).children("li").length > 0) {
+			$(this).parent("li").children(".result-toggle").show();
+		}
 	});
 }
 

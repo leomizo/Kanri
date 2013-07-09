@@ -37,7 +37,7 @@ class CandidatesController extends AppController {
 		}
 	}
 
-	public function new_add() {
+	public function add() {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
 			if ($this->request->is('post')) {
 				if ($this->request->data['City']['State']['Country']['id'] == 'null' || $this->request->data['City']['State']['Country']['id'] == '') {
@@ -59,7 +59,7 @@ class CandidatesController extends AppController {
 					unset($this->request->data['City']['name']);
 				}
 				if ($this->Candidate->saveAll($this->request->data, array('deep' => true))) {
-					$this->redirect(array('controller' => 'candidates', 'action' => 'new_edit', '?' => array('step' => 1), $this->Candidate->id));
+					$this->redirect(array('controller' => 'candidates', 'action' => 'edit', '?' => array('step' => 1), $this->Candidate->id));
 				}
 				else {
 					$this->set('alert', true);
@@ -74,7 +74,7 @@ class CandidatesController extends AppController {
 		else throw new ForbiddenException();
 	}
 
-	public function new_edit($id = null) {
+	public function edit($id = null) {
 		if ($this->UserVisibility == 0 || $this->UserVisibility == 2) {
 			$step = isset($this->request->query['step']) ? $this->request->query['step'] : 0;
 			if ($id > 0) {
