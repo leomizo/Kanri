@@ -64,7 +64,7 @@
   				</div>
   			</div>
   		</form>
-  		<button type='button' class="btn btn-primary" onclick='Candidate.addFormation()'>Adicionar formação</button>
+  		<button type='button' id='formation-modal-add-btn' class="btn btn-primary" onclick='Candidate.addFormation()'>Adicionar formação</button>
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
   	</div>
 </div>
@@ -94,7 +94,7 @@
   				</div>
   			</div>
   		</form>
-  		<button type='button' class="btn btn-primary" onclick='Candidate.addCourse()'>Adicionar curso / especialização</button>
+  		<button type='button' id='course-modal-add-btn' class="btn btn-primary" onclick='Candidate.addCourse()'>Adicionar curso / especialização</button>
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
   	</div>
 </div>
@@ -133,7 +133,7 @@
 			</div>
   		</form>
   		
-    	<a id="add-new-work-local" class="btn btn-primary" style="float:left; margin-left: 25px" onclick="Candidate.addWorkplace()"><i class="icon-plus icon-white"></i> Adicionar novo local</a>
+    	<button type='button' id='workplace-modal-add-btn' class="btn btn-primary" style="float:left; margin-left: 25px" onclick="Candidate.addWorkplace()"><i class="icon-plus icon-white"></i> Adicionar novo local</button>
   	</div>
 </div>
 
@@ -160,7 +160,7 @@
   				</div>
   			</div>
   		</form>
-  		<button type='button' class="btn btn-primary" onclick='Candidate.addJob()'>Adicionar cargo</button>
+  		<button type='button' id='job-modal-add-btn' class="btn btn-primary" onclick='Candidate.addJob()'>Adicionar cargo</button>
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
   	</div>
 </div>

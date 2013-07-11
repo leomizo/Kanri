@@ -117,7 +117,8 @@ Candidate.searchFormation = function(form) {
 }
 
 Candidate.addFormation = function() {
-	if ($("#formation-new-input").val() != "") {
+	if ($("#formation-new-input").val() != "" && !$("#formation-modal-add-btn").hasClass('disabled')) {
+		$("#formation-modal-add-btn").addClass('disabled');
 		$.post('/formations/add', {Formation: {name: $('#formation-new-input').val()}}, function(data) {
 			$('#formation-name-input').text($('#formation-new-input').val());
 			$('#formation-new-input').val("");
@@ -125,8 +126,9 @@ Candidate.addFormation = function() {
 			$('#formation-modal').modal('hide');
 			$('#formation-content').load('/candidates/get_formations');
 			Candidate.checkFormationData();
+			$("#formation-modal-add-btn").removeClass('disabled');
 		}).fail(function() {
-
+			$("#formation-modal-add-btn").removeClass('disabled');
 		});
 	}
 }
@@ -244,7 +246,8 @@ Candidate.searchCourse = function(form) {
 }
 
 Candidate.addCourse = function() {
-	if ($('#course-new-input').val() != '') {
+	if ($('#course-new-input').val() != '' && !$("#course-modal-add-btn").hasClass('disabled')) {
+		$("#course-modal-add-btn").addClass('disabled');
 		$.post('/courses/add', {Course: {name: $('#course-new-input').val()}}, function(data) {
 			$('#course-name-input').text($('#course-new-input').val());
 			$('#course-new-input').val("");
@@ -252,8 +255,9 @@ Candidate.addCourse = function() {
 			$('#course-modal').modal('hide');
 			$('#course-content').load('/candidates/get_courses');
 			Candidate.checkCourseData();
+			$("#course-modal-add-btn").removeClass('disabled');
 		}).fail(function() {
-
+			$("#course-modal-add-btn").removeClass('disabled');
 		});
 	}
 }
@@ -516,16 +520,20 @@ Candidate.searchJob = function(form) {
 }
 
 Candidate.addJob = function() {
-	$.post('/jobs/add', {Job: {name: $('#job-new-input').val()}}, function(data) {
-		$('#job-input').val($.parseJSON(data).id);
-		$('#job-name-input').text($('#job-new-input').val());
-		$('#job-new-input').val("");
-		$('#job-modal').modal('hide');
-		$('#job-content').load('/candidates/get_jobs');
-		Candidate.checkExperienceData();
-	}).fail(function() {
-
-	});
+	if ($('#job-new-input').val() != "" && !$("#job-modal-add-btn").hasClass('disabled')) {
+		$("#job-modal-add-btn").addClass('disabled');
+		$.post('/jobs/add', {Job: {name: $('#job-new-input').val()}}, function(data) {
+			$('#job-input').val($.parseJSON(data).id);
+			$('#job-name-input').text($('#job-new-input').val());
+			$('#job-new-input').val("");
+			$('#job-modal').modal('hide');
+			$('#job-content').load('/candidates/get_jobs');
+			Candidate.checkExperienceData();
+			$("#job-modal-add-btn").removeClass('disabled');
+		}).fail(function() {
+			$("#job-modal-add-btn").removeClass('disabled');
+		});
+	}
 }
 
 Candidate.checkJobData = function() {
@@ -556,41 +564,45 @@ Candidate.cancelWorkplaceMarketSectorAdd = function() {
 }
 
 Candidate.addWorkplace = function() {
-	var newWorkplace = {
-		Workplace: {
-			name: $('#workplace-name-new-input').val(),
-			nationality: $('#workplace-nationality-new-input').val()
+	if ($('#workplace-name-new-input').val() != "" && $('#workplace-nationality-new-input').val() != "" && ($("#workplace-market-sector-add-input").children('input').val() != "" || $("#workplace-market-sector-new-input").val() != "") && !$("#workplace-modal-add-btn").hasClass('disabled')) {
+		$("#workplace-modal-add-btn").addClass('disabled');
+		var newWorkplace = {
+			Workplace: {
+				name: $('#workplace-name-new-input').val(),
+				nationality: $('#workplace-nationality-new-input').val()
+			}
+		};
+
+		if ($("#workplace-market-sector-new-input").val() == 'null') {
+			newWorkplace.MarketSector = {
+				name: $("#workplace-market-sector-add-input").children('input').val(),
+				id: 'null'
+			};
 		}
-	};
+		else {
+			newWorkplace.MarketSector = {
+				id:	$("#workplace-market-sector-new-input").val()
+			};
+		}
 
-	if ($("#workplace-market-sector-new-input").val() == 'null') {
-		newWorkplace.MarketSector = {
-			name: $("#workplace-market-sector-add-input").children('input').val(),
-			id: 'null'
-		};
+		$.post('/workplaces/add', newWorkplace, function(data) {
+			data = $.parseJSON(data);
+			$("#workplace-input").text($('#workplace-name-new-input').val());
+			$("#workplace-id-input").text(data.id);
+			$("#workplace-nationality-input").text($('#workplace-nationality-new-input').val());
+			if (data.new_sector) $("#workplace-market-sector-input").text($('#workplace-market-sector-add-input > input').val());
+			else $("#workplace-market-sector-input").text($('#workplace-market-sector-new-input > option:selected').text());
+			$('#workplace-name-new-input, #workplace-nationality-new-input, #workplace-market-sector-add-input > input').val("");
+			$('#workplace-modal').modal('hide');
+			$('#workplace-content').load('/candidates/get_workplaces');
+			$('#workplace-market-sector-new-input').load('/market_sectors/refresh_select?add=true');
+			Candidate.cancelWorkplaceMarketSectorAdd();
+			Candidate.checkExperienceData();
+			$("#workplace-modal-add-btn").removeClass('disabled');
+		}).fail(function() {
+			$("#workplace-modal-add-btn").removeClass('disabled');
+		});
 	}
-	else {
-		newWorkplace.MarketSector = {
-			id:	$("#workplace-market-sector-new-input").val()
-		};
-	}
-
-	$.post('/workplaces/add', newWorkplace, function(data) {
-		data = $.parseJSON(data);
-		$("#workplace-input").text($('#workplace-name-new-input').val());
-		$("#workplace-id-input").text(data.id);
-		$("#workplace-nationality-input").text($('#workplace-nationality-new-input').val());
-		if (data.new_sector) $("#workplace-market-sector-input").text($('#workplace-market-sector-add-input > input').val());
-		else $("#workplace-market-sector-input").text($('#workplace-market-sector-new-input > option:selected').text());
-		$('#workplace-name-new-input, #workplace-nationality-new-input, #workplace-market-sector-add-input > input').val("");
-		$('#workplace-modal').modal('hide');
-		$('#workplace-content').load('/candidates/get_workplaces');
-		$('#workplace-market-sector-new-input').load('/market_sectors/refresh_select?add=true');
-		Candidate.cancelWorkplaceMarketSectorAdd();
-		Candidate.checkExperienceData();
-	}).fail(function() {
-
-	});
 }
 
 Candidate.handleWorkplaceSelection = function(link) {
