@@ -1,0 +1,22 @@
+PHP
+
+Windows 7
+
+Ativar IIS
+Instalar Web Platform Installer
+Instalar php Manager e PHP 5.6
+Adicionar Kanri como aplicativo
+Fazer app/tmp writable
+Mudar Autenticacao (nao usar IUSR)
+Mudar Usuario default do application pool
+
+
+
+MySQL
+
+Baixar .NET Framework
+Baixar MySQL installer
+Instalar MySQL
+Rodar kanri.sql
+
+

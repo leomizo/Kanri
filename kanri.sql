@@ -1,3 +1,9 @@
+DROP DATABASE IF EXISTS `kanri`;
+
+CREATE DATABASE `kanri`;
+
+USE `kanri`;
+
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
@@ -202,7 +208,8 @@ CREATE TABLE `remunerations` (
 	id SERIAL PRIMARY KEY,
 	candidate_id BIGINT UNSIGNED NOT NULL,
 	type VARCHAR(32),
-	value VARCHAR(64)
+	value VARCHAR(64),
+	created DATETIME NULL
 );
 
 DROP TABLE IF EXISTS `companies`;

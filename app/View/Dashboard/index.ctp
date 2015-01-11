@@ -30,7 +30,7 @@
 						<td><?php echo $candidate['Candidate']['personal_email']; ?></td>
 						<td style="text-align: center">
 							<?php if ($candidate['CandidateBirthday']['status'] == 0): ?>
-								<?php echo $this->Form->postLink('Enviar', array('action' => 'send_candidate_birthday_email', $candidate['CandidateBirthday']['id'], $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-primary', 'style' => 'margin-right: 5px'));
+								<?php echo $this->Form->postLink('Enviar', array('action' => 'send_candidate_birthday_email', $candidate['CandidateBirthday']['id'], $candidate['Candidate']['id']), array('class' => 'btn btn-mini btn-primary', 'style' => 'margin-right: 5px; display: none'));
 									  echo $this->Form->postLink('Ignorar', array('action' => 'ignore_candidate_birthday', $candidate['CandidateBirthday']['id']), array('class' => 'btn btn-mini btn-danger'), 'Você tem certeza?'); ?>
 							<?php elseif ($candidate['CandidateBirthday']['status'] == 1): ?>
 								<span style='color: #0A1'>Enviado!</span>

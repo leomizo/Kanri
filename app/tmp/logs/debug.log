@@ -1,0 +1,971 @@
+2015-01-10 11:50:54 Debug: Array
+(
+    [Workplace] => Array
+        (
+            [name] => Microsoft
+            [nationality] => Americana
+        )
+
+    [MarketSector] => Array
+        (
+            [id] => 3
+        )
+
+)
+
+2015-01-10 11:51:13 Debug: Array
+(
+    [Workplace] => Array
+        (
+            [name] => Bayer
+            [nationality] => Alemã
+        )
+
+    [MarketSector] => Array
+        (
+            [name] => Farmacêutico
+        )
+
+)
+
+2015-01-10 13:06:58 Debug: Array
+(
+    [Workplace] => Array
+        (
+            [name] => Samsung
+            [nationality] => Chinesa
+        )
+
+    [MarketSector] => Array
+        (
+            [name] => Telefonia
+        )
+
+)
+
+2015-01-10 13:13:00 Debug: Notice (8): Undefined index: birthdate in [C:\Users\Leonardo\Kanri-master\app\Model\Dependent.php, line 9]
+Trace:
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:13:00 Debug: Notice (8): Undefined offset: 2 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:13:01 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:13:01 Debug: Notice (8): Undefined index: birthdate in [C:\Users\Leonardo\Kanri-master\app\Model\Dependent.php, line 9]
+Trace:
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:13:01 Debug: Notice (8): Undefined offset: 2 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:13:01 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:19:03 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:19:16 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:19:21 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:19:33 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:19:46 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:19:55 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:20:00 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:20:04 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:21:00 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:25:52 Debug: Notice (8): Undefined index: birthdate in [C:\Users\Leonardo\Kanri-master\app\Model\Dependent.php, line 9]
+Trace:
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:25:52 Debug: Notice (8): Undefined offset: 2 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:25:52 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:25:52 Debug: Notice (8): Undefined index: birthdate in [C:\Users\Leonardo\Kanri-master\app\Model\Dependent.php, line 9]
+Trace:
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:25:52 Debug: Notice (8): Undefined offset: 2 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 13:25:52 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Vendor\global_functions.php, line 4]
+Trace:
+age_from_dob - APP\Vendor\global_functions.php, line 4
+Dependent::afterFind() - APP\Model\Dependent.php, line 9
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::_filterResults() - CORE\Cake\Model\Model.php, line 2974
+Model::find() - CORE\Cake\Model\Model.php, line 2700
+Model::deleteAll() - CORE\Cake\Model\Model.php, line 2537
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 103
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:04:45 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveAssociated() - CORE\Cake\Model\Model.php, line 2247
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2110
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:04:45 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveAssociated() - CORE\Cake\Model\Model.php, line 2247
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2110
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:16:42 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveAssociated() - CORE\Cake\Model\Model.php, line 2247
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2110
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:16:42 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveAssociated() - CORE\Cake\Model\Model.php, line 2247
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2110
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:16:50 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveAssociated() - CORE\Cake\Model\Model.php, line 2247
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2110
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:16:50 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveAssociated() - CORE\Cake\Model\Model.php, line 2247
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2110
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:20:39 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:20:39 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:20:45 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:20:45 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:21:09 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:21:09 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:23:26 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:23:26 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:28:31 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:28:31 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:30:58 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:30:58 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:36:09 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:36:09 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:44:39 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:44:39 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:45:37 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:45:37 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:46:26 Debug: Notice (8): Undefined index: start_date in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 16:46:26 Debug: Notice (8): Undefined offset: 1 in [C:\Users\Leonardo\Kanri-master\app\Model\Experience.php, line 29]
+Trace:
+Experience::beforeSave() - APP\Model\Experience.php, line 29
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 246
+Model::save() - CORE\Cake\Model\Model.php, line 1685
+Model::saveMany() - CORE\Cake\Model\Model.php, line 2085
+CandidatesController::edit() - APP\Controller\CandidatesController.php, line 148
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 7]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 7
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 8]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 8
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 10]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 10
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 11]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 11
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 13]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 13
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 14]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 14
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 16]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 16
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 17]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 17
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 19]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 20]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 20
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 22]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 23]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 23
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 25]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 25
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 26]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined index: Candidate in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 36]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 36
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 39]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 39
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 43]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 43
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 73]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 73
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Debug: Notice (8): Undefined variable: step in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 103]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 103
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:49:27 Debug: Notice (8): Undefined index: pageCount in [C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\PaginatorHelper.php, line 702]
+Trace:
+PaginatorHelper::numbers() - CORE\Cake\View\Helper\PaginatorHelper.php, line 702
+include - APP\View\Candidates\results.ctp, line 69
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 18:26:28 Debug: Notice (8): Undefined variable: candidates in [C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php, line 21]
+Trace:
+DashboardController::index() - APP\Controller\DashboardController.php, line 21
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+

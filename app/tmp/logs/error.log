@@ -1,0 +1,1154 @@
+2015-01-10 11:28:51 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+',
+  'enabled' => true,
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\FormHelper.php(198): Model->schema()
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#8 C:\Users\Leonardo\Kanri-master\app\View\Users\login.ctp(5): FormHelper->create('User', Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(947): include('C:\\Users\\Leonar...')
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(909): View->_evaluate('C:\\Users\\Leonar...', Array)
+#11 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(471): View->_render('C:\\Users\\Leonar...')
+#12 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#17 {main}
+2015-01-10 11:29:05 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+',
+  'enabled' => true,
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\FormHelper.php(198): Model->schema()
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\View\Helper\FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#8 C:\Users\Leonardo\Kanri-master\app\View\Users\login.ctp(5): FormHelper->create('User', Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(947): include('C:\\Users\\Leonar...')
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(909): View->_evaluate('C:\\Users\\Leonar...', Array)
+#11 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(471): View->_render('C:\\Users\\Leonar...')
+#12 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#17 {main}
+2015-01-10 13:00:53 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=pau
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:00:55 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=pau
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:01:12 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=F
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:04:33 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_courses?search=inf
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_courses')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:04:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_courses?search=inf
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_courses')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:04:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_courses?search=inf
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_courses')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:07:09 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_jobs?search=est
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_jobs')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:15:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 13:16:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 13:16:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 13:16:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 13:16:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 13:40:35 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=mack
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:41:11 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=mack
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:41:20 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=mack
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:41:27 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:41:49 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:41:51 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=x
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:42:15 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 13:42:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=c
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:17:17 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=c
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:18:13 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:19:09 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:19:13 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:19:16 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:19:45 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:20:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:21:51 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:23:53 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:23:55 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:26:00 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:26:03 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:26:32 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=a
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:26:57 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:27:00 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=s
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:27:43 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=s
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:31:16 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=s
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:34:23 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:38:37 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:38:39 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=x
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:40:37 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=s
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:46:55 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit/get_formations?search=x
+Stack Trace:
+#0 [internal function]: CandidatesController->edit('get_formations')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 15:49:56 Error: [MissingControllerException] Controller class GetFormationsController could not be found.
+Exception Attributes: array (
+  'class' => 'GetFormationsController',
+  'plugin' => NULL,
+)
+Request URL: /get_formations?search=x
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#2 {main}
+2015-01-10 16:04:45 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 16:14:28 Error: [PDOException] SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '2004-14-01' for column 'final_date' at row 1
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 16:16:42 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 16:16:50 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 16:20:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:20:45 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:21:09 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:23:26 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:28:31 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:30:58 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:36:09 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:44:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:45:37 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:46:26 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'candidate_id' doesn't have a default value
+Request URL: /candidates/edit/1?step=5
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(Experience), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(148): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:46:49 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'institution' doesn't have a default value
+Request URL: /candidates/edit/1?step=1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateFormation), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(111): Model->saveMany(Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:46:58 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'level' doesn't have a default value
+Request URL: /candidates/edit/1?step=2
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateLanguage), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(121): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:49:19 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'level' doesn't have a default value
+Request URL: /candidates/edit/1?step=2
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateLanguage), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(122): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:49:29 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'level' doesn't have a default value
+Request URL: /candidates/edit/1?step=2
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateLanguage), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(122): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:50:32 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'level' doesn't have a default value
+Request URL: /candidates/edit/1?step=2
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateLanguage), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(121): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 16:58:43 Error: X
+2015-01-10 16:59:18 Error: Array
+(
+)
+
+2015-01-10 16:59:18 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'level' doesn't have a default value
+Request URL: /candidates/edit/1?step=2
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateLanguage), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(122): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 17:00:51 Error: 
+2015-01-10 17:02:08 Error: notempty
+2015-01-10 17:02:23 Error: empty
+2015-01-10 17:02:23 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'level' doesn't have a default value
+Request URL: /candidates/edit/1?step=2
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ka...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `ka...')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CandidateLanguage), Array, Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2085): Model->save(Array, Array)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(122): Model->saveMany(Array, Array)
+#6 [internal function]: CandidatesController->edit('1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-10 17:03:35 Warning: Warning (2): include(_edit_.ctp) [<a href='http://php.net/function.include'>function.include</a>]: failed to open stream: No such file or directory in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 39]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 39
+include - APP\View\Candidates\edit.ctp, line 39
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:35 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening '_edit_.ctp' for inclusion (include_path='.;C:\php\pear') in [C:\Users\Leonardo\Kanri-master\app\View\Candidates\edit.ctp, line 39]
+Trace:
+include - APP\View\Candidates\edit.ctp, line 39
+include - APP\View\Candidates\edit.ctp, line 39
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+Controller::render() - CORE\Cake\Controller\Controller.php, line 948
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 194
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 17:03:38 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit?step=2
+Stack Trace:
+#0 [internal function]: CandidatesController->edit()
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 17:03:41 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit?step=2
+Stack Trace:
+#0 [internal function]: CandidatesController->edit()
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 17:03:43 Error: [InternalErrorException] Internal Server Error
+Request URL: /candidates/edit?step=2
+Stack Trace:
+#0 [internal function]: CandidatesController->edit()
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}
+2015-01-10 17:07:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 17:08:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Remuneration.created' in 'where clause'
+Request URL: /candidates/edit/1?step=4
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Remuner...', Array)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Remuner...', Array, Array)
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Remuner...', false)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Remuneration), Array)
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\Users\Leonardo\Kanri-master\app\Controller\CandidatesController.php(140): Model->deleteAll(Array)
+#7 [internal function]: CandidatesController->edit('1')
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(CandidatesController), Array)
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CandidatesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#13 {main}
+2015-01-10 18:04:38 Error: 
+2015-01-10 18:26:28 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\Users\Leonardo\Kanri-master\app\View\Emails\html\admin_birthdays.ctp, line 7]
+Trace:
+include - APP\View\Emails\html\admin_birthdays.ctp, line 7
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 471
+CakeEmail::_renderTemplates() - CORE\Cake\Network\Email\CakeEmail.php, line 1565
+CakeEmail::_render() - CORE\Cake\Network\Email\CakeEmail.php, line 1432
+CakeEmail::send() - CORE\Cake\Network\Email\CakeEmail.php, line 1064
+CakeEmail::deliver() - CORE\Cake\Network\Email\CakeEmail.php, line 1105
+DashboardController::index() - APP\Controller\DashboardController.php, line 21
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+require - APP\webroot\index.php, line 109
+[main] - ROOT\index.php, line 43
+
+2015-01-10 18:26:29 Error: [SocketException] Could not send email.
+Request URL: /dashboard
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('edson@kanri.com', 'Candidatos aniv...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(21): CakeEmail::deliver('edson@kanri.com', 'Candidatos aniv...', Array, Array)
+#4 [internal function]: DashboardController->index()
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 11:52:13 Error: XXXXXXXXX
+2015-01-11 11:52:15 Error: [SocketException] Could not send email.
+Request URL: /dashboard
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('edson@kanri.com', 'Candidatos aniv...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(27): CakeEmail::deliver('edson@kanri.com', 'Candidatos aniv...', Array, Array)
+#4 [internal function]: DashboardController->index()
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 11:53:22 Error: [MissingViewException] View file "C:\Users\Leonardo\Kanri-master\app\View\Emails\text\candidate_birthday.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\Leonardo\\Kanri-master\\app\\View\\Emails\\text\\candidate_birthday.ctp',
+)
+Request URL: /dashboard/send_candidate_birthday_email/1/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(468): View->_getViewFileName('candidate_birth...')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1565): View->render('candidate_birth...', NULL)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1432): CakeEmail->_renderTemplates('\n')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1064): CakeEmail->_render(Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(46): CakeEmail::deliver('josesilva@hotma...', 'Feliz anivers\xC3\xA1...', Array, Array)
+#6 [internal function]: DashboardController->send_candidate_birthday_email('1', '1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-11 12:13:43 Error: [MissingViewException] View file "C:\Users\Leonardo\Kanri-master\app\View\Emails\text\candidate_birthday.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\Leonardo\\Kanri-master\\app\\View\\Emails\\text\\candidate_birthday.ctp',
+)
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(468): View->_getViewFileName('candidate_birth...')
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1565): View->render('candidate_birth...', NULL)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1432): CakeEmail->_renderTemplates('\n')
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1064): CakeEmail->_render(Array)
+#4 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#5 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#6 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#8 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#12 {main}
+2015-01-11 12:19:13 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:27:21 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:27:38 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:29:07 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:30:29 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:50:20 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:51:23 Error: [SocketException] Could not send email.
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\MailTransport.php(47): MailTransport->_mail('leomizo2@gmail....', 'Feliz =?UTF-8?B...', '<!DOCTYPE html ...', 'From: Kanri <ka...', NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1066): MailTransport->send(Object(CakeEmail))
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Network\Email\CakeEmail.php(1105): CakeEmail->send(NULL)
+#3 C:\Users\Leonardo\Kanri-master\app\Controller\DashboardController.php(47): CakeEmail::deliver('leomizo2@gmail....', 'Feliz anivers\xC3\xA1...', Array, Array)
+#4 [internal function]: DashboardController->send_candidate_birthday_email('6', '1')
+#5 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#6 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#10 {main}
+2015-01-11 12:52:24 Error: [MissingViewException] View file "C:\Users\Leonardo\Kanri-master\app\View\Dashboard\send_candidate_birthday_email.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\Leonardo\\Kanri-master\\app\\View\\Dashboard\\send_candidate_birthday_email.ctp',
+)
+Request URL: /dashboard/send_candidate_birthday_email/6/1
+Stack Trace:
+#0 C:\Users\Leonardo\Kanri-master\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\Users\Leonardo\Kanri-master\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\Leonardo\Kanri-master\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\Leonardo\Kanri-master\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Leonardo\Kanri-master\index.php(43): require('C:\\Users\\Leonar...')
+#6 {main}

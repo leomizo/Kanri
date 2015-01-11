@@ -58,13 +58,24 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => '127.0.0.1',
-		'login' => 'kanriadmin',
-		'password' => 'gestionnaire',
-		'database' => 'kanri_dev',
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => '2rianar',
+		'database' => 'kanri',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
+
+//	public $default = array(
+//		'datasource' => 'Database/Mysql',
+//		'persistent' => false,
+//		'host' => '127.0.0.1',
+//		'login' => 'kanriadmin',
+//		'password' => 'gestionnaire',
+//		'database' => 'kanri_dev',
+//		'prefix' => '',
+//		'encoding' => 'utf8',
+//	);
 
 	public $test = array(
 		'datasource' => 'Database/Mysql',

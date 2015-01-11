@@ -108,7 +108,7 @@ class CandidatesController extends AppController {
 							}
 							break;
 						case 1:
-							if ($this->Candidate->CandidateFormation->saveMany($this->request->data)) {
+							if (empty($this->request->data) || $this->Candidate->CandidateFormation->saveMany($this->request->data)) {
 								$this->Candidate->CandidateFormation->deleteAll(array('CandidateFormation.candidate_id' => $id, 'CandidateFormation.created <' => date('Y-m-d H:i:s')));
 								$this->redirect(array('?' => array('step' => 2), $id));
 							}
@@ -118,7 +118,7 @@ class CandidatesController extends AppController {
 							break;
 						case 2:
 							unset($this->request->data['language-level']);
-							if ($this->Candidate->CandidateLanguage->saveMany($this->request->data, array('deep' => true))) {
+							if (empty($this->request->data) || $this->Candidate->CandidateLanguage->saveMany($this->request->data, array('deep' => true))) {
 								$this->Candidate->CandidateLanguage->deleteAll(array('CandidateLanguage.candidate_id' => $id, 'CandidateLanguage.created <' => date('Y-m-d H:i:s')));
 								$this->redirect(array('?' => array('step' => 3), $id));
 							}
@@ -127,7 +127,7 @@ class CandidatesController extends AppController {
 							}
 							break;
 						case 3:
-							if ($this->Candidate->CandidateCourse->saveMany($this->request->data)) {
+							if (empty($this->request->data) || $this->Candidate->CandidateCourse->saveMany($this->request->data)) {
 								$this->Candidate->CandidateCourse->deleteAll(array('CandidateCourse.candidate_id' => $id, 'CandidateCourse.created <' => date('Y-m-d H:i:s')));
 								$this->redirect(array('?' => array('step' => 4), $id));
 							}
@@ -145,7 +145,7 @@ class CandidatesController extends AppController {
 							}
 							break;
 						case 5:
-							if ($this->Candidate->Experience->saveMany($this->request->data, array('deep' => true))) {
+							if (empty($this->request->data) || $this->Candidate->Experience->saveMany($this->request->data, array('deep' => true))) {
 								$this->Candidate->Experience->deleteAll(array('Experience.candidate_id' => $id, 'Experience.created <' => date('Y-m-d H:i:s')));
 								$this->redirect(array('?' => array('step' => 6), $id));
 							}

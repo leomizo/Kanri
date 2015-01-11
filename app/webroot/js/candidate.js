@@ -112,7 +112,7 @@ Candidate.selectCity = function(select) {
 // Formations
 
 Candidate.searchFormation = function(form) {
-	$('#formation-content').load('get_formations?search=' + $(form).children('input').val());
+	$('#formation-content').load('/candidates/get_formations?search=' + $(form).children('input').val());
 	return false;
 }
 
@@ -241,7 +241,7 @@ Candidate.checkFormationData = function() {
 // Courses
 
 Candidate.searchCourse = function(form) {
-	$('#course-content').load('get_courses?search=' + $(form).children('input').val());
+	$('#course-content').load('/candidates/get_courses?search=' + $(form).children('input').val());
 	return false;
 }
 
@@ -515,7 +515,7 @@ Candidate.correctRemunerationIndexes = function() {
 // Jobs
 
 Candidate.searchJob = function(form) {
-	$('#job-content').load('get_jobs?search=' + $(form).children('input').val());
+	$('#job-content').load('/candidates/get_jobs?search=' + $(form).children('input').val());
 	return false;
 }
 
@@ -640,7 +640,7 @@ Candidate.addExperience = function() {
 		
 		var experience_team = "<span class='experience-team just-added'>Equipe: " + $("#experience-team-input").val() + "</span><br class='experience-team-break just-added' />";
 
-		$(achievements_list).append("<li index='" + experienceIndex + "' experience-job-name='" + $("#job-name-input").text() + "' experience-job-id='" + $("#job-input").val() + "' experience-start='" + $("#experience-start-input").val() + "' experience-end='" + $("#experience-end-input").val() + "' experience-report='" + $("#experience-report-input").val() + "' experience-team='" + $("#experience-team-input").val() + "' editing='false'><strong class='experience-period'>" + experience_period + "</strong><br /><strong class='experience-job'>" + $("#job-name-input").text() + "</strong><br />" + experience_report + experience_team + "<button type='button' class='btn btn-primary btn-mini experience-edit-btn' style='margin-right: 4px' onclick='Candidate.editExperience(this)'><i class='icon-edit icon-white'></i></button><button type='button' class='btn btn-danger btn-mini experience-remove-btn' onclick='Candidate.removeExperience(this)'><i class='icon-remove icon-white'></i></button></li>");
+		$(achievements_list).append("<li index='" + experienceIndex + "' experience-job-name='" + $("#job-name-input").text() + "' experience-job-id='" + $("#job-input").val() + "' experience-start='" + $("#experience-start-input").val() + "' experience-end='" + $("#experience-end-input").val() + "' experience-report='" + $("#experience-report-input").val() + "' experience-team='" + $("#experience-team-input").val() + "' editing='false'><strong class='experience-period'>" + experience_period + "</strong><br /><strong class='experience-job'>" + $("#job-name-input").text() + "</strong><br />" + experience_report + experience_team + "<button type='button' class='btn btn-primary btn-mini experience-edit-btn' style='margin-right: 4px' onclick='Candidate.editExperience(this)'><i class='icon-edit icon-white'></i></button><button type='button' class='btn btn-danger btn-mini experience-remove-btn' style='margin-right: 4px' onclick='Candidate.removeExperience(this)'><i class='icon-remove icon-white'></i></button><button type='button' class='btn btn-info btn-mini experience-add-description-btn' style='margin-right: 4px' onclick='Candidate.addExperienceDescription(this)'>Adicionar descrição</button><button type='button' class='btn btn-warning btn-mini experience-add-result-btn' onclick='Candidate.addExperienceResult(this)'>Adicionar resultado</button><ul class='description-list'></ul><strong class='result-toggle' style='display: none'>Resultados obtidos: </strong><br class='result-toggle' style='display: none'/><ul class='result-list'></ul></li>");
 
 		if ($("#experience-team-input").val() == "") {
 			$(achievements_list).find(".experience-team.just-added, .experience-team-break.just-added").hide();
@@ -888,6 +888,11 @@ Candidate.showResultToggle = function() {
 }
 
 // SEARCH
+
+Candidate.clearField = function(btn) {
+	$(btn).parents('.controls').find("input").val("");
+	$(btn).parents('.controls').find("span")[0].innerHTML = "";
+}
 
 Candidate.addSearchLanguage = function() {
 	var index = $("#language-table > tbody > tr").length;

@@ -45,6 +45,7 @@
 						<input type='hidden' name='data[job]' id="job-input" />
 						<button class="btn" type="button" data-toggle="modal" data-target="#job-modal"><i class="icon-search"></i></button>
 					</div>
+					<button type='button' class="btn" style="margin-left: 5px;" onclick="Candidate.clearField(this)">Limpar campo</button>
 				</div>
 			</fieldset>
 
@@ -153,6 +154,7 @@
 						<input type='hidden' name='data[formation]' id='formation-input' />
 						<button class="btn" type="button" data-toggle="modal" data-target="#formation-modal"><i class="icon-search"></i></button>
 					</div>
+					<button type='button' class="btn" style="margin-left: 5px;" onclick="Candidate.clearField(this)">Limpar campo</button>
 				</div>
 			</fieldset>
 
